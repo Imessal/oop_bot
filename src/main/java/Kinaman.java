@@ -10,6 +10,7 @@ class Kinoman {
     private String m_link;
     private Map<Integer, ArrayList<Animation>> pageList = new HashMap<>();
     private int m_pageCount;
+    private int m_animCount;
     private int m_currentPage;
     private int m_currentAnim;
     private String m_sortingType;
@@ -53,6 +54,7 @@ class Kinoman {
 
     private void showByRating(){
         if (m_currentPage > m_pageCount){
+            System.out.println("Это был последний(");
             return;
         }
         ArrayList<Animation> anims = getAnimList(m_currentPage, m_link);
@@ -70,6 +72,10 @@ class Kinoman {
     }
 
     private void showRandomly() {
+        if (m_shownAnim.size() == m_animCount){
+            System.out.println("Это был последний(");
+            return;
+        }
         while (true) {
             Random rn = new Random();
             m_currentPage = rn.nextInt(m_pageCount) + 1;
@@ -118,8 +124,9 @@ class Kinoman {
                 String inputLine;
                 while ((inputLine = br.readLine()) != null) {
                     if (inputLine.startsWith("    <div class=\"pagesFromTo\">")) {
-                        String pageCount = inputLine.substring(inputLine.indexOf("из ") + 3, inputLine.indexOf("</div>"));
-                        return Integer.parseInt(pageCount) / 25;
+                        int animCount = Integer.parseInt(inputLine.substring(inputLine.indexOf("из ") + 3, inputLine.indexOf("</div>")));
+                        m_animCount = animCount;
+                        return animCount / 25;
                     }
                 }
             }
