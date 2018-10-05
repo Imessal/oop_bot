@@ -62,6 +62,7 @@ class Kinoman {
             m_link = m_link.substring(0, m_link.indexOf("page/") + 5);
             m_link = m_link + m_currentPage;
             m_currentAnim = 0;
+            anims = getAnimList(m_currentPage, m_link);
         }
         Animation anim = anims.get(m_currentAnim);
         addAnnotation();
