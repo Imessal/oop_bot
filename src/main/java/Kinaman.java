@@ -35,7 +35,7 @@ class Kinoman {
             case "рейтинг":
                 m_sortingType = "рейтинг";
                 break;
-            case "рандомно":
+            case "рандом":
                 m_sortingType = "рандом";
                 break;
             default:
