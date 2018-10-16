@@ -1,90 +1,111 @@
-import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class Bot
 {
-    private static String pathToCommands = String.format("src%smain%1$sresources%1$sCommands.txt", File.separator);
-    private static final Map<String, Method> commands = getDict();
+    private static Kinoman context = null;
 
     public static void main(String[] args)	{
         startBot();
     }
 
-    private static Map<String, Method> getDict(){
-        Map<String, Method> dict = new HashMap<>();
-        try {
-            dict.put("команды", Bot.class.getMethod("printCommands"));
-            dict.put("что посмотреть", Bot.class.getMethod("adviseFilm"));
-            dict.put("чп", Bot.class.getMethod("adviseFilm"));
-        }
-        catch (NoSuchMethodException e){System.out.println(e.getLocalizedMessage());}
-        return dict;
-    }
-
     private static void startBot() {
-        System.out.println("Привет, я Ботик!");
-        System.out.println("Чтобы узнать возможные команды, введите \"Команды\"");
+        System.out.println("Привет, я Киноман!");
+        System.out.println("Могу порекомендовать фильм или сериал к просмотру.");
+        System.out.println("Для справки введи \"помощь\"");
+        work();
+    }
 
+    private static void work() {
         Scanner scanner = new Scanner(System.in);
-        while(true)
-        {
+        while (true) {
             String request = scanner.nextLine().toLowerCase().trim();
-            if (commands.containsKey(request)) {
-                try {commands.get(request).invoke(Bot.class);}
-                catch (IllegalAccessException e) {System.out.println(e.getLocalizedMessage());}
-                catch (InvocationTargetException k) {System.out.println(k.getMessage());}
+            if (request.equals("помощь")) {
+                printHelp();
+                continue;
             }
-            else {
-                System.out.println("Я ни чего не понял, давай еще раз.");
-                System.out.println("Чтобы узнать возможные команды, введи \"Команды\"");
+            if (request.equals("возможные запросы")) {
+                printValidRequest();
+                continue;
             }
+            if (request.equals("следующий")) {
+                if (context != null) {
+                    context.showNext();
+                } else {
+                    System.out.println("Сначала сделай запрос.");
+                    System.out.println("Узнать как - \"помощь\"");
+                }
+                continue;
+            }
+            if (request.equals("похожие")) {
+                if (context != null) {
+                    context.showSimilar();
+                } else {
+                    System.out.println("Сначала сделай запрос.");
+                    System.out.println("Узнать как - \"помощь\"");
+                }
+                continue;
+            }
+            if (request.startsWith("покажи")) {
+                Kinoman km = createKinomanOnRequest(request);
+                context = km;
+                km.showNext();
+                continue;
+            }
+            System.out.println("Ну, я ничего не понял(");
+            System.out.println("Может ты что-то не правильно написал? Псмотреть как надо - \"помощь\" ");
+
         }
     }
 
-    public static void printCommands(){
-        try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(
-                        new FileInputStream(pathToCommands), StandardCharsets.UTF_8))){
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
+    static Kinoman createKinomanOnRequest(String request){
+        String typeOfMovie = "фильм";
+        String sortingType = "годам";
+        ArrayList<String> genre = new ArrayList<>();
+        String[] words = request.split(" ");
+        for (String word : words){
+            if (LinkBuilder.getTypeOfMovieDict().containsKey(word)){
+                typeOfMovie = word;
+                break;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+        for (String word : words){
+            if (LinkBuilder.getSortingTypeDict().containsKey(word) || word.startsWith("рандомный")){
+                sortingType = word;
+                break;
+            }
+        }
+        for (String word : words){
+            if (LinkBuilder.getGenreDict().containsKey(word)){
+                genre.add(word);
+            }
+        }
+        return new Kinoman(typeOfMovie, sortingType, genre.toArray(new String[0]));
     }
 
-    public static void adviseFilm(){
-        System.out.println("Что хочешь посмотреть фильм или сериал?");
-        Scanner sc = new Scanner(System.in);
-        String typeOfAnim = sc.nextLine().toLowerCase().trim();
-        System.out.println("Выводит по рейтингу или рандомно?");
-        String sortingType = sc.nextLine().toLowerCase().trim();
+    private static void printHelp(){
+        System.out.println("Просто напиши - \"Покажи\" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки");
+        System.out.println("\nПример запроса:");
+        System.out.println("Покажи мне мультфильм, и выводи их по годам, пожалуйста\n");
+        System.out.println("После вывода фильма, можно попросить показать \"похожие\"");
+        System.out.println("Чтобы продолжить вывод, напиши \"следующий\" или введи новый запрос");
+        System.out.println("Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши \"возможные запросы\"");
+    }
 
-
-        Kinoman km = new Kinoman(typeOfAnim, sortingType);
-        lab:
-        while (true){
-            km.showNext();
-            System.out.println("\"Следующий\" или \"назад\"?");
-            String answer = sc.nextLine().toLowerCase().trim();
-            switch (answer) {
-                case "следующий":
-                    break;
-                case "назад":
-                    break lab;
-                default:
-                    System.out.println("Что-то?");
-                    break;
-            }
+    private static void printValidRequest(){
+        System.out.print("Могу найти: ");
+        for (String movie: LinkBuilder.getTypeOfMovieDict().keySet()){
+            System.out.print(movie + ", ");
         }
-
-        System.out.println("Чем еще могу помочь?");
+        System.out.print("\nВыводить могу по: ");
+        for (String sortingType : LinkBuilder.getSortingTypeDict().keySet()){
+            System.out.print(sortingType + ", ");
+        }
+        System.out.print("\nЗнаю такие жанры, как: ");
+        for (String genre : LinkBuilder.getGenreDict().keySet()){
+            System.out.print(genre + ", ");
+        }
+        System.out.println();
     }
 }
