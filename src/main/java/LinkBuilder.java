@@ -1,4 +1,3 @@
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,11 +6,11 @@ class LinkBuilder {
     static String getLink(String movie, String sortingType, int page, String... genres){
         movie = getTypeOfMovieDict().get(movie);
         sortingType = getSortingTypeDict().get(sortingType);
-        String genre = "";
 
+        String genre = "";
         if (genres.length != 0) {
             StringBuilder strBuild = new StringBuilder();
-            Map genreDict = getGenreDict();
+            HashMap<String, String> genreDict = getGenreDict();
             for (String cGenre : genres){
                 strBuild.append('/');
                 strBuild.append(genreDict.get(cGenre));
@@ -23,21 +22,20 @@ class LinkBuilder {
     }
 
     static String getNextPage(String link){
-        int curPage = Integer.parseInt(link.substring(link.length() - 1));
-        return getPageIndexOf(link, ++curPage);
+        int curPageNumber = Integer.parseInt(link.substring(link.length() - 1));
+        return getPageIndexOf(link, ++curPageNumber);
     }
 
     static String getPageIndexOf(String link, int pageNumber){
         return link.substring(0, link.length() - 1) + pageNumber;
     }
 
-    static URL getAlikePageURL(URL url){
-        String link = url.toString();
-        return WebsiteOpener.stringToURL(link + "like/");
+    static String getAlikePageLink(String link){
+        return link + "like/";
     }
 
-    static Map<String, String> getTypeOfMovieDict(){
-        Map<String, String> movieDict = new HashMap<>();
+    static HashMap<String, String> getTypeOfMovieDict(){
+        HashMap<String, String> movieDict = new HashMap<>();
         movieDict.put("фильм", "1");
         movieDict.put("сериал", "45");
         movieDict.put("мультфильм", "13");
@@ -47,16 +45,16 @@ class LinkBuilder {
         return movieDict;
     }
 
-    static Map<String, String> getSortingTypeDict(){
-        Map<String, String> sortingTypeDict = new HashMap<>();
+    static HashMap<String, String> getSortingTypeDict(){
+        HashMap<String, String> sortingTypeDict = new HashMap<>();
         sortingTypeDict.put("годам", "year");
         sortingTypeDict.put("рейтингу", "rating_imdb");
         sortingTypeDict.put("времени", "runtime");
         return sortingTypeDict;
     }
 
-    static Map<String, String> getGenreDict(){
-        Map<String, String> genreDict = new HashMap<>();
+    static HashMap<String, String> getGenreDict(){
+        HashMap<String, String> genreDict = new HashMap<>();
         genreDict.put("комедия", "genre[6]/6");
         genreDict.put("боевик", "genre[3]/3");
         genreDict.put("приключения", "genre[10]/10");

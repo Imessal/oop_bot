@@ -95,17 +95,27 @@ public class Bot
 
     private static void printValidRequest(){
         System.out.print("Могу найти: ");
+        StringBuilder strBuild = new StringBuilder();
         for (String movie: LinkBuilder.getTypeOfMovieDict().keySet()){
-            System.out.print(movie + ", ");
+            strBuild.append(movie);
+            strBuild.append(", ");
         }
-        System.out.print("\nВыводить могу по: ");
+        System.out.println(strBuild.deleteCharAt(strBuild.length()-2).toString());
+
+        System.out.print("Выводить могу по: ");
+        strBuild.delete(0, strBuild.length());
         for (String sortingType : LinkBuilder.getSortingTypeDict().keySet()){
-            System.out.print(sortingType + ", ");
+            strBuild.append(sortingType);
+            strBuild.append(", ");
         }
-        System.out.print("\nЗнаю такие жанры, как: ");
+        System.out.println(strBuild.deleteCharAt(strBuild.length()-2).toString());
+
+        System.out.print("Знаю такие жанры, как: ");
+        strBuild.delete(0, strBuild.length());
         for (String genre : LinkBuilder.getGenreDict().keySet()){
-            System.out.print(genre + ", ");
+            strBuild.append(genre);
+            strBuild.append(", ");
         }
-        System.out.println();
+        System.out.println(strBuild.deleteCharAt(strBuild.length()-2).toString());
     }
 }

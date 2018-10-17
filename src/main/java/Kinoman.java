@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-class Kinoman {
+class Kinoman{
     String link;
     private int pageCount;
     private int movieCount;
@@ -37,7 +37,7 @@ class Kinoman {
         currentMovie += 1;
         Movie movie = movies.get(currentMovie);
         movie.addAnnotation();
-        System.out.println("\n"+movie.toString()+"\n");
+        System.out.println("\n"+movie.toStringMovie()+"\n");
         if (currentMovie == movies.size()){
             currentPage++;
             link = LinkBuilder.getNextPage(link);
@@ -59,7 +59,7 @@ class Kinoman {
             if(checkShownMovie(currentPage, currentMovie)) {
                 Movie movie = movies.get(currentMovie);
                 movie.addAnnotation();
-                System.out.println("\n"+movie.toString()+"\n");
+                System.out.println("\n"+movie.toStringMovie()+"\n");
                 addToShownMovie(currentPage, currentMovie);
                 break;
             }
@@ -67,12 +67,12 @@ class Kinoman {
     }
 
     void showSimilar(){
-        ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(getCurrentMovie().url);
+        ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(getCurrentMovie().link);
         System.out.println();
         if (similarMovies.size() != 0){
             for (int i = 0; i <= 2; i++){
                 similarMovies.get(i).addAnnotation();
-                System.out.println(similarMovies.get(i).toString()+"\n");
+                System.out.println(similarMovies.get(i).toStringMovie()+"\n");
             }
         } else {
             System.out.println("Похожих не оказалось(");
