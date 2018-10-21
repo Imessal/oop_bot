@@ -1,10 +1,10 @@
-class Movie {
+class Movie{
     String name;
     String rating;
     String link;
-    String annotation;
+    private String annotation;
 
-    public String toStringMovie(){
+    String toStringMovie(){
         return name + "\nРейтинг - " + rating +"\n"+ link + "\n" + "Аннотация:\n" + annotation;
     }
 
