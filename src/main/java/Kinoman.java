@@ -69,7 +69,7 @@ class Kinoman{
     void showSimilar(){
         ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(getCurrentMovie().link);
         System.out.println();
-        if (similarMovies.size() != 0) {
+        if (similarMovies.size() > 2) {
             for (int i = 0; i <= 2; i++) {
                 similarMovies.get(i).addAnnotation();
                 System.out.println(similarMovies.get(i).toStringMovie() + "\n");

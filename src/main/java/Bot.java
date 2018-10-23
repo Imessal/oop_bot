@@ -1,12 +1,9 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
-
-public class Bot
-{
+public class Bot {
     private static Kinoman context = null;
 
-    public static void main(String[] args)	{
+    public static void main(String[] args) {
         startBot();
     }
 
@@ -20,10 +17,10 @@ public class Bot
     private static void work() {
         //Scanner scanner = new Scanner(System.in);
         FiniteStateMachine fsm = new FiniteStateMachine();
-        fsm.workWithRequest();
-            System.out.println("Ну, я ничего не понял(");
-            System.out.println("Может ты что-то не правильно написал? Псмотреть как надо - \"помощь\" ");
-
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            String input = sc.nextLine();
+            fsm.workWithRequest(input);
         }
     }
-
+}
