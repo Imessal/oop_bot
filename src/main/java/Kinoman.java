@@ -34,15 +34,16 @@ class Kinoman{
             return;
         }
         ArrayList<Movie> movies = getMovieList(currentPage, link);
-        currentMovie += 1;
-        Movie movie = movies.get(currentMovie);
-        movie.addAnnotation();
-        System.out.println("\n" + movie.toStringMovie() + "\n");
         if (currentMovie == movies.size()) {
+            System.out.println("Секундочку...");
             currentPage++;
             link = LinkBuilder.getNextPage(link);
             currentMovie = 0;
         }
+        currentMovie += 1;
+        Movie movie = movies.get(currentMovie);
+        movie.addAnnotation();
+        System.out.println("\n" + movie.toStringMovie() + "\n");
     }
 
     private void showRandomly(){

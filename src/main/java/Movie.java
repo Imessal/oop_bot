@@ -6,6 +6,7 @@ class Movie{
 
     String toStringMovie(){
         return name + "\nРейтинг - " + rating +"\n"+ link + "\n" + "Аннотация:\n" + annotation;
+        //return name;
     }
 
     void addAnnotation(){
