@@ -20,18 +20,18 @@ class Kinoman{
         this.sortingType = sortingType;
     }
 
-    void showNext(){
+    Movie getNext(){
         if (sortingType.equals("рандомный")){
-            showRandomly();
+            return getRandomly();
         } else {
-            showInOrder();
+            return getInOrder();
         }
     }
 
-    private void showInOrder(){
+    private Movie getInOrder(){
         if (currentPage > pageCount) {
             System.out.println("Это был последний(");
-            return;
+            return null;
         }
         ArrayList<Movie> movies = getMovieList(currentPage, link);
         if (currentMovie == movies.size()) {
@@ -42,14 +42,14 @@ class Kinoman{
         }
         currentMovie += 1;
         Movie movie = movies.get(currentMovie);
-        movie.addAnnotation();
-        System.out.println("\n" + movie.toStringMovie() + "\n");
+        //movie.addAnnotation();
+        return movie;
     }
 
-    private void showRandomly(){
+    private Movie getRandomly(){
         if (shownMovie.size() == movieCount){
             System.out.println("Это был последний(");
-            return;
+            return null;
         }
         Random rn = new Random();
         while (true){
@@ -59,24 +59,20 @@ class Kinoman{
             currentMovie = rn.nextInt(movies.size());
             if (checkShownMovie(currentPage, currentMovie)) {
                 Movie movie = movies.get(currentMovie);
-                movie.addAnnotation();
-                System.out.println("\n" + movie.toStringMovie() + "\n");
+                //movie.addAnnotation();
                 addToShownMovie(currentPage, currentMovie);
-                break;
+                return movie;
             }
         }
     }
 
-    void showSimilar(){
+    List<Movie> showSimilar(){
         ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(getCurrentMovie().link);
-        System.out.println();
         if (similarMovies.size() > 2) {
-            for (int i = 0; i <= 2; i++) {
-                similarMovies.get(i).addAnnotation();
-                System.out.println(similarMovies.get(i).toStringMovie() + "\n");
-            }
+            return similarMovies.subList(0, 3);
         } else {
             System.out.println("Похожих не оказалось(");
+            return null;
         }
     }
 
@@ -110,39 +106,37 @@ class Kinoman{
         return pageList.get(currentPage).get(currentMovie);
     }
 
-    static void printHelp(){
-        System.out.println("Просто напиши - \"Покажи\" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки");
-        System.out.println("\nПример запроса:");
-        System.out.println("Покажи мне мультфильм, и выводи их по годам, пожалуйста\n");
-        System.out.println("После вывода фильма, можно попросить показать \"похожие\"");
-        System.out.println("Чтобы продолжить вывод, напиши \"следующий\" или введи новый запрос");
-        System.out.println("Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши \"возможные запросы\"");
+    static String printHelp(){
+        return "Просто напиши - \"Покажи\" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки\n" +
+                "\nПример запроса:\n" +
+                "Покажи мне мультфильм, и выводи их по годам, пожалуйста\n\n" +
+                "После вывода фильма, можно попросить показать \"похожие\"\n" +
+                "Чтобы продолжить вывод, напиши \"следующий\" или введи новый запрос\n" +
+                "Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши \"возможные запросы\"\n";
     }
 
-    static void printValidRequest(){
-        System.out.print("Могу найти: ");
-        StringBuilder strBuild = new StringBuilder();
+    static String printValidRequest(){
+        StringBuilder st = new StringBuilder();
+        st.append("*Могу найти*: ");
         for (String movie : LinkBuilder.getTypeOfMovieDict().keySet()){
-            strBuild.append(movie);
-            strBuild.append(", ");
+            st.append(movie);
+            st.append(", ");
         }
-        System.out.println(strBuild.deleteCharAt(strBuild.length() - 2).toString());
+        st.deleteCharAt(st.length() - 2).toString();
 
-        System.out.print("Выводить могу по: ");
-        strBuild.delete(0, strBuild.length());
+        st.append("\n*Выводить могу по*: ");
         for (String sortingType : LinkBuilder.getSortingTypeDict().keySet()){
-            strBuild.append(sortingType);
-            strBuild.append(", ");
+            st.append(sortingType);
+            st.append(", ");
         }
-        System.out.println(strBuild.deleteCharAt(strBuild.length() - 2).toString());
+        st.deleteCharAt(st.length() - 2).toString();
 
-        System.out.print("Знаю такие жанры, как: ");
-        strBuild.delete(0, strBuild.length());
+        st.append("\n*Знаю такие жанры, как*: ");
         for (String genre : LinkBuilder.getGenreDict().keySet()){
-            strBuild.append(genre);
-            strBuild.append(", ");
+            st.append(genre);
+            st.append(", ");
         }
-        System.out.println(strBuild.deleteCharAt(strBuild.length() - 2).toString());
+        return st.deleteCharAt(st.length() - 2).toString();
     }
 
     static Kinoman createKinomanOnRequest(String request){
