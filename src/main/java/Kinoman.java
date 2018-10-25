@@ -9,7 +9,8 @@ class Kinoman{
     private int currentMovie;
     private String sortingType;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
-    private TreeMap<Integer, ArrayList<Integer>> shownMovie = new TreeMap<>();
+    private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
+    private int shownMovie = 0;
 
     Kinoman(String typeOfMovie, String sortingType, String... genres){
         currentPage = 1;
@@ -30,7 +31,7 @@ class Kinoman{
 
     private Movie getInOrder(){
         if (currentPage > pageCount) {
-            System.out.println("Это был последний(");
+            System.out.println("Это был последний");
             return null;
         }
         ArrayList<Movie> movies = getMovieList(currentPage, link);
@@ -41,14 +42,12 @@ class Kinoman{
             currentMovie = 0;
         }
         currentMovie += 1;
-        Movie movie = movies.get(currentMovie);
-        //movie.addAnnotation();
-        return movie;
+        return movies.get(currentMovie);
     }
 
     private Movie getRandomly(){
-        if (shownMovie.size() == movieCount){
-            System.out.println("Это был последний(");
+        if (shownMovie == movieCount){
+            System.out.println("Это был последний");
             return null;
         }
         Random rn = new Random();
@@ -71,7 +70,7 @@ class Kinoman{
         if (similarMovies.size() > 2) {
             return similarMovies.subList(0, 3);
         } else {
-            System.out.println("Похожих не оказалось(");
+            System.out.println("Похожих не оказалось");
             return null;
         }
     }
@@ -86,19 +85,20 @@ class Kinoman{
     }
 
     private boolean checkShownMovie(int curPage, int curMovie){
-        if (shownMovie.containsKey(curPage)){
-            return !shownMovie.get(curPage).contains(curMovie);
+        if (shownMovieDict.containsKey(curPage)){
+            return !shownMovieDict.get(curPage).contains(curMovie);
         }
         return true;
     }
 
     private void addToShownMovie(int curPage, int curMovie){
-        if (shownMovie.containsKey(curPage)){
-            shownMovie.get(curPage).add(curMovie);
+        shownMovie++;
+        if (shownMovieDict.containsKey(curPage)){
+            shownMovieDict.get(curPage).add(curMovie);
         } else {
             ArrayList<Integer> list = new ArrayList<>();
             list.add(curMovie);
-            shownMovie.put(curPage, list);
+            shownMovieDict.put(curPage, list);
         }
     }
 
@@ -122,14 +122,14 @@ class Kinoman{
             st.append(movie);
             st.append(", ");
         }
-        st.deleteCharAt(st.length() - 2).toString();
+        st.deleteCharAt(st.length() - 2);
 
         st.append("\n*Выводить могу по*: ");
         for (String sortingType : LinkBuilder.getSortingTypeDict().keySet()){
             st.append(sortingType);
             st.append(", ");
         }
-        st.deleteCharAt(st.length() - 2).toString();
+        st.deleteCharAt(st.length() - 2);
 
         st.append("\n*Знаю такие жанры, как*: ");
         for (String genre : LinkBuilder.getGenreDict().keySet()){

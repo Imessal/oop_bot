@@ -26,7 +26,7 @@ class LinkBuilder {
     }
 
     static String getPageIndexOf(String link, int pageNumber){
-        return link.substring(0, link.length() - 1) + pageNumber;
+        return link.substring(0, link.lastIndexOf("/") + 1) + pageNumber;
     }
 
     static String getAlikePageLink(String link){

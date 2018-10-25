@@ -10,9 +10,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 
 public class Bot extends TelegramLongPollingBot {
@@ -38,8 +38,12 @@ public class Bot extends TelegramLongPollingBot {
             return;
         }
         User user = users.get(chatId);
-        System.out.print("\n" + user.username + ": ");
+
+        Date date = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+        System.out.print("\n" + format.format(date) + " " + user.username + ":" + user.first_name + " - ");
         System.out.println(request);
+
         FiniteStateMachine.State state = user.FSM.workWithRequest(request);
         switch (state) {
             case Ready:
@@ -49,6 +53,10 @@ public class Bot extends TelegramLongPollingBot {
                 request = SpellChecker.check(request); //Заменит "случайный" на "рандомый" и т.п.
                 user.kinoman = Kinoman.createKinomanOnRequest(request);
                 Movie movie = user.kinoman.getNext();
+                if (movie == null){
+                    sendMsg(chatId, "Не нашел такого, что ты вообще ищешь?!");
+                    break;
+                }
                 System.out.println(movie.name);
                 sendMsg(chatId, movie.toStringMovie(), "Похожие","Следующий");
                 break;
@@ -66,6 +74,10 @@ public class Bot extends TelegramLongPollingBot {
                 break;
             case ShowingNext:
                 movie = user.kinoman.getNext();
+                if (movie == null){
+                    sendMsg(chatId, "Больше нет");
+                    break;
+                }
                 System.out.println(movie.name);
                 sendMsg(chatId, movie.toStringMovie(), "Похожие","Следующий");
                 break;

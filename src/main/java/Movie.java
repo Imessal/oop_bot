@@ -5,7 +5,8 @@ class Movie{
     //private String annotation;
 
     String toStringMovie(){
-        return "[" + name + "]"+"(" + link + ")" + "\nРейтинг - " + rating; //+ "Аннотация:\n" + annotation;
+        return "[" + name + "]"+"(" + link + ")" + "\nРейтинг - " + rating;
+        //return name + "\nРейтинг - " + rating + "\n" + link;
         //return name;
     }
 
