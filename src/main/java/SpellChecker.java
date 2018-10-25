@@ -65,11 +65,15 @@ class SpellChecker {
         dict.put("рандомный", new ArrayList<>());
         dict.get("рандомный").add("рандомные");
         dict.get("рандомный").add("рандомно");
+        dict.get("рандомный").add("рандомное");
         dict.get("рандомный").add("случайный");
         dict.get("рандомный").add("случайные");
 
         dict.put("годам", new ArrayList<>());
         dict.get("годам").add("году");
+        dict.get("годам").add("старые");
+        dict.get("годам").add("немолодые");
+        dict.get("годам").add("древние");
 
         /*
         dict.put("рейтингу", new ArrayList<>());
@@ -83,6 +87,8 @@ class SpellChecker {
         dict.get("комедия").add("комедии");
         dict.get("комедия").add("смешное");
         dict.get("комедия").add("смешные");
+        dict.get("комедия").add("ржаку"); // не ну мало ли
+
 
         /*
         dict.put("боевик", new ArrayList<>());
@@ -100,6 +106,7 @@ class SpellChecker {
 
         dict.put("фантастика", new ArrayList<>());
         dict.get("фантастика").add("фантастику");
+        dict.get("фантастика").add("фантастический");
 
         dict.put("фэнтези", new ArrayList<>());
         dict.get("фэнтези").add("фентези");
