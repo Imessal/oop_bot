@@ -71,9 +71,12 @@ class SpellChecker {
 
         dict.put("годам", new ArrayList<>());
         dict.get("годам").add("году");
-        dict.get("годам").add("старые");
-        dict.get("годам").add("немолодые");
-        dict.get("годам").add("древние");
+        dict.get("годам").add("новые");
+        dict.get("годам").add("новый");
+        dict.get("годам").add("новенькое");
+        dict.get("годам").add("новенький");
+        dict.get("годам").add("свежие");
+        dict.get("годам").add("свежий");
 
         /*
         dict.put("рейтингу", new ArrayList<>());
