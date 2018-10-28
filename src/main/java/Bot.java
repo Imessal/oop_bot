@@ -35,13 +35,14 @@ public class Bot extends TelegramLongPollingBot {
         checkUser(message); //Если пользователь новенький, кидает его в users
         if (request.equals("/start") || request.equals("привет")){
             sendHello(chatId);
+            System.out.println("Привет!");
             return;
         }
         User user = users.get(chatId);
 
-        Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
-        System.out.print("\n" + format.format(date) + " " + user.username + ":" + user.first_name + " - ");
+        //Date date = new Date();
+        //SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+        System.out.print("\n" + "(" + user.username + ")" + user.first_name + ": "); // + format.format(date) + " "
         System.out.println(request);
 
         FiniteStateMachine.State state = user.FSM.workWithRequest(request);
@@ -52,13 +53,18 @@ public class Bot extends TelegramLongPollingBot {
                 sendMsg(chatId,"Минутку...");
                 request = SpellChecker.check(request); //Заменит "случайный" на "рандомый" и т.п.
                 user.kinoman = Kinoman.createKinomanOnRequest(request);
+                if (user.kinoman.sortingType.equals("рандомный")){
+                    sendMsg(chatId, "Я могу долго выбирать рандомный фильм, лучше указать метод сортировки.");
+                }
                 Movie movie = user.kinoman.getNext();
                 if (movie == null){
-                    sendMsg(chatId, "Не нашел такого, что ты вообще ищешь?!");
+                    sendMsg(chatId, "Ты пытался найди хоррор мультик или что-то вроде?" +
+                            "\nВ любом случае я ничего не нашел.");
+                    System.out.println("Ничего не нашел по данному запросу");
                     break;
                 }
                 System.out.println(movie.name);
-                sendMsg(chatId, movie.toStringMovie(), "Похожие","Следующий");
+                sendMsg(chatId, movie.toStringMovie(), "Возможные запросы","Похожие","Следующий");
                 break;
             case ShowingSimilar:
                 List<Movie> similarMovie = user.kinoman.showSimilar();
@@ -70,27 +76,32 @@ public class Bot extends TelegramLongPollingBot {
                     }
                 } else {
                     sendMsg(chatId, "Я не нашел похожих, сорян");
+                    System.out.println("Нет похожих");
                 }
                 break;
             case ShowingNext:
                 movie = user.kinoman.getNext();
                 if (movie == null){
                     sendMsg(chatId, "Больше нет");
+                    System.out.println("Больше нет");
                     break;
                 }
                 System.out.println(movie.name);
-                sendMsg(chatId, movie.toStringMovie(), "Похожие","Следующий");
+                sendMsg(chatId, movie.toStringMovie(), "Похожие", "Следующий");
                 break;
             case ShowingHelp:
                 sendMsg(chatId, Kinoman.printHelp(), "Возможные запросы");
+                System.out.println("Вывел помощь");
                 break;
             case ShowingValidRequests:
                 sendMsg(chatId, Kinoman.printValidRequest());
+                System.out.println("Вывел возможные запросы");
                 break;
             default:
                 String text = "Ну, я ничего не понял(" +
                         "\nМожет ты что-то не правильно написал? Псмотреть как надо - \"помощь\"";
                 sendMsg(chatId,text);
+                System.out.println("Не корректный запрос");
         }
     }
 

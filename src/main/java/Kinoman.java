@@ -7,7 +7,7 @@ class Kinoman{
     private int movieCount;
     private int currentPage;
     private int currentMovie;
-    private String sortingType;
+    String sortingType;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
     private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
     private int shownMovie = 0;
@@ -112,6 +112,7 @@ class Kinoman{
                 "Покажи мне мультфильм, и выводи их по годам, пожалуйста\n\n" +
                 "После вывода фильма, можно попросить показать \"похожие\"\n" +
                 "Чтобы продолжить вывод, напиши \"следующий\" или введи новый запрос\n" +
+                "\nЯ еще не умею искать фильмы по названиям или по актерам, но скоро научусь)\n"+
                 "Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши \"возможные запросы\"\n";
     }
 
@@ -141,7 +142,7 @@ class Kinoman{
 
     static Kinoman createKinomanOnRequest(String request){
         String typeOfMovie = "фильм";
-        String sortingType = "годам";
+        String sortingType = "рандомный";
         ArrayList<String> genre = new ArrayList<>();
         String[] words = request.split(" ");
         for (String word : words){
