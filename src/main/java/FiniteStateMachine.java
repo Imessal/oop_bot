@@ -7,9 +7,10 @@ class FiniteStateMachine{
 
     enum State {
         Ready("покажи", "помощь", "возможные запросы"),
-        Requesting("похожие", "следующий", "покажи","помощь", "возможные запросы"),
+        Requesting("похожие", "следующий", "покажи", "помощь", "возможные запросы", "аннотация"),
         ShowingSimilar("следующий", "покажи","помощь", "возможные запросы"),
-        ShowingNext("следующий", "покажи", "похожие","помощь", "возможные запросы"),
+        ShowingNext("похожие", "следующий", "покажи", "помощь", "возможные запросы", "аннотация"),
+        ShowingAnnotation("похожие", "следующий", "покажи", "помощь", "возможные запросы"),
         Error("следующий", "покажи","помощь", "возможные запросы"),
         LaunchError("покажи","помощь", "возможные запросы"),
         ShowingHelp("покажи", "помощь", "возможные запросы"),
@@ -23,7 +24,7 @@ class FiniteStateMachine{
             if (inputs.contains(findRequest(input))) {
                 return map.getOrDefault(findRequest(input), current);
             }
-            else if (current.equals(State.Ready) ||current.equals(State.LaunchError)) {
+            else if (current.equals(State.Ready) || current.equals(State.LaunchError)) {
                 return State.LaunchError;
             } else {
                 return State.Error;
@@ -35,6 +36,7 @@ class FiniteStateMachine{
 
         static {
             map.put("покажи", State.Requesting);
+            map.put("аннотация", State.ShowingAnnotation);
             map.put("похожие", State.ShowingSimilar);
             map.put("следующий", State.ShowingNext);
             map.put("помощь", State.ShowingHelp);

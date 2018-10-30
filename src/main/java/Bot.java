@@ -53,9 +53,6 @@ public class Bot extends TelegramLongPollingBot {
                 sendMsg(chatId,"Минутку...");
                 request = SpellChecker.check(request); //Заменит "случайный" на "рандомый" и т.п.
                 user.kinoman = Kinoman.createKinomanOnRequest(request);
-                if (user.kinoman.sortingType.equals("рандомный")){
-                    sendMsg(chatId, "Я могу долго выбирать рандомный фильм, лучше указать метод сортировки.");
-                }
                 Movie movie = user.kinoman.getNext();
                 if (movie == null){
                     sendMsg(chatId, "Ты пытался найди хоррор мультик или что-то вроде?" +
@@ -64,7 +61,11 @@ public class Bot extends TelegramLongPollingBot {
                     break;
                 }
                 System.out.println(movie.name);
-                sendMsg(chatId, movie.toStringMovie(), "Возможные запросы","Похожие","Следующий");
+                sendMsg(chatId, movie.toStringMovie(), "Похожие", "Аннотация", "Следующий");
+                break;
+            case ShowingAnnotation:
+                sendMsg(chatId, user.kinoman.getCurrentMovie().getAnnotation(), "Похожие", "Следующий");
+                System.out.println("Вывел аннотацию");
                 break;
             case ShowingSimilar:
                 List<Movie> similarMovie = user.kinoman.showSimilar();
@@ -87,7 +88,7 @@ public class Bot extends TelegramLongPollingBot {
                     break;
                 }
                 System.out.println(movie.name);
-                sendMsg(chatId, movie.toStringMovie(), "Похожие", "Следующий");
+                sendMsg(chatId, movie.toStringMovie(), "Похожие", "Аннотация", "Следующий");
                 break;
             case ShowingHelp:
                 sendMsg(chatId, Kinoman.printHelp(), "Возможные запросы");
@@ -108,7 +109,7 @@ public class Bot extends TelegramLongPollingBot {
     private void sendMsg(Long chatId, String text, String... commands){
         SendMessage sendMessage = new SendMessage(chatId, text);
         sendMessage.enableMarkdown(true);
-        //sendMessage.disableWebPagePreview(); //Отключает подгрузку страницы в чат телеги
+        //sendMessage.disableWebPagePreview(); //Отключает подгрузку ссылок в чат телеги
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
@@ -119,15 +120,10 @@ public class Bot extends TelegramLongPollingBot {
         if (commands.length != 0) {
             // Создаем список строк клавиатуры
             List<KeyboardRow> keyboard = new ArrayList<>();
-
             // Первая строчка клавиатуры
             KeyboardRow keyboardFirstRow = new KeyboardRow();
             // Добавляем кнопки в первую строчку клавиатуры
-            keyboardFirstRow.add(commands[0]);
-            if (commands.length > 1) {
-                keyboardFirstRow.add(commands[1]);
-            }
-
+            Arrays.stream(commands).forEach(keyboardFirstRow::add);
             // Добавляем все строчки клавиатуры в список
             keyboard.add(keyboardFirstRow);
             // и устанваливаем этот список нашей клавиатуре

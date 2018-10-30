@@ -6,15 +6,15 @@ class Kinoman{
     private int pageCount;
     private int movieCount;
     private int currentPage;
-    private int currentMovie;
-    String sortingType;
+    private int currentMovieListed;
+    private String sortingType;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
     private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
     private int shownMovie = 0;
 
     Kinoman(String typeOfMovie, String sortingType, String... genres){
         currentPage = 1;
-        currentMovie = -1;
+        currentMovieListed = -1;
         link = LinkBuilder.getLink(typeOfMovie, sortingType, currentPage, genres);
         movieCount = KinopoiskParser.getMoviesCount(link);
         pageCount = KinopoiskParser.getPageCount(movieCount);
@@ -35,14 +35,14 @@ class Kinoman{
             return null;
         }
         ArrayList<Movie> movies = getMovieList(currentPage, link);
-        if (currentMovie == movies.size()) {
+        if (currentMovieListed == movies.size()) {
             System.out.println("Секундочку...");
             currentPage++;
             link = LinkBuilder.getNextPage(link);
-            currentMovie = 0;
+            currentMovieListed = 0;
         }
-        currentMovie += 1;
-        return movies.get(currentMovie);
+        currentMovieListed += 1;
+        return movies.get(currentMovieListed);
     }
 
     private Movie getRandomly(){
@@ -55,11 +55,11 @@ class Kinoman{
             currentPage = rn.nextInt(pageCount) + 1;
             link = LinkBuilder.getPageIndexOf(link, currentPage);
             ArrayList<Movie> movies = getMovieList(currentPage, link);
-            currentMovie = rn.nextInt(movies.size());
-            if (checkShownMovie(currentPage, currentMovie)) {
-                Movie movie = movies.get(currentMovie);
+            currentMovieListed = rn.nextInt(movies.size());
+            if (checkShownMovie(currentPage, currentMovieListed)) {
+                Movie movie = movies.get(currentMovieListed);
                 //movie.addAnnotation();
-                addToShownMovie(currentPage, currentMovie);
+                addToShownMovie(currentPage, currentMovieListed);
                 return movie;
             }
         }
@@ -102,8 +102,8 @@ class Kinoman{
         }
     }
 
-    private Movie getCurrentMovie(){
-        return pageList.get(currentPage).get(currentMovie);
+    Movie getCurrentMovie(){
+        return pageList.get(currentPage).get(currentMovieListed);
     }
 
     static String printHelp(){
