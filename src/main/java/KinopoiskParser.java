@@ -37,10 +37,12 @@ class KinopoiskParser {
         try (BufferedReader br = WebsiteOpener.getWebsiteContent(link)) {
             assert br != null : "Не удалось открыть страницу - " + link;
             String inputLine;
-            while ((inputLine = br.readLine()) != null) {
+            int counter = 0;
+            while ((inputLine = br.readLine()) != null && counter < 3) {
                 if (inputLine.startsWith("            <div style=\"margin-bottom: 9px\"><a style=\"font-size: 13px; font-weight: bold\"")) {
                     Movie movie = new Movie();
                     movies.add(movie);
+                    counter++;
                     movie.link = "https://www.kinopoisk.ru" +
                             inputLine.substring(inputLine.indexOf("/film/"), inputLine.indexOf("\" class"));
                     String name = inputLine.substring(inputLine.indexOf("\" class=\"all\">") + 14, inputLine.indexOf("</a><span style="));

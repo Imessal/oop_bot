@@ -15,8 +15,10 @@ public class Bot{
         while (true){
             String request = sc.nextLine().toLowerCase();
             request = SpellChecker.check(request);
-            String answer = Elector.getAnswer(user, request).answer;
-            System.out.println(answer);
+            Answer answer = Selector.getAnswer(user, request);
+            for (String curAnswer : answer.answer) {
+                System.out.println(curAnswer);
+            }
         }
     }
 }

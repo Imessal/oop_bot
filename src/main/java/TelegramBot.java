@@ -34,8 +34,10 @@ public class TelegramBot extends TelegramLongPollingBot {
         request = SpellChecker.check(request);
         checkUser(message); //Если пользователь новенький, кидает его в users
         User user = users.get(chatId);
-        Answer answer = Elector.getAnswer(user, request);
-        sendMsg(answer.answer, chatId, answer.buttons);
+        Answer answer = Selector.getAnswer(user, request);
+        for (String curAnswer : answer.answer) {
+            sendMsg(curAnswer, chatId, answer.buttons);
+        }
     }
 
     private void sendMsg(String text, Long chatId, String... commands){
