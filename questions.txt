@@ -1,9 +1,33 @@
-1. Мы сдали задачу №1? Правильно ли все сделали на github? 
+1. Мы сдали задачу №1? Правильно ли все сделали на github?
+->
+
 2. Какова наша задача №2? 
   - добавить точные запросы по актерам, годам, странам?
   - добавить бд просмотренных фильмов?
+->консольный+телега, конфиги, убрать "логи"
+
 3. Как правильно вести логи?
+->Библиотека логирование+файл логов
+
 4. Как хранить токен бота?
+-> Configs
+
 5. Что за классы Bot$1 и FSM$State
+->анонимные классы
 
 + как работает .gitignore
+
+import org.junit.Assert;
+import org.junit.Test;
+
+
+public class SpellCheckerTest{
+    @Test
+    public void checkTest(){
+        Assert.assertEquals(SpellChecker.check("покажи смешные"), "покажи комедия ");
+        Assert.assertEquals(SpellChecker.check("покажи мульт"), "покажи мультфильм ");
+        Assert.assertEquals(SpellChecker.check("покажи анимесериалы"), "покажи аниме-сериал ");
+        Assert.assertEquals(SpellChecker.check("покажи новенький"), "покажи годам ");
+        Assert.assertEquals(SpellChecker.check("покажи страшный"), "покажи ужас ");
+    }
+}
