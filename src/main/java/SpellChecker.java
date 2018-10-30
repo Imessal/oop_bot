@@ -3,6 +3,9 @@ import java.util.HashMap;
 
 class SpellChecker {
     static String check(String request){
+        if (request.startsWith("привет")){
+            return "/start";
+        }
         String[] words = request.split(" ");
         if (words.length < 2){
             return request;
