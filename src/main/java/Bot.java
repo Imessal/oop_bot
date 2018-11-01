@@ -18,7 +18,7 @@ public class Bot{
         Scanner sc = new Scanner(System.in);
         while (true){
             String request = sc.nextLine().toLowerCase();
-            request = SpellChecker.check(request);
+            request = SpellChecker.check(request).trim();
             log.info("console: " + request);
             Answer answer = Selector.getAnswer(user, request);
             for (String curAnswer : answer.answer) {

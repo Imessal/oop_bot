@@ -34,7 +34,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         Message message = update.getMessage();
         Long chatId = message.getChatId();
         String request = message.getText().toLowerCase();
-        request = SpellChecker.check(request);
+        request = SpellChecker.check(request).trim();
         checkUser(message); //Если пользователь новенький, кидает его в users
         User user = users.get(chatId);
         log.info("("+user.username+")"+user.first_name+": "+request);
