@@ -4,7 +4,7 @@ class Movie{
     String link;
 
     String toStringMovie(){
-        return "[" + name + "]"+"(" + link + ")" + "\nРейтинг - " + rating;
+        return "[" + name + "]"+"(" + link + ") " + "\nРейтинг - " + rating;
         //return name + "\nРейтинг - " + rating + "\n" + link;
         //return name;
     }

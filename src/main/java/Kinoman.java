@@ -31,12 +31,10 @@ class Kinoman{
 
     private Movie getInOrder(){
         if (currentPage > pageCount) {
-            System.out.println("Это был последний");
             return null;
         }
         ArrayList<Movie> movies = getMovieList(currentPage, link);
         if (currentMovieListed == movies.size()) {
-            System.out.println("Секундочку...");
             currentPage++;
             link = LinkBuilder.getNextPage(link);
             currentMovieListed = 0;
@@ -47,7 +45,6 @@ class Kinoman{
 
     private Movie getRandomly(){
         if (shownMovie == movieCount){
-            System.out.println("Это был последний");
             return null;
         }
         Random rn = new Random();
@@ -58,7 +55,6 @@ class Kinoman{
             currentMovieListed = rn.nextInt(movies.size());
             if (checkShownMovie(currentPage, currentMovieListed)) {
                 Movie movie = movies.get(currentMovieListed);
-                //movie.addAnnotation();
                 addToShownMovie(currentPage, currentMovieListed);
                 return movie;
             }
@@ -70,7 +66,6 @@ class Kinoman{
         if (similarMovies.size() > 2) {
             return similarMovies.subList(0, 3);
         } else {
-            System.out.println("Похожих не оказалось");
             return null;
         }
     }

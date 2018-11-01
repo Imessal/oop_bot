@@ -10,9 +10,11 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 
 public class TelegramBot extends TelegramLongPollingBot {
+    private static final Logger log = Bot.log;
     private static String TOKEN;
     private HashMap<Long, User> users = new HashMap<>();
 
@@ -22,6 +24,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         TelegramBotsApi TBA = new TelegramBotsApi();
         try {
             TBA.registerBot(new TelegramBot());
+            log.config("Telegram start");
         } catch (TelegramApiRequestException e) {
             e.printStackTrace();
         }}
@@ -34,9 +37,11 @@ public class TelegramBot extends TelegramLongPollingBot {
         request = SpellChecker.check(request);
         checkUser(message); //Если пользователь новенький, кидает его в users
         User user = users.get(chatId);
+        log.info("("+user.username+")"+user.first_name+": "+request);
         Answer answer = Selector.getAnswer(user, request);
         for (String curAnswer : answer.answer) {
             sendMsg(curAnswer, chatId, answer.buttons);
+            log.info("bot: " + curAnswer);
         }
     }
 
@@ -80,6 +85,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             user.kinoman = new Kinoman("фильм", "по годам");
             user.first_name = message.getFrom().getFirstName();
             user.username = message.getFrom().getUserName();
+            log.config("new user - " + user.username);
         }
     }
 
