@@ -6,14 +6,16 @@ import java.util.Map;
 class FiniteStateMachine{
 
     enum State {
-        Ready("покажи", "помощь", "возможные запросы"),
-        Requesting("похожие", "следующий", "покажи","помощь", "возможные запросы"),
-        ShowingSimilar("следующий", "покажи","помощь", "возможные запросы"),
-        ShowingNext("следующий", "покажи", "похожие","помощь", "возможные запросы"),
-        Error("следующий", "покажи","помощь", "возможные запросы"),
-        LaunchError("покажи","помощь", "возможные запросы"),
-        ShowingHelp("покажи", "помощь", "возможные запросы"),
-        ShowingValidRequests("покажи", "помощь", "возможене запросы");
+        Ready("/start", "покажи", "помощь", "возможные запросы"),
+        SayHello("/start", "покажи", "помощь", "возможные запросы"),
+        Requesting("/start", "похожие", "следующий", "покажи", "помощь", "возможные запросы", "аннотация"),
+        ShowingSimilar("/start", "следующий", "покажи","помощь", "возможные запросы"),
+        ShowingNext("/start", "похожие", "следующий", "покажи", "помощь", "возможные запросы", "аннотация"),
+        ShowingAnnotation("/start", "похожие", "следующий", "покажи", "помощь", "возможные запросы"),
+        Error("/start", "следующий", "покажи","помощь", "возможные запросы", "аннотация"),
+        LaunchError("/start", "покажи","помощь", "возможные запросы"),
+        ShowingHelp("/start", "покажи", "помощь", "возможные запросы"),
+        ShowingValidRequests("/start", "покажи", "помощь", "возможене запросы");
 
         State(String... in) {
             inputs = Arrays.asList(in);
@@ -23,7 +25,7 @@ class FiniteStateMachine{
             if (inputs.contains(findRequest(input))) {
                 return map.getOrDefault(findRequest(input), current);
             }
-            else if (current.equals(State.Ready) ||current.equals(State.LaunchError)) {
+            else if (current.equals(State.Ready) || current.equals(State.LaunchError)) {
                 return State.LaunchError;
             } else {
                 return State.Error;
@@ -34,7 +36,9 @@ class FiniteStateMachine{
         final static Map<String, State> map = new HashMap<>();
 
         static {
+            map.put("/start", State.SayHello);
             map.put("покажи", State.Requesting);
+            map.put("аннотация", State.ShowingAnnotation);
             map.put("похожие", State.ShowingSimilar);
             map.put("следующий", State.ShowingNext);
             map.put("помощь", State.ShowingHelp);

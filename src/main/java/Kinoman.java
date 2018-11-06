@@ -6,81 +6,72 @@ class Kinoman{
     private int pageCount;
     private int movieCount;
     private int currentPage;
-    private int currentMovie;
+    private int currentMovieListed;
     private String sortingType;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
-    private TreeMap<Integer, ArrayList<Integer>> shownMovie = new TreeMap<>();
+    private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
+    private int shownMovie = 0;
 
     Kinoman(String typeOfMovie, String sortingType, String... genres){
         currentPage = 1;
-        currentMovie = -1;
+        currentMovieListed = -1;
         link = LinkBuilder.getLink(typeOfMovie, sortingType, currentPage, genres);
         movieCount = KinopoiskParser.getMoviesCount(link);
         pageCount = KinopoiskParser.getPageCount(movieCount);
         this.sortingType = sortingType;
     }
 
-    void showNext(){
+    Movie getNext(){
         if (sortingType.equals("рандомный")){
-            showRandomly();
+            return getRandomly();
         } else {
-            showInOrder();
+            return getInOrder();
         }
     }
 
-    private void showInOrder(){
+    private Movie getInOrder(){
         if (currentPage > pageCount) {
-            System.out.println("Это был последний(");
-            return;
+            return null;
         }
-        ArrayList<Movie> movies = getMovieList(currentPage, link);
-        if (currentMovie == movies.size()) {
-            System.out.println("Секундочку...");
+        ArrayList<Movie> movies = getMovieList(currentPage);
+        if (currentMovieListed + 1 == movies.size()) {
             currentPage++;
             link = LinkBuilder.getNextPage(link);
-            currentMovie = 0;
+            currentMovieListed = -1;
+            movies = getMovieList(currentPage);
         }
-        currentMovie += 1;
-        Movie movie = movies.get(currentMovie);
-        movie.addAnnotation();
-        System.out.println("\n" + movie.toStringMovie() + "\n");
+        currentMovieListed += 1;
+        return movies.get(currentMovieListed);
     }
 
-    private void showRandomly(){
-        if (shownMovie.size() == movieCount){
-            System.out.println("Это был последний(");
-            return;
+    private Movie getRandomly(){
+        if (shownMovie == movieCount){
+            return null;
         }
         Random rn = new Random();
         while (true){
             currentPage = rn.nextInt(pageCount) + 1;
             link = LinkBuilder.getPageIndexOf(link, currentPage);
-            ArrayList<Movie> movies = getMovieList(currentPage, link);
-            currentMovie = rn.nextInt(movies.size());
-            if (checkShownMovie(currentPage, currentMovie)) {
-                Movie movie = movies.get(currentMovie);
-                movie.addAnnotation();
-                System.out.println("\n" + movie.toStringMovie() + "\n");
-                addToShownMovie(currentPage, currentMovie);
-                break;
+            ArrayList<Movie> movies = getMovieList(currentPage);
+            currentMovieListed = rn.nextInt(movies.size());
+            if (checkShownMovie(currentPage, currentMovieListed)) {
+                Movie movie = movies.get(currentMovieListed);
+                addToShownMovie(currentPage, currentMovieListed);
+                return movie;
             }
         }
     }
 
-    void showSimilar(){
+    List<Movie> showSimilar(){
         ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(getCurrentMovie().link);
-        System.out.println();
         if (similarMovies.size() > 2) {
-            for (int i = 0; i <= 2; i++) {
-                similarMovies.get(i).addAnnotation();
-                System.out.println(similarMovies.get(i).toStringMovie() + "\n");
-            }
+            return similarMovies.subList(0, 3);
         } else {
-            System.out.println("Похожих не оказалось(");
+            return null;
         }
     }
 
-    private ArrayList<Movie> getMovieList(int page, String link){
+    private ArrayList<Movie> getMovieList(int page){
         if (pageList.containsKey(page)){
             return pageList.get(page);
         } else {
@@ -90,64 +81,64 @@ class Kinoman{
     }
 
     private boolean checkShownMovie(int curPage, int curMovie){
-        if (shownMovie.containsKey(curPage)){
-            return !shownMovie.get(curPage).contains(curMovie);
+        if (shownMovieDict.containsKey(curPage)){
+            return !shownMovieDict.get(curPage).contains(curMovie);
         }
         return true;
     }
 
     private void addToShownMovie(int curPage, int curMovie){
-        if (shownMovie.containsKey(curPage)){
-            shownMovie.get(curPage).add(curMovie);
+        shownMovie++;
+        if (shownMovieDict.containsKey(curPage)){
+            shownMovieDict.get(curPage).add(curMovie);
         } else {
             ArrayList<Integer> list = new ArrayList<>();
             list.add(curMovie);
-            shownMovie.put(curPage, list);
+            shownMovieDict.put(curPage, list);
         }
     }
 
-    private Movie getCurrentMovie(){
-        return pageList.get(currentPage).get(currentMovie);
+    Movie getCurrentMovie(){
+        return pageList.get(currentPage).get(currentMovieListed);
     }
 
-    static void printHelp(){
-        System.out.println("Просто напиши - \"Покажи\" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки");
-        System.out.println("\nПример запроса:");
-        System.out.println("Покажи мне мультфильм, и выводи их по годам, пожалуйста\n");
-        System.out.println("После вывода фильма, можно попросить показать \"похожие\"");
-        System.out.println("Чтобы продолжить вывод, напиши \"следующий\" или введи новый запрос");
-        System.out.println("Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши \"возможные запросы\"");
+    static String printHelp(){
+        return "Просто напиши - \"Покажи\" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки\n" +
+                "\nПример запроса:\n" +
+                "Покажи мне мультфильм, и выводи их по годам, пожалуйста\n\n" +
+                "После вывода фильма, можно попросить показать \"похожие\"\n" +
+                "Чтобы продолжить вывод, напиши \"следующий\" или введи новый запрос\n" +
+                "\nЯ еще не умею искать фильмы по названиям или по актерам, но скоро научусь)\n"+
+                "Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши \"возможные запросы\"\n";
     }
 
-    static void printValidRequest(){
-        System.out.print("Могу найти: ");
-        StringBuilder strBuild = new StringBuilder();
+    static String printValidRequest(){
+        StringBuilder st = new StringBuilder();
+        st.append("*Могу найти*: ");
         for (String movie : LinkBuilder.getTypeOfMovieDict().keySet()){
-            strBuild.append(movie);
-            strBuild.append(", ");
+            st.append(movie);
+            st.append(", ");
         }
-        System.out.println(strBuild.deleteCharAt(strBuild.length() - 2).toString());
+        st.deleteCharAt(st.length() - 2);
 
-        System.out.print("Выводить могу по: ");
-        strBuild.delete(0, strBuild.length());
+        st.append("\n*Выводить могу по*: ");
         for (String sortingType : LinkBuilder.getSortingTypeDict().keySet()){
-            strBuild.append(sortingType);
-            strBuild.append(", ");
+            st.append(sortingType);
+            st.append(", ");
         }
-        System.out.println(strBuild.deleteCharAt(strBuild.length() - 2).toString());
+        st.deleteCharAt(st.length() - 2);
 
-        System.out.print("Знаю такие жанры, как: ");
-        strBuild.delete(0, strBuild.length());
+        st.append("\n*Знаю такие жанры, как*: ");
         for (String genre : LinkBuilder.getGenreDict().keySet()){
-            strBuild.append(genre);
-            strBuild.append(", ");
+            st.append(genre);
+            st.append(", ");
         }
-        System.out.println(strBuild.deleteCharAt(strBuild.length() - 2).toString());
+        return st.deleteCharAt(st.length() - 2).toString();
     }
 
     static Kinoman createKinomanOnRequest(String request){
         String typeOfMovie = "фильм";
-        String sortingType = "годам";
+        String sortingType = "рандомный";
         ArrayList<String> genre = new ArrayList<>();
         String[] words = request.split(" ");
         for (String word : words){
