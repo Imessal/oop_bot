@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Bot{
-    static final Logger log = LoggerBot.getBotLogger(Bot.class.getName());
+    static final Logger log = LoggerBot.getBotLoggerInFils(Bot.class.getName());
 
     public static void main(String[] args) {
         TelegramBot.Start(System.getenv("TOKEN"));

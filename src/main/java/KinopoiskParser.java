@@ -42,7 +42,6 @@ class KinopoiskParser {
                 if (inputLine.startsWith("            <div style=\"margin-bottom: 9px\"><a style=\"font-size: 13px; font-weight: bold\"")) {
                     Movie movie = new Movie();
                     movies.add(movie);
-                    counter++;
                     movie.link = "https://www.kinopoisk.ru" +
                             inputLine.substring(inputLine.indexOf("/film/"), inputLine.indexOf("\" class"));
                     String name = inputLine.substring(inputLine.indexOf("\" class=\"all\">") + 14, inputLine.indexOf("</a><span style="));
@@ -51,6 +50,7 @@ class KinopoiskParser {
                 if (inputLine.startsWith("               <span class=\"all\" style=\"color: #fff\">")) {
                     int indexForSubstring = inputLine.indexOf(">") + 1;
                     movies.get(movies.size() - 1).rating = inputLine.substring(indexForSubstring, inputLine.indexOf(">") + 6);
+                    counter++;
                 }
             }
         } catch (java.io.IOException e) {
@@ -65,7 +65,13 @@ class KinopoiskParser {
             assert br != null : "Не удалось открыть страницу - " + link;
             while ((inputLine = br.readLine()) != null) {
                 if (inputLine.startsWith("    <span class=\"_reachbanner_\"><div class=\"brand_words film-synopsys\" itemprop=\"description\">")) {
-                    return StringEscapeUtils.unescapeHtml4(inputLine.substring(94, inputLine.indexOf("</div>")));
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(inputLine);
+                    while (!inputLine.contains("</div>")) {
+                        inputLine = br.readLine();
+                        sb.append(inputLine);
+                    }
+                    return StringEscapeUtils.unescapeHtml4(sb.toString().substring(94, inputLine.indexOf("</div>")));
                 }
             }
         } catch (java.io.IOException e) {

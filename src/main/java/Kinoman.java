@@ -33,11 +33,12 @@ class Kinoman{
         if (currentPage > pageCount) {
             return null;
         }
-        ArrayList<Movie> movies = getMovieList(currentPage, link);
-        if (currentMovieListed == movies.size()) {
+        ArrayList<Movie> movies = getMovieList(currentPage);
+        if (currentMovieListed + 1 == movies.size()) {
             currentPage++;
             link = LinkBuilder.getNextPage(link);
-            currentMovieListed = 0;
+            currentMovieListed = -1;
+            movies = getMovieList(currentPage);
         }
         currentMovieListed += 1;
         return movies.get(currentMovieListed);
@@ -51,7 +52,7 @@ class Kinoman{
         while (true){
             currentPage = rn.nextInt(pageCount) + 1;
             link = LinkBuilder.getPageIndexOf(link, currentPage);
-            ArrayList<Movie> movies = getMovieList(currentPage, link);
+            ArrayList<Movie> movies = getMovieList(currentPage);
             currentMovieListed = rn.nextInt(movies.size());
             if (checkShownMovie(currentPage, currentMovieListed)) {
                 Movie movie = movies.get(currentMovieListed);
@@ -70,7 +71,7 @@ class Kinoman{
         }
     }
 
-    private ArrayList<Movie> getMovieList(int page, String link){
+    private ArrayList<Movie> getMovieList(int page){
         if (pageList.containsKey(page)){
             return pageList.get(page);
         } else {
