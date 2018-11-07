@@ -4,8 +4,11 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.Logger;
 
 class WebsiteOpener {
+    private static Logger log = Bot.log;
+
     static BufferedReader getWebsiteContent(String link) {
         URL url = stringToURL(link);
         assert url != null : "Сcылка равна null";
@@ -34,7 +37,7 @@ class WebsiteOpener {
             return new BufferedReader(
                     new InputStreamReader(conn.getInputStream(), "windows-1251"));
         } catch (IOException e) {
-            System.out.println("Не получилось открыть страницу - " + url.toString());
+            log.config("Не получилось открыть страницу - " + url.toString());
         }
         return null;
     }

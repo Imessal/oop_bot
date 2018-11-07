@@ -1,3 +1,5 @@
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -8,20 +10,30 @@ class LinkBuilder {
         movie = getTypeOfMovieDict().get(movie);
         sortingType = getSortingTypeDict().get(sortingType);
 
-        String genre = "";
+        StringBuilder genresBuild = new StringBuilder();
         if (genres.length != 0) {
-            StringBuilder strBuild = new StringBuilder();
             HashMap<String, String> genreDict = getGenreDict();
             for (String cGenre : genres){
-                strBuild.append('/');
-                strBuild.append(genreDict.get(cGenre));
+                genresBuild.append('/');
+                genresBuild.append(genreDict.get(cGenre));
             }
-            genre = strBuild.toString();
         }
 
-        String link = "https://www.kinopoisk.ru/top/lists/"+movie+"/filtr/all/sort/"+sortingType+genre+"/page/"+page;
+        String link = "https://www.kinopoisk.ru/top/lists/" +
+                movie + "/filtr/all/sort/" +
+                sortingType+genresBuild.toString() +
+                "/page/" + page;
         log.config("link - " + link);
         return link;
+    }
+
+    static String getLink(String movieName){
+        try {
+            movieName = URLEncoder.encode(movieName, "windows-1251");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "https://www.kinopoisk.ru/s/type/film/list/1/find/"+movieName+"/order/relevant/page/1";
     }
 
     static String getNextPage(String link){
@@ -56,9 +68,9 @@ class LinkBuilder {
 
     static HashMap<String, String> getSortingTypeDict(){
         HashMap<String, String> sortingTypeDict = new HashMap<>();
-        sortingTypeDict.put("годам", "year");
-        sortingTypeDict.put("рейтингу", "rating_imdb");
-        sortingTypeDict.put("времени", "runtime");
+        sortingTypeDict.put("по годам", "year");
+        sortingTypeDict.put("по рейтингу", "rating_imdb");
+        sortingTypeDict.put("по времени", "runtime");
         return sortingTypeDict;
     }
 

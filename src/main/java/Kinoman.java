@@ -1,12 +1,15 @@
 import java.util.*;
+import java.util.logging.Logger;
 
 
 class Kinoman{
+    private static Logger log = Bot.log;
     String link;
     private int pageCount;
     private int movieCount;
     private int currentPage;
     private int currentMovieListed;
+    private String movieTitle;
     private String sortingType;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
     private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
@@ -21,19 +24,42 @@ class Kinoman{
         this.sortingType = sortingType;
     }
 
+    Kinoman(String movieTitle){
+        this.movieTitle = movieTitle;
+        link = LinkBuilder.getLink(movieTitle);
+        currentMovieListed = -1;
+        currentPage = 1;
+    }
+
     Movie getNext(){
-        if (sortingType.equals("рандомный")){
+        log.config("Search next");
+        if (movieTitle != null) {
+            return getMovieCalled();
+        }else if (sortingType.equals("рандомный")){
             return getRandomly();
         } else {
             return getInOrder();
         }
     }
 
+    private Movie getMovieCalled(){
+        log.config("Начал парсить");
+        ArrayList<Movie> movies = getMovieList(currentPage);
+        log.config("Закончил");
+        if (currentMovieListed + 1 == movies.size()) {
+            return null;
+        }
+        currentMovieListed += 1;
+        return movies.get(currentMovieListed);
+    }
+
     private Movie getInOrder(){
         if (currentPage > pageCount) {
             return null;
         }
+        log.config("Начал парсить");
         ArrayList<Movie> movies = getMovieList(currentPage);
+        log.config("закончил");
         if (currentMovieListed + 1 == movies.size()) {
             currentPage++;
             link = LinkBuilder.getNextPage(link);
@@ -52,7 +78,9 @@ class Kinoman{
         while (true){
             currentPage = rn.nextInt(pageCount) + 1;
             link = LinkBuilder.getPageIndexOf(link, currentPage);
+            log.config("Начал парсить");
             ArrayList<Movie> movies = getMovieList(currentPage);
+            log.config("закончил");
             currentMovieListed = rn.nextInt(movies.size());
             if (checkShownMovie(currentPage, currentMovieListed)) {
                 Movie movie = movies.get(currentMovieListed);
@@ -64,7 +92,7 @@ class Kinoman{
 
     List<Movie> showSimilar(){
         ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(getCurrentMovie().link);
-        if (similarMovies.size() > 2) {
+        if (similarMovies != null && similarMovies.size() > 2) {
             return similarMovies.subList(0, 3);
         } else {
             return null;
@@ -73,6 +101,9 @@ class Kinoman{
 
     private ArrayList<Movie> getMovieList(int page){
         if (pageList.containsKey(page)){
+            return pageList.get(page);
+        } else if (movieTitle != null) {
+            pageList.put(page, KinopoiskParser.getMoviesListCalled(link));
             return pageList.get(page);
         } else {
             pageList.put(page, KinopoiskParser.getMoviesList(link));
@@ -121,7 +152,7 @@ class Kinoman{
         }
         st.deleteCharAt(st.length() - 2);
 
-        st.append("\n*Выводить могу по*: ");
+        st.append("\n*Выводить могу*: ");
         for (String sortingType : LinkBuilder.getSortingTypeDict().keySet()){
             st.append(sortingType);
             st.append(", ");
@@ -137,27 +168,56 @@ class Kinoman{
     }
 
     static Kinoman createKinomanOnRequest(String request){
+        StringBuilder movieTitle = new StringBuilder();
         String typeOfMovie = "фильм";
         String sortingType = "рандомный";
-        ArrayList<String> genre = new ArrayList<>();
-        String[] words = request.split(" ");
-        for (String word : words){
-            if (LinkBuilder.getTypeOfMovieDict().containsKey(word)){
+        ArrayList<String> genres = new ArrayList<>();
+
+        for (String word : splitRequest(request)) {
+            if (word.equals("покажи")){
+                continue;
+            }
+            if (LinkBuilder.getTypeOfMovieDict().containsKey(word)) {
                 typeOfMovie = word;
-                break;
+                continue;
             }
-        }
-        for (String word : words){
-            if (LinkBuilder.getSortingTypeDict().containsKey(word) || word.startsWith("рандомный")){
+            if (LinkBuilder.getSortingTypeDict().containsKey(word) || word.startsWith("рандомный")) {
                 sortingType = word;
-                break;
+                continue;
+            }
+            if (LinkBuilder.getGenreDict().containsKey(word)) {
+                genres.add(word);
+                continue;
+            }
+            movieTitle.append(word).append(" ");
+        }
+
+        if (movieTitle.toString().length() == 0){
+            log.config("Вывожу: movie - " + typeOfMovie
+                    + ", sorting - " + sortingType
+                    + ", genres - " + genres);
+            return new Kinoman(typeOfMovie, sortingType, genres.toArray(new String[0]));
+        }else {
+            log.config("Вывожу по названию - " + movieTitle);
+            return new Kinoman(movieTitle.toString());
+        }
+    }
+
+    private static ArrayList<String> splitRequest(String request){
+        char[] chars = request.toCharArray();
+        StringBuilder word = new StringBuilder();
+        ArrayList<String> words = new ArrayList<>();
+        for (int i = 0; i < chars.length; i++){
+            if(i+1 == chars.length){
+                word.append(chars[i]);
+                words.add(word.toString());
+            }else if (chars[i] == 32 && !word.toString().equals("по")){
+                words.add(word.toString());
+                word.delete(0, word.length());
+            }else {
+                word.append(chars[i]);
             }
         }
-        for (String word : words){
-            if (LinkBuilder.getGenreDict().containsKey(word)){
-                genre.add(word);
-            }
-        }
-        return new Kinoman(typeOfMovie, sortingType, genre.toArray(new String[0]));
+        return words;
     }
 }

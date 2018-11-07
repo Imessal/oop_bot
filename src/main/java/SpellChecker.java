@@ -37,6 +37,7 @@ class SpellChecker {
 
         dict.put("фильм", new ArrayList<>());
         dict.get("фильм").add("фильмы");
+        dict.get("фильм").add("кино");
 
         dict.put("сериал", new ArrayList<>());
         dict.get("сериал").add("сериалы");
@@ -72,18 +73,21 @@ class SpellChecker {
         dict.get("рандомный").add("случайный");
         dict.get("рандомный").add("случайные");
 
-        dict.put("годам", new ArrayList<>());
-        dict.get("годам").add("году");
-        dict.get("годам").add("новые");
-        dict.get("годам").add("новый");
-        dict.get("годам").add("новенькое");
-        dict.get("годам").add("новенький");
-        dict.get("годам").add("свежие");
-        dict.get("годам").add("свежий");
+        dict.put("по годам", new ArrayList<>());
+        dict.get("по годам").add("по году");
+        dict.get("по годам").add("новые");
+        dict.get("по годам").add("новый");
+        dict.get("по годам").add("новенькое");
+        dict.get("по годам").add("новенький");
+        dict.get("по годам").add("свежие");
+        dict.get("по годам").add("свежий");
 
+
+        dict.put("по рейтингу", new ArrayList<>());
+        dict.get("по рейтингу").add("топ");
+        dict.get("по рейтингу").add("топовый");
+        dict.get("по рейтингу").add("топовые");
         /*
-        dict.put("рейтингу", new ArrayList<>());
-        dict.get("рейтингу").add("");
         dict.put("времени", new ArrayList<>());
         dict.get("времени").add("");
         */
@@ -109,6 +113,10 @@ class SpellChecker {
         dict.get("ужас").add("ужастики");
         dict.get("ужас").add("страшный");
         dict.get("ужас").add("страшные");
+        dict.get("ужас").add("хоррор");
+        dict.get("ужас").add("хорор");
+        dict.get("ужас").add("хорроры");
+        dict.get("ужас").add("хороры");
 
         dict.put("фантастика", new ArrayList<>());
         dict.get("фантастика").add("фантастику");

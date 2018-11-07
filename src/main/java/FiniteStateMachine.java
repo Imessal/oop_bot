@@ -21,9 +21,9 @@ class FiniteStateMachine{
             inputs = Arrays.asList(in);
         }
 
-        State nextState(String input, State current) {
-            if (inputs.contains(findRequest(input))) {
-                return map.getOrDefault(findRequest(input), current);
+        State nextState(String request, State current) {
+            if (inputs.contains(findRequest(request))) {
+                return map.getOrDefault(findRequest(request), current);
             }
             else if (current.equals(State.Ready) || current.equals(State.LaunchError)) {
                 return State.LaunchError;
@@ -53,11 +53,10 @@ class FiniteStateMachine{
         return state;
     }
 
-    static String findRequest(String input){
-        String request = "покажи";
-        if(input.contains(request)){
-            return request;
+    static String findRequest(String request){
+        if(request.startsWith("покажи")){
+            return "покажи";
         }
-        else return input;
+        else return request;
     }
 }

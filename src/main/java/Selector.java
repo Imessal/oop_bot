@@ -15,7 +15,6 @@ class Selector {
                         "Помощь", "Возможные запросы");
             case Requesting:
                 log.config("FSM - Requesting");
-                request = SpellChecker.check(request); //Заменит "случайный" на "рандомый" и т.п.
                 user.kinoman = Kinoman.createKinomanOnRequest(request);
                 Movie movie = user.kinoman.getNext();
                 if (movie == null){
