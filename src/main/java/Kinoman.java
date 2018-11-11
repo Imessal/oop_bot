@@ -11,6 +11,7 @@ class Kinoman{
     private int currentMovieListed;
     private String movieTitle;
     private String sortingType;
+    private Movie currentMovie;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
     private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
     private int shownMovie = 0;
@@ -24,7 +25,7 @@ class Kinoman{
         this.sortingType = sortingType;
     }
 
-    Kinoman(String movieTitle){
+    private Kinoman(String movieTitle){
         this.movieTitle = movieTitle;
         link = LinkBuilder.getLink(movieTitle);
         currentMovieListed = -1;
@@ -50,7 +51,9 @@ class Kinoman{
             return null;
         }
         currentMovieListed += 1;
-        return movies.get(currentMovieListed);
+        Movie movie = movies.get(currentMovieListed);
+        currentMovie = movie;
+        return movie;
     }
 
     private Movie getInOrder(){
@@ -67,7 +70,9 @@ class Kinoman{
             movies = getMovieList(currentPage);
         }
         currentMovieListed += 1;
-        return movies.get(currentMovieListed);
+        Movie movie = movies.get(currentMovieListed);
+        currentMovie = movie;
+        return movie;
     }
 
     private Movie getRandomly(){
@@ -85,13 +90,14 @@ class Kinoman{
             if (checkShownMovie(currentPage, currentMovieListed)) {
                 Movie movie = movies.get(currentMovieListed);
                 addToShownMovie(currentPage, currentMovieListed);
+                currentMovie = movie;
                 return movie;
             }
         }
     }
 
     List<Movie> showSimilar(){
-        ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(getCurrentMovie().link);
+        ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(currentMovie.link);
         if (similarMovies != null && similarMovies.size() > 2) {
             return similarMovies.subList(0, 3);
         } else {
@@ -127,10 +133,6 @@ class Kinoman{
             list.add(curMovie);
             shownMovieDict.put(curPage, list);
         }
-    }
-
-    Movie getCurrentMovie(){
-        return pageList.get(currentPage).get(currentMovieListed);
     }
 
     static String printHelp(){
