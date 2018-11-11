@@ -43,7 +43,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         Answer answer = Selector.getAnswer(user, request);
         for (String curAnswer : answer.answer) {
             sendMsg(curAnswer, chatId, answer.buttons);
-            controller.updateUserInfo(message.getFrom().getId(), DatabaseController.UserInfo.movies_seen, curAnswer);
+            controller.updateUserInfo(message.getFrom().getId(), "movies_seen", curAnswer);
             log.info("bot: " + curAnswer);
         }
     }

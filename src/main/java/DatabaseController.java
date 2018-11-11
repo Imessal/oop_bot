@@ -4,10 +4,10 @@ import java.util.ArrayList;
 public class DatabaseController{
     private static Connection connection;
 
-    enum UserInfo{
-        token,
-        movies_seen,
-    }
+//    enum UserInfo{
+//        token,
+//        movies_seen,
+//    }
 
     public DatabaseController() {
         connection = connect();
@@ -29,7 +29,7 @@ public class DatabaseController{
         postRequest(getUserInfoRequest(token));
     }
 
-    public void updateUserInfo(Integer token, UserInfo field, Object newValue) {
+    public void updateUserInfo(Integer token, String field, Object newValue) {
         getRequest(updateUserInfoRequest(token, field, newValue));
     }
 
@@ -76,10 +76,16 @@ public class DatabaseController{
 
 
 
+//    private String createMoviesTableRequest(){
+//        return "CREATE TABLE movies (" +
+//                "movies_seen varchar(150) NULL" +
+//                ");";
+//    }
+
     private String createTableRequest() {
         return "CREATE TABLE sessions (" +
                 "token integer NOT NULL PRIMARY KEY," +
-                "movies_seen varchar(40) NULL" +
+                "movies_seen varchar(200) NULL" +
                 ");";
     }
 
@@ -95,7 +101,7 @@ public class DatabaseController{
         return String.format("SELECT * FROM sessions WHERE token = %d;", token);
     }
 
-    private String updateUserInfoRequest(Integer token, UserInfo column, Object value) {
+    private String updateUserInfoRequest(Integer token, String column, Object value) {
         return String.format("UPDATE sessions SET %s = \'%s\' WHERE token = %d;", column, value, token);
     }
 //
