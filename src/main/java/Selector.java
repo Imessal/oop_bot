@@ -24,7 +24,7 @@ class Selector {
                 return new Answer(new String[]{movie.toStringMovie()}, "Похожие", "Аннотация", "Следующий");
             case ShowingAnnotation:
                 log.config("FSM - ShowingAnnotation");
-                return new Answer(new String[]{user.kinoman.getCurrentMovie().getAnnotation()}, "Похожие", "Следующий");
+                return new Answer(new String[]{user.kinoman.currentMovie.getAnnotation()}, "Похожие", "Следующий");
             case ShowingSimilar:
                 log.config("FSM - ShowingSimilar");
                 List<Movie> similarMovie = user.kinoman.showSimilar();

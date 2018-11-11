@@ -3,6 +3,7 @@ class Movie{
     String link;
     String rating;
     String year;
+    String id;
 
     String toStringMovie(){
         StringBuilder sb = new StringBuilder();

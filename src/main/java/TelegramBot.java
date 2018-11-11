@@ -15,11 +15,13 @@ import java.util.logging.Logger;
 
 public class TelegramBot extends TelegramLongPollingBot {
     private static final Logger log = Bot.log;
+    private static  DatabaseController controller = new DatabaseController();
     private static String TOKEN;
     private HashMap<Long, User> users = new HashMap<>();
 
     static void Start(String token) {
         TOKEN = token;
+        controller.createNewTable();
         ApiContextInitializer.init();
         TelegramBotsApi TBA = new TelegramBotsApi();
         try {
@@ -41,6 +43,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         Answer answer = Selector.getAnswer(user, request);
         for (String curAnswer : answer.answer) {
             sendMsg(curAnswer, chatId, answer.buttons);
+            controller.updateUserInfo(message.getFrom().getId(), DatabaseController.UserInfo.movies_seen, curAnswer);
             log.info("bot: " + curAnswer);
         }
     }
@@ -85,6 +88,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             user.kinoman = new Kinoman("фильм", "по годам");
             user.first_name = message.getFrom().getFirstName();
             user.username = message.getFrom().getUserName();
+            controller.addUser(message.getFrom().getId());
             log.config("new user - " + user.username);
         }
     }

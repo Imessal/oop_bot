@@ -5,7 +5,7 @@ public class Bot{
     static final Logger log = LoggerBot.getBotLoggerInFils(Bot.class.getName());
 
     public static void main(String[] args) {
-        //TelegramBot.Start(System.getenv("TOKEN"));
+        TelegramBot.Start(System.getenv("TOKEN"));
         workOnConsole();
     }
 

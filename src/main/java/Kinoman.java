@@ -11,7 +11,7 @@ class Kinoman{
     private int currentMovieListed;
     private String movieTitle;
     private String sortingType;
-    private Movie currentMovie;
+    Movie currentMovie;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
     private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
     private int shownMovie = 0;
