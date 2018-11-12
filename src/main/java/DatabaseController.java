@@ -1,39 +1,15 @@
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DatabaseController{
+class DatabaseController{
     private static Connection connection;
 
-//    enum UserInfo{
-//        token,
-//        movies_seen,
-//    }
-
-    public DatabaseController() {
+    DatabaseController() {
         connection = connect();
     }
 
-    public void createNewTable() {
-        getRequest(createTableRequest());
-    }
-
-    public void addUser(Integer token) {
-        getRequest(addNewUserRequest(token));
-    }
-
-    public void removeUser(Integer token) {
-        getRequest(removeUserRequest(token));
-    }
-
-    public void getUserInfo(Integer token) {
-        postRequest(getUserInfoRequest(token));
-    }
-
-    public void updateUserInfo(Integer token, String field, Object newValue) {
-        getRequest(updateUserInfoRequest(token, field, newValue));
-    }
-
     private Connection connect() {
+        //String dbUrl = "jdbc:postgresql://ec2-54-195-246-59.eu-west-1.compute.amazonaws.com:5432/d85qs8kb1qsqjs?user=skutpslmhajgws&password=9202c08527f52d3b34023bc75baacf481ed1ce9044de197aeaff3e58e9a6d8ec&sslmode=require";
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         try {
             return DriverManager.getConnection(dbUrl);
@@ -43,14 +19,45 @@ public class DatabaseController{
         return null;
     }
 
-    private void getRequest(String task) {
+    private ResultSet executeQuery(String request){
         try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate(task);
-            System.out.println("Success");
+            return statement.executeQuery(request);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
+    }
+
+    private void executeUpdate(String task) {
+        try {
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(task);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void createMainTable(){
+        executeUpdate("CREATE TABLE if not exists a_users(u_id integer NOT NULL PRIMARY KEY);");
+    }
+
+    void addUser(Integer token) {
+        executeUpdate(String.format("INSERT INTO a_users(u_id) VALUES (%d) ON CONFLICT DO NOTHING;", token));
+        executeUpdate(String.format("CREATE TABLE if not exists black_list_%d (m_id text PRIMARY KEY);", token));
+    }
+
+    void addMovieToBlackList(int u_id, String m_id){
+        executeUpdate(String.format("INSERT INTO black_list_%d(m_id) VALUES (\'%s\') ON CONFLICT DO NOTHING;", u_id, m_id));
+    }
+
+    boolean checkMovie(int u_id, String m_id) {
+        ResultSet result = executeQuery(String.format("SELECT m_id FROM black_list_%d WHERE m_id = \'%s\'", u_id, m_id));
+        try {
+            return !(result != null && result.next());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } return true;
     }
 
     private ArrayList<Object> postRequest(String task) {
@@ -66,15 +73,11 @@ public class DatabaseController{
                     values.add(resultSet.getObject(i));
                 }
             }
-            System.out.println(values);
-            System.out.println("Success");
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return values;
     }
-
-
 
 //    private String createMoviesTableRequest(){
 //        return "CREATE TABLE movies (" +
@@ -82,35 +85,7 @@ public class DatabaseController{
 //                ");";
 //    }
 
-    private String createTableRequest() {
-        return "CREATE TABLE sessions (" +
-                "token integer NOT NULL PRIMARY KEY," +
-                "movies_seen varchar(200) NULL" +
-                ");";
-    }
-
-    private String addNewUserRequest(Integer token) {
-        return String.format("INSERT INTO sessions (token) VALUES (%d);", token);
-    }
-
-    private String removeUserRequest(Integer token) {
-        return String.format("DELETE FROM sessions WHERE token = %d;", token);
-    }
-
-    private String getUserInfoRequest(Integer token) {
-        return String.format("SELECT * FROM sessions WHERE token = %d;", token);
-    }
-
     private String updateUserInfoRequest(Integer token, String column, Object value) {
-        return String.format("UPDATE sessions SET %s = \'%s\' WHERE token = %d;", column, value, token);
+        return String.format("UPDATE users SET %s = \'%s\' WHERE u_id = %d;", column, value, token);
     }
-//
-//    public static void main(String args[]){
-//        DatabaseController controller = new DatabaseController();
-//        controller.createNewTable();
-//        controller.addUser(1234);
-//        controller.getUserInfo(1234);
-//        controller.updateUserInfo(1234, UserInfo.movies_seen, "Зверополис");
-//        controller.removeUser(1234);
-//    }
 }

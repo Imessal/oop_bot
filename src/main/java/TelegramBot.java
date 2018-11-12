@@ -15,13 +15,13 @@ import java.util.logging.Logger;
 
 public class TelegramBot extends TelegramLongPollingBot {
     private static final Logger log = Bot.log;
-    private static  DatabaseController controller = new DatabaseController();
+    static  DatabaseController controller = new DatabaseController();
     private static String TOKEN;
     private HashMap<Long, User> users = new HashMap<>();
 
     static void Start(String token) {
         TOKEN = token;
-        controller.createNewTable();
+        controller.createMainTable();
         ApiContextInitializer.init();
         TelegramBotsApi TBA = new TelegramBotsApi();
         try {
@@ -37,18 +37,17 @@ public class TelegramBot extends TelegramLongPollingBot {
         Long chatId = message.getChatId();
         String request = message.getText().toLowerCase();
         request = SpellChecker.check(request).trim();
-        checkUser(message); //Если пользователь новенький, кидает его в users
+        checkUser(message);
         User user = users.get(chatId);
         log.info("("+user.username+")"+user.first_name+": "+request);
         Answer answer = Selector.getAnswer(user, request);
         for (String curAnswer : answer.answer) {
-            sendMsg(curAnswer, chatId, answer.buttons);
-            controller.updateUserInfo(message.getFrom().getId(), "movies_seen", curAnswer);
+            sendMsg(curAnswer, chatId, answer.f_buttons, answer.s_buttons);
             log.info("bot: " + curAnswer);
         }
     }
 
-    private void sendMsg(String text, Long chatId, String... commands){
+    private void sendMsg(String text, Long chatId, String[] f_commands, String[] s_commands){
         if (chatId == null){
             System.out.println(text);
         }else {
@@ -57,7 +56,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             sendMessage.setChatId(chatId);
             sendMessage.setText(text);
 
-            if (commands.length != 0) {
+            if (f_commands.length != 0) {
                 ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
                 sendMessage.setReplyMarkup(replyKeyboardMarkup);
                 replyKeyboardMarkup.setSelective(true);
@@ -66,8 +65,13 @@ public class TelegramBot extends TelegramLongPollingBot {
 
                 List<KeyboardRow> keyboard = new ArrayList<>(); // Создаем список строк клавиатуры
                 KeyboardRow keyboardFirstRow = new KeyboardRow(); // Первая строчка клавиатуры
-                Arrays.stream(commands).forEach(keyboardFirstRow::add); // Добавляем кнопки в первую строчку клавиатуры
+                Arrays.stream(f_commands).forEach(keyboardFirstRow::add); // Добавляем кнопки в первую строчку клавиатуры
                 keyboard.add(keyboardFirstRow); // Добавляем все строчки клавиатуры в список
+                if(s_commands.length!=0){
+                    KeyboardRow keyboardSecondRow = new KeyboardRow(); // Вторая строчка клавиатуры
+                    Arrays.stream(s_commands).forEach(keyboardSecondRow::add); // Добавляем кнопки во вторую строчку клавиатуры
+                    keyboard.add(keyboardSecondRow);
+                }
                 replyKeyboardMarkup.setKeyboard(keyboard); // и устанваливаем этот список нашей клавиатуре
             }
 
@@ -84,11 +88,12 @@ public class TelegramBot extends TelegramLongPollingBot {
         if(!users.containsKey(chatId)){
             users.put(chatId, new User());
             User user = users.get(chatId);
-            user.FSM = new FiniteStateMachine();
-            user.kinoman = new Kinoman("фильм", "по годам");
             user.first_name = message.getFrom().getFirstName();
             user.username = message.getFrom().getUserName();
+            user.id = message.getFrom().getId();
             controller.addUser(message.getFrom().getId());
+            user.FSM = new FiniteStateMachine();
+            user.kinoman = new Kinoman(user.id, "фильм", "по годам", new String[0], new String[0]);
             log.config("new user - " + user.username);
         }
     }

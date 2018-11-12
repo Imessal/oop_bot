@@ -1,9 +1,13 @@
 import java.util.*;
 import java.util.logging.Logger;
 
+import static org.apache.commons.lang3.ArrayUtils.toArray;
+
 
 class Kinoman{
     private static Logger log = Bot.log;
+    private static DatabaseController controller = TelegramBot.controller;
+    private int userId;
     String link;
     private int pageCount;
     private int movieCount;
@@ -16,16 +20,18 @@ class Kinoman{
     private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
     private int shownMovie = 0;
 
-    Kinoman(String typeOfMovie, String sortingType, String... genres){
+    Kinoman(int userId, String typeOfMovie, String sortingType, String[] genres, String[] countries){
+        this.userId = userId;
         currentPage = 1;
         currentMovieListed = -1;
-        link = LinkBuilder.getLink(typeOfMovie, sortingType, currentPage, genres);
+        link = LinkBuilder.getLink(typeOfMovie, sortingType, currentPage, genres, countries);
         movieCount = KinopoiskParser.getMoviesCount(link);
         pageCount = KinopoiskParser.getPageCount(movieCount);
         this.sortingType = sortingType;
     }
 
-    private Kinoman(String movieTitle){
+    private Kinoman(int userId, String movieTitle){
+        this.userId = userId;
         this.movieTitle = movieTitle;
         link = LinkBuilder.getLink(movieTitle);
         currentMovieListed = -1;
@@ -43,7 +49,7 @@ class Kinoman{
         }
     }
 
-    private Movie getMovieCalled(){
+    private Movie getMovieCalled() {
         log.config("Начал парсить");
         ArrayList<Movie> movies = getMovieList(currentPage);
         log.config("Закончил");
@@ -72,7 +78,11 @@ class Kinoman{
         currentMovieListed += 1;
         Movie movie = movies.get(currentMovieListed);
         currentMovie = movie;
-        return movie;
+        if (controller.checkMovie(userId, movie.name)) {
+            return movie;
+        }else {
+            return getInOrder();
+        }
     }
 
     private Movie getRandomly(){
@@ -91,7 +101,11 @@ class Kinoman{
                 Movie movie = movies.get(currentMovieListed);
                 addToShownMovie(currentPage, currentMovieListed);
                 currentMovie = movie;
-                return movie;
+                if (controller.checkMovie(userId, movie.name)) {
+                    return movie;
+                }else {
+                    return getRandomly();
+                }
             }
         }
     }
@@ -169,11 +183,12 @@ class Kinoman{
         return st.deleteCharAt(st.length() - 2).toString();
     }
 
-    static Kinoman createKinomanOnRequest(String request){
+    static Kinoman createKinomanOnRequest(int userId, String request){
         StringBuilder movieTitle = new StringBuilder();
         String typeOfMovie = "фильм";
         String sortingType = "рандомный";
         ArrayList<String> genres = new ArrayList<>();
+        ArrayList<String> countries = new ArrayList<>();
 
         for (String word : splitRequest(request)) {
             if (word.equals("покажи")){
@@ -191,17 +206,22 @@ class Kinoman{
                 genres.add(word);
                 continue;
             }
+            if (LinkBuilder.getCountriesDict().containsKey(word)){
+                countries.add(word);
+                continue;
+            }
             movieTitle.append(word).append(" ");
         }
 
         if (movieTitle.toString().length() == 0){
             log.config("Вывожу: movie - " + typeOfMovie
                     + ", sorting - " + sortingType
-                    + ", genres - " + genres);
-            return new Kinoman(typeOfMovie, sortingType, genres.toArray(new String[0]));
+                    + ", genres - " + genres
+                    + ", countries - " + countries);
+            return new Kinoman(userId, typeOfMovie, sortingType, genres.toArray(new String[0]), countries.toArray(new String[0]));
         }else {
             log.config("Вывожу по названию - " + movieTitle);
-            return new Kinoman(movieTitle.toString());
+            return new Kinoman(userId, movieTitle.toString());
         }
     }
 

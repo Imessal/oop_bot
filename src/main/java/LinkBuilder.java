@@ -6,25 +6,34 @@ import java.util.logging.Logger;
 class LinkBuilder {
     private static final Logger log = Bot.log;
 
-    static String getLink(String movie, String sortingType, int page, String... genres){
-        movie = getTypeOfMovieDict().get(movie);
-        sortingType = getSortingTypeDict().get(sortingType);
+    static String getLink(String movie, String sortingType, int page, String[] genres, String[] countries){
+        StringBuilder link = new StringBuilder();
+        link.append("https://www.kinopoisk.ru/top/lists/");
+        link.append(getTypeOfMovieDict().get(movie));
+        link.append("/filtr/all/sort/");
+        link.append(getSortingTypeDict().get(sortingType));
 
-        StringBuilder genresBuild = new StringBuilder();
         if (genres.length != 0) {
             HashMap<String, String> genreDict = getGenreDict();
             for (String cGenre : genres){
-                genresBuild.append('/');
-                genresBuild.append(genreDict.get(cGenre));
+                link.append('/');
+                link.append(genreDict.get(cGenre));
             }
         }
 
-        String link = "https://www.kinopoisk.ru/top/lists/" +
-                movie + "/filtr/all/sort/" +
-                sortingType+genresBuild.toString() +
-                "/page/" + page;
+        if (countries.length != 0) {
+            HashMap<String, String> countriesDict = getCountriesDict();
+            for (String cCountry : countries){
+                link.append('/');
+                link.append(countriesDict.get(cCountry));
+            }
+        }
+
+        link.append("/page/");
+        link.append(page);
+
         log.config("link - " + link);
-        return link;
+        return link.toString();
     }
 
     static String getLink(String movieName){
@@ -34,6 +43,8 @@ class LinkBuilder {
             e.printStackTrace();
         }
         return "https://www.kinopoisk.ru/s/type/film/list/1/find/"+movieName+"/order/relevant/page/1";
+        //      https://www.kinopoisk.ru/index.php?kp_query=%EC%E0%F2%F0%E8%F6%E0&what=
+        //      https://www.kinopoisk.ru/index.php?kp_query=%E4%E6%E8%EC+%EA%E5%F0%F0%E8&what=
     }
 
     static String getNextPage(String link){
@@ -83,5 +94,19 @@ class LinkBuilder {
         genreDict.put("фантастика", "genre[2]/2");
         genreDict.put("фэнтези", "genre[5]/5");
         return genreDict;
+    }
+
+    static HashMap<String, String> getCountriesDict(){
+        HashMap<String, String> movieDict = new HashMap<>();
+        movieDict.put("великобритания", "country[11]/11");
+        movieDict.put("германия", "country[3]/3");
+        movieDict.put("италия", "country[14]/14");
+        movieDict.put("ссср", "country[13]/13");
+        movieDict.put("россия", "country[2]/2");
+        movieDict.put("сша", "country[1]/1");
+        movieDict.put("франция", "country[8]/8");
+        movieDict.put("япония", "country[9]/9");
+        movieDict.put("китай", "country[31]/31");
+        return movieDict;
     }
 }

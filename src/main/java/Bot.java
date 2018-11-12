@@ -13,7 +13,7 @@ public class Bot{
         log.config("Console start");
         User user = new User();
         user.FSM = new FiniteStateMachine();
-        user.kinoman = new Kinoman("фильм", "по годам");
+        user.kinoman = new Kinoman(0,"фильм", "по годам", new String[0], new String[0]);
 
         Scanner sc = new Scanner(System.in);
         while (true){
