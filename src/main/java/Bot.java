@@ -12,8 +12,9 @@ public class Bot{
     private static void workOnConsole(){
         log.config("Console start");
         User user = new User();
+        user.id = 0;
         user.FSM = new FiniteStateMachine();
-        user.kinoman = new Kinoman(0,"фильм", "по годам", new String[0], new String[0]);
+        user.kinoman = new Kinoman(user,"фильм", "по годам", new String[0], new String[0]);
 
         Scanner sc = new Scanner(System.in);
         while (true){

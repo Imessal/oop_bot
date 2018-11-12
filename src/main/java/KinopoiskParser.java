@@ -27,12 +27,11 @@ class KinopoiskParser {
                         log.config("у фильма - "+movie.name+", нет года");
                     }
                 }
-//                if (inputLine.startsWith("             data-film-title")) {
-//                    String name = inputLine.substring(inputLine.indexOf("\"") + 1, inputLine.length() - 1);
-//                    movies.get(movies.size() - 1).name = StringEscapeUtils.unescapeHtml4(name);
-//                }
                 if (inputLine.startsWith("             data-film-rating")) {
                     movies.get(movies.size() - 1).rating = inputLine.substring(inputLine.indexOf("\"") + 1, inputLine.length() - 1);
+                }
+                if (inputLine.startsWith("    data-kp-film-id")) {
+                    movies.get(movies.size() - 1).id = Integer.parseInt(inputLine.substring(inputLine.indexOf("\"") + 1, inputLine.length() - 1));
                 }
             }
         } catch (java.io.IOException e) {
@@ -56,6 +55,8 @@ class KinopoiskParser {
                     String name = inputLine.substring(inputLine.indexOf("data-type="), inputLine.indexOf("</a>"));
                     name = name.substring(name.indexOf(">") + 1);
                     movie.name = StringEscapeUtils.unescapeHtml4(name);
+                    String id = inputLine.substring(inputLine.indexOf("data-id=\"")+9);
+                    movie.id = Integer.parseInt(id.substring(0, id.indexOf("\"")));
                     try {
                         movie.year = StringEscapeUtils.unescapeHtml4(
                                 inputLine.substring(inputLine.indexOf("\"year\">") + 7, inputLine.indexOf("</span>")));
@@ -127,24 +128,6 @@ class KinopoiskParser {
         }
         log.config("не нашел");
         return "У этого фильма нет аннотации";
-    }
-
-    //Возвращает ссылку на постер к фильму https://....jpg
-    static String getImage(String link){
-        String inputLine;
-        try (BufferedReader br = WebsiteOpener.getWebsiteContent(link)) {
-            assert br != null : "Не удалось открыть страницу - " + link;
-            while ((inputLine = br.readLine()) != null) {
-                if (inputLine.startsWith("                        <img width=\"205\"")) {
-                    String result = inputLine.substring(inputLine.indexOf("src=") + 5, inputLine.indexOf("jpg") + 3);
-                    result = result.replaceAll("_", "\\\\_");
-                    return result;
-                }
-            }
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     static int getMoviesCount(String link) {

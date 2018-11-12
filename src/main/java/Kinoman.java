@@ -7,7 +7,7 @@ import static org.apache.commons.lang3.ArrayUtils.toArray;
 class Kinoman{
     private static Logger log = Bot.log;
     private static DatabaseController controller = TelegramBot.controller;
-    private int userId;
+    private User user;
     String link;
     private int pageCount;
     private int movieCount;
@@ -20,8 +20,8 @@ class Kinoman{
     private TreeMap<Integer, ArrayList<Integer>> shownMovieDict = new TreeMap<>();
     private int shownMovie = 0;
 
-    Kinoman(int userId, String typeOfMovie, String sortingType, String[] genres, String[] countries){
-        this.userId = userId;
+    Kinoman(User user, String typeOfMovie, String sortingType, String[] genres, String[] countries){
+        this.user = user;
         currentPage = 1;
         currentMovieListed = -1;
         link = LinkBuilder.getLink(typeOfMovie, sortingType, currentPage, genres, countries);
@@ -30,8 +30,8 @@ class Kinoman{
         this.sortingType = sortingType;
     }
 
-    private Kinoman(int userId, String movieTitle){
-        this.userId = userId;
+    private Kinoman(User user, String movieTitle){
+        this.user = user;
         this.movieTitle = movieTitle;
         link = LinkBuilder.getLink(movieTitle);
         currentMovieListed = -1;
@@ -78,7 +78,7 @@ class Kinoman{
         currentMovieListed += 1;
         Movie movie = movies.get(currentMovieListed);
         currentMovie = movie;
-        if (controller.checkMovie(userId, movie.name)) {
+        if (controller.checkMovie(user, movie)) {
             return movie;
         }else {
             return getInOrder();
@@ -101,7 +101,7 @@ class Kinoman{
                 Movie movie = movies.get(currentMovieListed);
                 addToShownMovie(currentPage, currentMovieListed);
                 currentMovie = movie;
-                if (controller.checkMovie(userId, movie.name)) {
+                if (controller.checkMovie(user, movie)) {
                     return movie;
                 }else {
                     return getRandomly();
@@ -183,7 +183,7 @@ class Kinoman{
         return st.deleteCharAt(st.length() - 2).toString();
     }
 
-    static Kinoman createKinomanOnRequest(int userId, String request){
+    static Kinoman createKinomanOnRequest(User user, String request){
         StringBuilder movieTitle = new StringBuilder();
         String typeOfMovie = "фильм";
         String sortingType = "рандомный";
@@ -218,10 +218,10 @@ class Kinoman{
                     + ", sorting - " + sortingType
                     + ", genres - " + genres
                     + ", countries - " + countries);
-            return new Kinoman(userId, typeOfMovie, sortingType, genres.toArray(new String[0]), countries.toArray(new String[0]));
+            return new Kinoman(user, typeOfMovie, sortingType, genres.toArray(new String[0]), countries.toArray(new String[0]));
         }else {
             log.config("Вывожу по названию - " + movieTitle);
-            return new Kinoman(userId, movieTitle.toString());
+            return new Kinoman(user, movieTitle.toString());
         }
     }
 

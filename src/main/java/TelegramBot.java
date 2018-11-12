@@ -91,9 +91,9 @@ public class TelegramBot extends TelegramLongPollingBot {
             user.first_name = message.getFrom().getFirstName();
             user.username = message.getFrom().getUserName();
             user.id = message.getFrom().getId();
-            controller.addUser(message.getFrom().getId());
+            controller.addUser(user);
             user.FSM = new FiniteStateMachine();
-            user.kinoman = new Kinoman(user.id, "фильм", "по годам", new String[0], new String[0]);
+            user.kinoman = new Kinoman(user, "фильм", "по годам", new String[0], new String[0]);
             log.config("new user - " + user.username);
         }
     }

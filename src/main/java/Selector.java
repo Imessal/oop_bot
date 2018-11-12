@@ -17,7 +17,7 @@ class Selector {
 
             case Requesting:
                 log.config("FSM - Requesting");
-                user.kinoman = Kinoman.createKinomanOnRequest(user.id, request);
+                user.kinoman = Kinoman.createKinomanOnRequest(user, request);
                 Movie movie = user.kinoman.getNext();
                 if (movie == null){
                     return new Answer(new String[]{"Ты пытался найди хоррор мультик или что-то вроде?" +
@@ -58,9 +58,9 @@ class Selector {
 
             case BanningCurrentRequest:
                 log.config("FSM - BanningRequest");
-                String movie_n = user.kinoman.currentMovie.name;
-                controller.addMovieToBlackList(user.id, movie_n);
-                return new Answer(new String[]{"Больше я не буду показывать вам - "+movie_n},
+                Movie c_movie = user.kinoman.currentMovie;
+                controller.addMovieToBlackList(user, c_movie);
+                return new Answer(new String[]{"Больше я не буду показывать вам - " + c_movie.name},
                         new String[]{"Похожие", "Следующий"}, new String[0]);
 
             case ShowingHelp:
