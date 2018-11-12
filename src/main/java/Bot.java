@@ -11,8 +11,7 @@ public class Bot{
 
     private static void workOnConsole(){
         log.config("Console start");
-        User user = new User();
-        user.id = 0;
+        User user = new User(333660675, 0);
         user.FSM = new FiniteStateMachine();
         user.kinoman = new Kinoman(user,"фильм", "по годам", new String[0], new String[0]);
 

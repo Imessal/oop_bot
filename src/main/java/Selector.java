@@ -13,7 +13,7 @@ class Selector {
                 log.config("FSM - SayHello");
                 return new Answer(new String[]{"Привет, я Киноман!\nМогу помочь с выбором фильма, сериала и т.д.\n" +
                         "Для справки введи \"помощь\""},
-                        new String[]{"Помощь", "Возможные запросы"}, new String[0]);
+                        new String[]{"Помощь", "Возможные запросы"});
 
             case Requesting:
                 log.config("FSM - Requesting");
@@ -21,7 +21,7 @@ class Selector {
                 Movie movie = user.kinoman.getNext();
                 if (movie == null){
                     return new Answer(new String[]{"Ты пытался найди хоррор мультик или что-то вроде?" +
-                            "\nВ любом случае я ничего не нашел."}, new String[0], new String[0]);
+                            "\nВ любом случае я ничего не нашел."});
                 }
                 return new Answer(new String[]{movie.toStringMovie()},
                         new String[]{"Похожие", "Следующий"}, new String[]{"Скрыть", "Аннотация"});
@@ -41,17 +41,17 @@ class Selector {
                         answer.add(curMovie.toStringMovie());
                     }
                     return new Answer(answer.toArray(new String[0]),
-                            new String[]{"Следующий"}, new String[0]);
+                            new String[]{"Следующий"});
                 } else {
                     return new Answer(new String[]{"Я не нашел похожих, сорян"},
-                            new String[]{"Следующий"}, new String[0]);
+                            new String[]{"Следующий"});
                 }
 
             case ShowingNext:
                 log.config("FSM - ShowingNext");
                 movie = user.kinoman.getNext();
                 if (movie == null){
-                    return new Answer(new String[]{"Это был последний"}, new String[0], new String[0]);
+                    return new Answer(new String[]{"Это был последний"});
                 }
                 return new Answer(new String[]{movie.toStringMovie()},
                         new String[]{"Похожие", "Следующий"}, new String[]{"Скрыть", "Аннотация"});
@@ -60,22 +60,22 @@ class Selector {
                 log.config("FSM - BanningRequest");
                 Movie c_movie = user.kinoman.currentMovie;
                 controller.addMovieToBlackList(user, c_movie);
-                return new Answer(new String[]{"Больше я не буду показывать вам - " + c_movie.name},
-                        new String[]{"Похожие", "Следующий"}, new String[0]);
+                return new Answer(new String[]{"Больше я не буду показывать вам - " + c_movie.getName()},
+                        new String[]{"Похожие", "Следующий"});
 
             case ShowingHelp:
                 log.config("FSM - ShowingNext");
                 return new Answer(new String[]{Kinoman.printHelp()},
-                        new String[]{"Возможные запросы"}, new String[0]);
+                        new String[]{"Возможные запросы"});
 
             case ShowingValidRequests:
                 log.config("FSM - ShowingNext");
-                return new Answer(new String[]{Kinoman.printValidRequest()}, new String[0], new String[0]);
+                return new Answer(new String[]{Kinoman.printValidRequest()});
 
             default:
                 return new Answer(new String[]{"Некорректная команда" +
                         "\nМожет ты что-то не правильно написал?"},
-                        new String[]{"Помощь", "Возможные запросы"}, new String[0]);
+                        new String[]{"Помощь", "Возможные запросы"});
         }
     }
 }

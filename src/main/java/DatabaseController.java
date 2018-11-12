@@ -43,40 +43,21 @@ class DatabaseController{
     }
 
     void addUser(User user) {
-        executeUpdate(String.format("INSERT INTO a_users VALUES (%d, \'%s\') ON CONFLICT DO NOTHING;", user.id, user.username));
-        executeUpdate(String.format("CREATE TABLE if not exists black_list_%d (m_id integer NOT NULL PRIMARY KEY, m_name text);", user.id));
+        executeUpdate(String.format("INSERT INTO a_users VALUES (%d, \'%s\') ON CONFLICT DO NOTHING;", user.getId(), user.username));
+        executeUpdate(String.format("CREATE TABLE if not exists black_list_%d (m_id integer NOT NULL PRIMARY KEY, m_name text);", user.getId()));
     }
 
     void addMovieToBlackList(User user, Movie movie){
-        executeUpdate(String.format("INSERT INTO black_list_%d VALUES (%d, \'%s\') ON CONFLICT DO NOTHING;", user.id, movie.id, movie.name));
+        executeUpdate(String.format("INSERT INTO black_list_%d VALUES (%d, \'%s\') ON CONFLICT DO NOTHING;", user.getId(), movie.getId(), movie.getName()));
     }
 
     boolean checkMovie(User user, Movie movie) {
-        ResultSet result = executeQuery(String.format("SELECT m_id FROM black_list_%d WHERE m_id = %d", user.id, movie.id));
+        ResultSet result = executeQuery(String.format("SELECT m_id FROM black_list_%d WHERE m_id = %d", user.getId(), movie.getId()));
         try {
             return !(result != null && result.next());
         } catch (SQLException e) {
             e.printStackTrace();
         } return true;
-    }
-
-    private ArrayList<Object> postRequest(String task) {
-        ArrayList values = new ArrayList<>();
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(task);
-            ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
-            int columnCount = resultSetMetaData.getColumnCount();
-
-            while (resultSet.next()) {
-                for (int i = 1; i <= columnCount; i++) {
-                    values.add(resultSet.getObject(i));
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return values;
     }
 
     private String updateUserInfoRequest(Integer token, String column, Object value) {

@@ -17,7 +17,7 @@ public class TelegramBot extends TelegramLongPollingBot {
     private static final Logger log = Bot.log;
     static  DatabaseController controller = new DatabaseController();
     private static String TOKEN;
-    private HashMap<Long, User> users = new HashMap<>();
+    private HashMap<Integer, User> users = new HashMap<>();
 
     static void Start(String token) {
         TOKEN = token;
@@ -34,11 +34,10 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
-        Long chatId = message.getChatId();
-        String request = message.getText().toLowerCase();
-        request = SpellChecker.check(request).trim();
         checkUser(message);
-        User user = users.get(chatId);
+        User user = users.get(message.getFrom().getId());
+        Long chatId = user.getChatId();
+        String request = SpellChecker.check(message.getText().toLowerCase()).trim();
         log.info("("+user.username+")"+user.first_name+": "+request);
         Answer answer = Selector.getAnswer(user, request);
         for (String curAnswer : answer.answer) {
@@ -56,7 +55,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             sendMessage.setChatId(chatId);
             sendMessage.setText(text);
 
-            if (f_commands.length != 0) {
+            if (f_commands != null) {
                 ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
                 sendMessage.setReplyMarkup(replyKeyboardMarkup);
                 replyKeyboardMarkup.setSelective(true);
@@ -67,7 +66,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 KeyboardRow keyboardFirstRow = new KeyboardRow(); // Первая строчка клавиатуры
                 Arrays.stream(f_commands).forEach(keyboardFirstRow::add); // Добавляем кнопки в первую строчку клавиатуры
                 keyboard.add(keyboardFirstRow); // Добавляем все строчки клавиатуры в список
-                if(s_commands.length!=0){
+                if(s_commands != null){
                     KeyboardRow keyboardSecondRow = new KeyboardRow(); // Вторая строчка клавиатуры
                     Arrays.stream(s_commands).forEach(keyboardSecondRow::add); // Добавляем кнопки во вторую строчку клавиатуры
                     keyboard.add(keyboardSecondRow);
@@ -84,17 +83,18 @@ public class TelegramBot extends TelegramLongPollingBot {
     }
 
     private void checkUser(Message message){
-        Long chatId = message.getChatId();
-        if(!users.containsKey(chatId)){
-            users.put(chatId, new User());
-            User user = users.get(chatId);
-            user.first_name = message.getFrom().getFirstName();
-            user.username = message.getFrom().getUserName();
-            user.id = message.getFrom().getId();
-            controller.addUser(user);
-            user.FSM = new FiniteStateMachine();
-            user.kinoman = new Kinoman(user, "фильм", "по годам", new String[0], new String[0]);
-            log.config("new user - " + user.username);
+        Integer userId = message.getFrom().getId();
+        if(!users.containsKey(userId)){
+            Long chatId = message.getChatId();
+            User newUser = new User(userId, chatId);
+            users.put(userId, newUser);
+            newUser.first_name = message.getFrom().getFirstName();
+            newUser.username = message.getFrom().getUserName();
+            controller.addUser(newUser);
+            newUser.FSM = new FiniteStateMachine();
+            newUser.kinoman = new Kinoman(newUser, "фильм", "по годам", new String[0], new String[0]);
+            controller.addUser(newUser);
+            log.config("new user - " + newUser.username);
         }
     }
 

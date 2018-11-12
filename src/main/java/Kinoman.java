@@ -111,7 +111,7 @@ class Kinoman{
     }
 
     List<Movie> showSimilar(){
-        ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(currentMovie.link);
+        ArrayList<Movie> similarMovies = KinopoiskParser.getSimilarMoviesList(currentMovie.getLink());
         if (similarMovies != null && similarMovies.size() > 2) {
             return similarMovies.subList(0, 3);
         } else {
@@ -150,35 +150,46 @@ class Kinoman{
     }
 
     static String printHelp(){
-        return "Просто напиши - \"Покажи\" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки\n" +
+        return "Просто напиши - \"Покажи\" + что хочешь посмотреть\n" +
                 "\nПример запроса:\n" +
-                "Покажи мне мультфильм, и выводи их по годам, пожалуйста\n\n" +
-                "После вывода фильма, можно попросить показать \"похожие\"\n" +
-                "Чтобы продолжить вывод, напиши \"следующий\" или введи новый запрос\n" +
-                "\nЯ еще не умею искать фильмы по названиям или по актерам, но скоро научусь)\n"+
-                "Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши \"возможные запросы\"\n";
+                "Покажи Назад в будущее\n" +
+                "Покажи новые мультфильмы\n" +
+                "Покажи американские сериалы по рейтингу\n\n" +
+                "Команды:\n" +
+                "Помощь - выводит справку\n" +
+                "Возможные запросы - выводит возможные фильтры и сортировки\n" +
+                "Покажи ... - выводит фильмы в соответствии с запросом\n" +
+                "Следующий - выводит следующий фильм в соответствии с запросом\n" +
+                "Аннотация - выводит аннотацию к фильму\n" +
+                "Похожие - выводит 3 фильма, похожих на последний\n" +
+                "Скрыть - добавляет фильм в черный список\n";
     }
 
     static String printValidRequest(){
         StringBuilder st = new StringBuilder();
+        st.append("*Могу найти фильм по названию*\n");
         st.append("*Могу найти*: ");
         for (String movie : LinkBuilder.getTypeOfMovieDict().keySet()){
-            st.append(movie);
-            st.append(", ");
+            st.append(movie).append(", ");
         }
         st.deleteCharAt(st.length() - 2);
 
         st.append("\n*Выводить могу*: ");
         for (String sortingType : LinkBuilder.getSortingTypeDict().keySet()){
-            st.append(sortingType);
-            st.append(", ");
+            st.append(sortingType).append(", ");
         }
         st.deleteCharAt(st.length() - 2);
 
         st.append("\n*Знаю такие жанры, как*: ");
         for (String genre : LinkBuilder.getGenreDict().keySet()){
-            st.append(genre);
-            st.append(", ");
+            st.append(genre).append(", ");
+        }
+        st.deleteCharAt(st.length() - 2);
+
+        st.append("\n*Знаю такие страны, как*: ");
+        for (String country : LinkBuilder.getCountriesDict().keySet()){
+            //st.append(country.substring(0, 1).toUpperCase()).append(country.substring(1)).append(", ");
+            st.append(country).append(", ");
         }
         return st.deleteCharAt(st.length() - 2).toString();
     }
