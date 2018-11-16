@@ -15,13 +15,12 @@ import java.util.logging.Logger;
 
 public class TelegramBot extends TelegramLongPollingBot {
     private static final Logger log = Bot.log;
-    static  DatabaseController controller = new DatabaseController();
+    static DatabaseRepository repository = new DatabaseRepository();
     private static String TOKEN;
     private HashMap<Integer, User> users = new HashMap<>();
 
     static void Start(String token) {
         TOKEN = token;
-        controller.createMainTable();
         ApiContextInitializer.init();
         TelegramBotsApi TBA = new TelegramBotsApi();
         try {
@@ -29,14 +28,15 @@ public class TelegramBot extends TelegramLongPollingBot {
             log.config("Telegram start");
         } catch (TelegramApiRequestException e) {
             e.printStackTrace();
-        }}
+        }
+    }
 
     @Override
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
         checkUser(message);
         User user = users.get(message.getFrom().getId());
-        Long chatId = user.getChatId();
+        Long chatId = message.getChatId();
         String request = SpellChecker.check(message.getText().toLowerCase()).trim();
         log.info("("+user.username+")"+user.first_name+": "+request);
         Answer answer = Selector.getAnswer(user, request);
@@ -46,54 +46,47 @@ public class TelegramBot extends TelegramLongPollingBot {
         }
     }
 
-    private void sendMsg(String text, Long chatId, String[] f_commands, String[] s_commands){
-        if (chatId == null){
-            System.out.println(text);
-        }else {
-            SendMessage sendMessage = new SendMessage(chatId, text);
-            sendMessage.enableMarkdown(true);
-            sendMessage.setChatId(chatId);
-            sendMessage.setText(text);
+    private void sendMsg(String text, Long chatId, String[] f_commands, String[] s_commands) {
+        SendMessage sendMessage = new SendMessage(chatId, text);
+        sendMessage.enableMarkdown(true);
 
-            if (f_commands != null) {
-                ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-                sendMessage.setReplyMarkup(replyKeyboardMarkup);
-                replyKeyboardMarkup.setSelective(true);
-                replyKeyboardMarkup.setResizeKeyboard(true);
-                replyKeyboardMarkup.setOneTimeKeyboard(true);
+        if (f_commands != null) {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+            sendMessage.setReplyMarkup(replyKeyboardMarkup);
+            replyKeyboardMarkup.setSelective(true);
+            replyKeyboardMarkup.setResizeKeyboard(true);
+            replyKeyboardMarkup.setOneTimeKeyboard(true);
 
-                List<KeyboardRow> keyboard = new ArrayList<>(); // Создаем список строк клавиатуры
-                KeyboardRow keyboardFirstRow = new KeyboardRow(); // Первая строчка клавиатуры
-                Arrays.stream(f_commands).forEach(keyboardFirstRow::add); // Добавляем кнопки в первую строчку клавиатуры
-                keyboard.add(keyboardFirstRow); // Добавляем все строчки клавиатуры в список
-                if(s_commands != null){
-                    KeyboardRow keyboardSecondRow = new KeyboardRow(); // Вторая строчка клавиатуры
-                    Arrays.stream(s_commands).forEach(keyboardSecondRow::add); // Добавляем кнопки во вторую строчку клавиатуры
-                    keyboard.add(keyboardSecondRow);
-                }
-                replyKeyboardMarkup.setKeyboard(keyboard); // и устанваливаем этот список нашей клавиатуре
+            List<KeyboardRow> keyboard = new ArrayList<>(); // Создаем список строк клавиатуры
+            KeyboardRow keyboardFirstRow = new KeyboardRow(); // Первая строчка клавиатуры
+            Arrays.stream(f_commands).forEach(keyboardFirstRow::add); // Добавляем кнопки в первую строчку клавиатуры
+            keyboard.add(keyboardFirstRow); // Добавляем строку клавиатуры в список
+            if (s_commands != null) {
+                KeyboardRow keyboardSecondRow = new KeyboardRow(); // Вторая строчка клавиатуры
+                Arrays.stream(s_commands).forEach(keyboardSecondRow::add); // Добавляем кнопки во вторую строчку клавиатуры
+                keyboard.add(keyboardSecondRow);
             }
+            replyKeyboardMarkup.setKeyboard(keyboard); // и устанваливаем этот список нашей клавиатуре
+        }
 
-            try {
-                execute(sendMessage);
-            } catch (TelegramApiException e) {
-                e.printStackTrace();
-            }
+        try {
+            execute(sendMessage);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
         }
     }
 
     private void checkUser(Message message){
         Integer userId = message.getFrom().getId();
         if(!users.containsKey(userId)){
-            Long chatId = message.getChatId();
-            User newUser = new User(userId, chatId);
+            User newUser = new User(userId);
             users.put(userId, newUser);
             newUser.first_name = message.getFrom().getFirstName();
             newUser.username = message.getFrom().getUserName();
-            controller.addUser(newUser);
+            repository.addUser(newUser);
             newUser.FSM = new FiniteStateMachine();
             newUser.kinoman = new Kinoman(newUser, "фильм", "по годам", new String[0], new String[0]);
-            controller.addUser(newUser);
+            repository.addUser(newUser);
             log.config("new user - " + newUser.username);
         }
     }

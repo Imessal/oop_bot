@@ -1,14 +1,12 @@
 import java.util.*;
 import java.util.logging.Logger;
 
-import static org.apache.commons.lang3.ArrayUtils.toArray;
-
 
 class Kinoman{
     private static Logger log = Bot.log;
-    private static DatabaseController controller = TelegramBot.controller;
+    private static DatabaseRepository repository = TelegramBot.repository;
     private User user;
-    String link;
+    private String link;
     private int pageCount;
     private int movieCount;
     private int currentPage;
@@ -78,7 +76,7 @@ class Kinoman{
         currentMovieListed += 1;
         Movie movie = movies.get(currentMovieListed);
         currentMovie = movie;
-        if (controller.checkMovie(user, movie)) {
+        if (repository.checkMovie(user, movie)) {
             return movie;
         }else {
             return getInOrder();
@@ -101,7 +99,7 @@ class Kinoman{
                 Movie movie = movies.get(currentMovieListed);
                 addToShownMovie(currentPage, currentMovieListed);
                 currentMovie = movie;
-                if (controller.checkMovie(user, movie)) {
+                if (repository.checkMovie(user, movie)) {
                     return movie;
                 }else {
                     return getRandomly();
@@ -236,7 +234,7 @@ class Kinoman{
         }
     }
 
-    private static ArrayList<String> splitRequest(String request){
+    static ArrayList<String> splitRequest(String request){
         char[] chars = request.toCharArray();
         StringBuilder word = new StringBuilder();
         ArrayList<String> words = new ArrayList<>();

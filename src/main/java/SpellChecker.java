@@ -30,7 +30,7 @@ class SpellChecker {
             st.append(word);
             st.append(" ");
         }
-        return st.toString();
+        return st.toString().trim();
     }
     private static HashMap<String, ArrayList<String>> getDict(){
         HashMap<String, ArrayList<String>> dict = new HashMap<>();
@@ -47,6 +47,7 @@ class SpellChecker {
         dict.get("мультфильм").add("мультики");
         dict.get("мультфильм").add("мульт");
         dict.get("мультфильм").add("мульты");
+        dict.get("мультфильм").add("мультов");
         dict.put("мультсериал", new ArrayList<>());
         dict.get("мультсериал").add("мультсериалы");
         dict.put("аниме", new ArrayList<>());
@@ -87,14 +88,17 @@ class SpellChecker {
         dict.put("комедия", new ArrayList<>());
         dict.get("комедия").add("комедию");
         dict.get("комедия").add("комедии");
+        dict.get("комедия").add("смешной");
         dict.get("комедия").add("смешное");
         dict.get("комедия").add("смешные");
+        dict.get("комедия").add("смешных");
         dict.get("комедия").add("ржаку"); // не ну мало ли
         dict.put("приключения", new ArrayList<>());
         dict.get("приключения").add("приключение");
         dict.put("ужас", new ArrayList<>());
         dict.get("ужас").add("ужастик");
         dict.get("ужас").add("ужастики");
+        dict.get("ужас").add("ужасов");
         dict.get("ужас").add("страшный");
         dict.get("ужас").add("страшные");
         dict.get("ужас").add("хоррор");
@@ -125,6 +129,7 @@ class SpellChecker {
         dict.get("италия").add("итальянские");
         dict.get("италия").add("итальянское");
         dict.put("ссср", new ArrayList<>());
+        dict.get("ссср").add("советских");
         dict.get("ссср").add("советский");
         dict.get("ссср").add("советские");
         dict.get("ссср").add("советское");
