@@ -29,25 +29,29 @@ class Movie{
         return KinopoiskParser.getAnnotation(link);
     }
 
-    String getName(){
+    public String getName(){
         return name;
     }
-    String getLink(){
+    public String getLink(){
         return link;
     }
-    int getId(){
+    public String getRating(){
+        return rating;
+    }
+    public String getYear(){
+        return year;
+    }
+    public int getId(){
         return id;
     }
-    void setRating(String rating){
-        if (this.rating == null){
+    public void setRating(String rating){
+        if (this.rating==null){
             this.rating = rating;
         }
     }
-    String getRating(){return rating;}
-    void setYear(String year){
-        if (this.year == null){
-            this.year = year;
+    public void setYear(String year){
+        if (this.rating==null){
+            this.rating = year;
         }
     }
-    String getYear(){return year;}
 }

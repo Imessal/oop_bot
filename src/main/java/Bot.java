@@ -5,15 +5,13 @@ public class Bot{
     static final Logger log = LoggerBot.getBotLoggerInFils(Bot.class.getName());
 
     public static void main(String[] args) {
-        //TelegramBot.Start(System.getenv("TOKEN"));
+        TelegramBot.Start(System.getenv("TOKEN"));
         workOnConsole();
     }
 
     private static void workOnConsole(){
         log.config("Console start");
-        User user = new User(0);
-        user.username="console";
-        user.first_name=null;
+        User user = new User(333660675, 0);
         user.FSM = new FiniteStateMachine();
         user.kinoman = new Kinoman(user,"фильм", "по годам", new String[0], new String[0]);
 

@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 class Selector {
     private static final Logger log = Bot.log;
-    private static DatabaseRepository repository = TelegramBot.repository;
+    private static DatabaseController controller = TelegramBot.controller;
 
     static Answer getAnswer(User user, String request){
         FiniteStateMachine.State state = user.FSM.workWithRequest(request);
@@ -59,7 +59,7 @@ class Selector {
             case BanningCurrentRequest:
                 log.config("FSM - BanningRequest");
                 Movie c_movie = user.kinoman.currentMovie;
-                repository.addMovieToBlackList(user, c_movie);
+                controller.addMovieToBlackList(user, c_movie);
                 return new Answer(new String[]{"Больше я не буду показывать вам - " + c_movie.getName()},
                         new String[]{"Похожие", "Следующий"});
 

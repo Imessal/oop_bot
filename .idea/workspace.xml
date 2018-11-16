@@ -13,46 +13,34 @@
     <session id="-203214630">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.42" value="1" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Commands" value="1" />
-          <entry key="class" value="1" />
-          <entry key="java" value="71" />
-          <entry key="md" value="1" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="71" />
-          <entry key="Markdown" value="1" />
+          <entry key="JAVA" value="33" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9876" />
-          <entry key="xml" value="6" />
+          <entry key="java" value="4428" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9876" />
-          <entry key="XML" value="6" />
+          <entry key="JAVA" value="4428" />
         </counts>
       </usages-collector>
     </session>
@@ -62,86 +50,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="378">
+              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#Bot#0" />
-                <element signature="method#workOnConsole#0;class#Bot#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TelegramBot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
-              <folding>
-                <element signature="method#Start#0;class#TelegramBot#0" />
-                <element signature="method#onUpdateReceived#0;class#TelegramBot#0" />
-                <element signature="method#sendMsg#0;class#TelegramBot#0" />
-                <element signature="method#checkUser#0;class#TelegramBot#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/FiniteStateMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-              <folding>
-                <element signature="class#State#0;class#FiniteStateMachine#0" />
-                <element signature="method#nextState#0;class#State#0;class#FiniteStateMachine#0" />
-                <element signature="initializer##0;class#State#0;class#FiniteStateMachine#0" />
-                <element signature="method#workWithRequest#0;class#FiniteStateMachine#0" />
-                <element signature="method#findRequest#0;class#FiniteStateMachine#0" />
+                <element signature="method#getDict#0;class#Bot#0" />
+                <element signature="method#startBot#0;class#Bot#0" />
+                <element signature="method#printCommands#0;class#Bot#0" />
+                <element signature="method#adviseFilm#0;class#Bot#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DatabaseRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Kinaman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="748">
+              <caret line="178" column="1" lean-forward="true" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
               <folding>
-                <element signature="method#connect#0;class#DatabaseRepository#0" />
-                <element signature="method#executeQuery#0;class#DatabaseRepository#0" />
-                <element signature="method#executeUpdate#0;class#DatabaseRepository#0" />
-                <element signature="method#createMainTable#0;class#DatabaseRepository#0" />
-                <element signature="method#addUser#0;class#DatabaseRepository#0" />
-                <element signature="method#addMovieToBlackList#0;class#DatabaseRepository#0" />
-                <element signature="method#addMovie#0;class#DatabaseRepository#0" />
-                <element signature="method#checkMovie#0;class#DatabaseRepository#0" />
-                <element signature="method#updateUserInfoRequest#0;class#DatabaseRepository#0" />
-                <element signature="method#queryInspector#0;class#DatabaseRepository#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#734#859#0" />
+                <element signature="e#3136#3286#0" />
+                <element signature="method#showByRating#0;class#Kinoman#0" />
+                <element signature="method#showRandomly#0;class#Kinoman#0" />
+                <element signature="e#5036#6376#0" />
+                <element signature="e#6382#7065#0" />
+                <element signature="e#7071#7461#0" />
+                <element signature="e#7467#7730#0" />
+                <element signature="method#addAnnotation#0;class#Kinoman#0" />
+                <element signature="method#checkShownMap#0;class#Kinoman#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LinkBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Animation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-              <folding>
-                <element signature="method#getLink#0;class#LinkBuilder#0" />
-                <element signature="method#getLink#1;class#LinkBuilder#0" />
-                <element signature="e#1569#1648#0" />
-                <element signature="method#getNextPage#0;class#LinkBuilder#0" />
-                <element signature="method#getPageIndexOf#0;class#LinkBuilder#0" />
-                <element signature="method#getAlikePageLink#0;class#LinkBuilder#0" />
-                <element signature="method#getTypeOfMovieDict#0;class#LinkBuilder#0" />
-                <element signature="method#getSortingTypeDict#0;class#LinkBuilder#0" />
-                <element signature="method#getGenreDict#0;class#LinkBuilder#0" />
-                <element signature="method#getCountriesDict#0;class#LinkBuilder#0" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -154,23 +101,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>sessions</find>
-      <find>System.out.println</find>
-      <find>black_list_m</find>
-      <find>token</find>
-      <find>movies_seen</find>
-      <find>new String[0]</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>users</replace>
-      <replace>black_list_m</replace>
-      <replace>token</replace>
-      <replace>u_id</replace>
-      <replace>balck_list_m</replace>
-    </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
@@ -185,27 +115,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/Commands" />
         <option value="$PROJECT_DIR$/src/main/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/Animation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Kinaman.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FiniteStateMachine.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BotTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Answer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/KinopoiskParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Movie.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DatabaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Selector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/FSMTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Kinoman.java" />
-        <option value="$PROJECT_DIR$/src/test/java/KinomanTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpellChecker.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SpelCheckerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LinkBuilderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/LinkBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TelegramBot.java" />
         <option value="$PROJECT_DIR$/src/main/java/Bot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DatabaseRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Kinaman.java" />
       </list>
     </option>
   </component>
@@ -216,31 +127,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="89" />
     <option name="y" value="-14" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>JUnitJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>AssertEqualsBetweenInconvertibleTypes</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -278,14 +169,16 @@
               <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Kinaman.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,11 +187,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="C:/Program Files/Java/jre1.8.0_191/lib/applet" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.3615917" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -312,45 +204,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Bot">
-    <configuration name="All in Bot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Bot">
+    <configuration name="Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Bot" />
       <module name="Bot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KinomanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="KinomanTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KinomanTest.createKinomanOnRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="KinomanTest" />
-      <option name="METHOD_NAME" value="createKinomanOnRequestTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LinkBuilderTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpelCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SpelCheckerTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -380,19 +237,11 @@
     </configuration>
     <list>
       <item itemvalue="Maven.Unnamed" />
-      <item itemvalue="JUnit.KinomanTest" />
-      <item itemvalue="JUnit.KinomanTest.createKinomanOnRequestTest" />
-      <item itemvalue="JUnit.SpelCheckerTest" />
-      <item itemvalue="JUnit.LinkBuilderTest" />
-      <item itemvalue="JUnit.All in Bot" />
+      <item itemvalue="Application.Bot" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Bot" />
-        <item itemvalue="JUnit.LinkBuilderTest" />
-        <item itemvalue="JUnit.SpelCheckerTest" />
-        <item itemvalue="JUnit.KinomanTest" />
-        <item itemvalue="JUnit.KinomanTest.createKinomanOnRequestTest" />
+        <item itemvalue="Application.Bot" />
       </list>
     </recent_temporary>
   </component>
@@ -406,58 +255,26 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="SpelCheckerTest - 2018.11.16 at 14h 36m 47s.xml">
-      <configuration name="SpelCheckerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpelCheckerTest - 2018.11.16 at 14h 36m 53s.xml">
-      <configuration name="SpelCheckerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpelCheckerTest - 2018.11.16 at 14h 37m 26s.xml">
-      <configuration name="SpelCheckerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkBuilderTest - 2018.11.16 at 14h 43m 36s.xml">
-      <configuration name="LinkBuilderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkBuilderTest - 2018.11.16 at 14h 43m 54s.xml">
-      <configuration name="LinkBuilderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkBuilderTest - 2018.11.16 at 14h 46m 21s.xml">
-      <configuration name="LinkBuilderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkBuilderTest - 2018.11.16 at 14h 47m 05s.xml">
-      <configuration name="LinkBuilderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkBuilderTest - 2018.11.16 at 14h 48m 08s.xml">
-      <configuration name="LinkBuilderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkBuilderTest - 2018.11.16 at 14h 48m 21s.xml">
-      <configuration name="LinkBuilderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Bot - 2018.11.16 at 14h 50m 01s.xml">
-      <configuration name="All in Bot" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925706" visible="true" weight="0.2468017" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925706" visible="true" weight="0.2217484" />
       <window_info id="Structure" order="1" sideWeight="0.5007429" side_tool="true" weight="0.25266525" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30477223" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30477223" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.159436" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3373102" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.45444685" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -471,6 +288,10 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/Commands" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -503,6 +324,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="371" selection-start-line="371" selection-end-line="371" />
+          <folding>
+            <element signature="e#12877#12878#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -594,6 +418,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="3257" selection-start-line="3257" selection-end-line="3257" />
+          <folding>
+            <element signature="e#24535#24536#0" expanded="true" />
+            <element signature="e#24581#24582#0" expanded="true" />
+            <element signature="e#58314#58315#0" expanded="true" />
+            <element signature="e#58358#58359#0" expanded="true" />
+            <element signature="e#129159#129160#0" expanded="true" />
+            <element signature="e#129243#129244#0" expanded="true" />
+            <element signature="e#129300#129301#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -611,225 +444,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Animation.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Kinaman.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.2.0/postgresql-42.2.0.jar!/org/postgresql/jdbc/PgConnection.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Animation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="293" selection-start-line="293" selection-end-line="293" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BotTest.java" />
-    <entry file="file://$PROJECT_DIR$/../Bot1/src/main/java/KinopoiskParser.java" />
-    <entry file="file://$PROJECT_DIR$/../Bot1/src/main/java/TelegramBot.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Answer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/KinopoiskParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <element signature="method#getMoviesList#0;class#KinopoiskParser#0" />
-            <element signature="method#getMoviesListCalled#0;class#KinopoiskParser#0" />
-            <element signature="method#getSimilarMoviesList#0;class#KinopoiskParser#0" />
-            <element signature="method#getAnnotation#0;class#KinopoiskParser#0" />
-            <element signature="method#getMoviesCount#0;class#KinopoiskParser#0" />
-            <element signature="method#getPageCount#0;class#KinopoiskParser#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-          <folding>
-            <element signature="method#Movie#0;class#Movie#0" />
-            <element signature="method#toStringMovie#0;class#Movie#0" />
-            <element signature="method#setRating#0;class#Movie#0" />
-            <element signature="method#setYear#0;class#Movie#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FiniteStateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-          <folding>
-            <element signature="class#State#0;class#FiniteStateMachine#0" />
-            <element signature="method#nextState#0;class#State#0;class#FiniteStateMachine#0" />
-            <element signature="initializer##0;class#State#0;class#FiniteStateMachine#0" />
-            <element signature="method#workWithRequest#0;class#FiniteStateMachine#0" />
-            <element signature="method#findRequest#0;class#FiniteStateMachine#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FSMTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="77" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="11" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Selector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Kinoman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="method#Kinoman#1;class#Kinoman#0" />
-            <element signature="method#getNext#0;class#Kinoman#0" />
-            <element signature="method#getMovieCalled#0;class#Kinoman#0" />
-            <element signature="method#getInOrder#0;class#Kinoman#0" />
-            <element signature="method#getRandomly#0;class#Kinoman#0" />
-            <element signature="method#showSimilar#0;class#Kinoman#0" />
-            <element signature="method#getMovieList#0;class#Kinoman#0" />
-            <element signature="method#checkShownMovie#0;class#Kinoman#0" />
-            <element signature="method#addToShownMovie#0;class#Kinoman#0" />
-            <element signature="method#printHelp#0;class#Kinoman#0" />
-            <element signature="method#printValidRequest#0;class#Kinoman#0" />
-            <element signature="method#createKinomanOnRequest#0;class#Kinoman#0" />
-            <element signature="method#splitRequest#0;class#Kinoman#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/KinomanTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="30" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SpelCheckerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpellChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="89" column="25" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LinkBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-284" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LinkBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-          <folding>
-            <element signature="method#getLink#0;class#LinkBuilder#0" />
-            <element signature="method#getLink#1;class#LinkBuilder#0" />
-            <element signature="e#1569#1648#0" />
-            <element signature="method#getNextPage#0;class#LinkBuilder#0" />
-            <element signature="method#getPageIndexOf#0;class#LinkBuilder#0" />
-            <element signature="method#getAlikePageLink#0;class#LinkBuilder#0" />
-            <element signature="method#getTypeOfMovieDict#0;class#LinkBuilder#0" />
-            <element signature="method#getSortingTypeDict#0;class#LinkBuilder#0" />
-            <element signature="method#getGenreDict#0;class#LinkBuilder#0" />
-            <element signature="method#getCountriesDict#0;class#LinkBuilder#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TelegramBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
-          <folding>
-            <element signature="method#Start#0;class#TelegramBot#0" />
-            <element signature="method#onUpdateReceived#0;class#TelegramBot#0" />
-            <element signature="method#sendMsg#0;class#TelegramBot#0" />
-            <element signature="method#checkUser#0;class#TelegramBot#0" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="378">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Bot#0" />
-            <element signature="method#workOnConsole#0;class#Bot#0" />
+            <element signature="method#getDict#0;class#Bot#0" />
+            <element signature="method#startBot#0;class#Bot#0" />
+            <element signature="method#printCommands#0;class#Bot#0" />
+            <element signature="method#adviseFilm#0;class#Bot#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DatabaseRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Kinaman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="748">
+          <caret line="178" column="1" lean-forward="true" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
           <folding>
-            <element signature="method#connect#0;class#DatabaseRepository#0" />
-            <element signature="method#executeQuery#0;class#DatabaseRepository#0" />
-            <element signature="method#executeUpdate#0;class#DatabaseRepository#0" />
-            <element signature="method#createMainTable#0;class#DatabaseRepository#0" />
-            <element signature="method#addUser#0;class#DatabaseRepository#0" />
-            <element signature="method#addMovieToBlackList#0;class#DatabaseRepository#0" />
-            <element signature="method#addMovie#0;class#DatabaseRepository#0" />
-            <element signature="method#checkMovie#0;class#DatabaseRepository#0" />
-            <element signature="method#updateUserInfoRequest#0;class#DatabaseRepository#0" />
-            <element signature="method#queryInspector#0;class#DatabaseRepository#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#734#859#0" />
+            <element signature="e#3136#3286#0" />
+            <element signature="method#showByRating#0;class#Kinoman#0" />
+            <element signature="method#showRandomly#0;class#Kinoman#0" />
+            <element signature="e#5036#6376#0" />
+            <element signature="e#6382#7065#0" />
+            <element signature="e#7071#7461#0" />
+            <element signature="e#7467#7730#0" />
+            <element signature="method#addAnnotation#0;class#Kinoman#0" />
+            <element signature="method#checkShownMap#0;class#Kinoman#0" />
           </folding>
         </state>
       </provider>
@@ -843,7 +493,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.3615917" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -855,7 +505,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.3615917" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -866,7 +516,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.3615917" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -878,7 +528,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.3615917" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -890,7 +540,8 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.3615917" />
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -910,11 +561,10 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.3615917" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

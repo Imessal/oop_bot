@@ -48,7 +48,7 @@ class LinkBuilder {
     }
 
     static String getNextPage(String link){
-        int curPageNumber = Integer.parseInt(link.substring(link.lastIndexOf("/")+1));
+        int curPageNumber = Integer.parseInt(link.substring(link.length() - 1));
         link = getPageIndexOf(link, ++curPageNumber);
         log.config("linkToNextPage - " + link);
         return link;
