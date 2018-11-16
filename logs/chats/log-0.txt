@@ -1,0 +1,1256 @@
+[2018-11-12 00:18:32.977] [INFO] [Bot workOnConsole] console: /start
+[2018-11-12 00:18:32.984] [INFO] [Bot workOnConsole] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 00:18:33.326] [INFO] [Bot workOnConsole] console: 
+[2018-11-12 00:18:33.327] [INFO] [Bot workOnConsole] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 00:18:40.765] [INFO] [Bot workOnConsole] console: /start
+[2018-11-12 00:18:40.772] [INFO] [Bot workOnConsole] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 00:19:26.572] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 00:19:27.175] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 00:20:21.663] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по рейтингу
+[2018-11-12 00:20:30.223] [INFO] [TelegramBot onUpdateReceived] bot: [Побег из Шоушенка](https://www.kinopoisk.ru/film/pobeg-iz-shoushenka-1994-326/)
+Год - 1994
+Рейтинг - 9.112
+[2018-11-12 00:21:13.697] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 00:21:14.233] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 00:24:12.424] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 00:24:13.012] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 00:24:41.809] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи
+[2018-11-12 00:24:48.897] [INFO] [TelegramBot onUpdateReceived] bot: [Охотник на оленей](https://www.kinopoisk.ru/film/okhotnik-na-oleney-1978-428/)
+Год - 1978
+Рейтинг - 7.959
+[2018-11-12 00:35:50.726] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 00:35:51.303] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 00:45:16.088] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 00:48:53.166] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 00:50:21.870] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 00:50:22.450] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 01:21:59.503] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 01:32:15.266] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 01:38:11.002] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 01:38:12.312] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 01:38:12.312] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи
+[2018-11-12 01:38:30.588] [INFO] [TelegramBot onUpdateReceived] bot: [Одержимость](https://www.kinopoisk.ru/film/oderzhimost-2013-725190/)
+Год - 2013
+Рейтинг - 8.324
+[2018-11-12 01:38:50.186] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по рейтингу
+[2018-11-12 01:38:57.530] [INFO] [TelegramBot onUpdateReceived] bot: [Побег из Шоушенка](https://www.kinopoisk.ru/film/pobeg-iz-shoushenka-1994-326/)
+Год - 1994
+Рейтинг - 9.112
+[2018-11-12 01:42:20.857] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 01:42:21.465] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 01:44:21.256] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 01:48:27.532] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 01:51:40.520] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 01:52:33.491] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:02:24.581] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:05:50.996] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:06:45.038] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:06:45.407] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:09:06.535] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:09:33.514] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:19:41.350] [INFO] [TelegramBot onUpdateReceived] (MATAU1802)Matau: /start
+[2018-11-12 02:19:41.809] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:19:41.829] [INFO] [TelegramBot onUpdateReceived] (MATAU1802)Matau: что ты можешь?
+[2018-11-12 02:19:42.123] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 02:19:42.123] [INFO] [TelegramBot onUpdateReceived] (MATAU1802)Matau: film
+[2018-11-12 02:19:42.420] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 02:19:42.420] [INFO] [TelegramBot onUpdateReceived] (MATAU1802)Matau: go
+[2018-11-12 02:19:42.723] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 02:19:45.034] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:19:45.324] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:22:10.717] [INFO] [TelegramBot onUpdateReceived] (MATAU1802)Matau: возможные запросы
+[2018-11-12 02:22:12.155] [INFO] [TelegramBot onUpdateReceived] bot: *Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+[2018-11-12 02:30:49.221] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:30:50.946] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:39:11.383] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:39:11.780] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:47:37.919] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:47:43.635] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:48:31.132] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:48:32.622] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:48:57.227] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:48:57.604] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:51:50.027] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:51:50.357] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:52:51.779] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:52:52.134] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 02:53:52.185] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 02:53:52.540] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:02:40.031] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:02:40.695] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:04:50.093] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:04:50.748] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:05:11.720] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:08:02.201] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:08:15.948] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:09:01.529] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:10:10.844] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:10:10.853] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: помощь
+[2018-11-12 03:10:16.473] [INFO] [TelegramBot onUpdateReceived] bot: Просто напиши - "Покажи" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки
+
+Пример запроса:
+Покажи мне мультфильм, и выводи их по годам, пожалуйста
+
+После вывода фильма, можно попросить показать "похожие"
+Чтобы продолжить вывод, напиши "следующий" или введи новый запрос
+
+Я еще не умею искать фильмы по названиям или по актерам, но скоро научусь)
+Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши "возможные запросы"
+
+[2018-11-12 03:10:34.779] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мультфильм
+[2018-11-12 03:10:41.542] [INFO] [TelegramBot onUpdateReceived] bot: [Алеша Попович и Тугарин Змей](https://www.kinopoisk.ru/film/81041/)
+Год - 2004
+Рейтинг - 7.640
+[2018-11-12 03:38:53.031] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:38:53.615] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:40:55.828] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:40:56.418] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:42:27.233] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:42:27.603] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:43:20.879] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мультфильм по рейтингу
+[2018-11-12 03:43:27.579] [INFO] [TelegramBot onUpdateReceived] bot: [Король Лев](https://www.kinopoisk.ru/film/korol-lev-1994-2360/)
+Год - 1994
+Рейтинг - 8.774
+[2018-11-12 03:44:25.156] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:44:25.542] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:44:42.241] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мультфильм по рейтингу
+[2018-11-12 03:44:50.125] [INFO] [TelegramBot onUpdateReceived] bot: [Король Лев](https://www.kinopoisk.ru/film/korol-lev-1994-2360/)
+Год - 1994
+Рейтинг - 8.774
+[2018-11-12 03:45:21.759] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 03:45:22.733] [INFO] [TelegramBot onUpdateReceived] bot: [Остров сокровищ  (ТВ)](https://www.kinopoisk.ru/film/573759/)
+Год - ТВ
+Рейтинг - 8.174
+[2018-11-12 03:45:24.499] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 03:45:24.792] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 03:46:48.674] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:46:49.038] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:46:55.630] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи
+[2018-11-12 03:47:03.038] [INFO] [TelegramBot onUpdateReceived] bot: [Чёрный лебедь](https://www.kinopoisk.ru/film/278273/)
+Год - 2010
+Рейтинг - 7.736
+[2018-11-12 03:47:05.757] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 03:47:09.851] [INFO] [TelegramBot onUpdateReceived] bot: [Доклад о школьницах 6: Что родители хотели бы скрыть](https://www.kinopoisk.ru/film/91867/)
+Год - 1973
+[2018-11-12 03:48:58.836] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: /start
+[2018-11-12 03:48:59.819] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:49:30.731] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: помощь
+[2018-11-12 03:49:31.068] [INFO] [TelegramBot onUpdateReceived] bot: Просто напиши - "Покажи" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки
+
+Пример запроса:
+Покажи мне мультфильм, и выводи их по годам, пожалуйста
+
+После вывода фильма, можно попросить показать "похожие"
+Чтобы продолжить вывод, напиши "следующий" или введи новый запрос
+
+Я еще не умею искать фильмы по названиям или по актерам, но скоро научусь)
+Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши "возможные запросы"
+
+[2018-11-12 03:49:45.886] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: возможные запросы
+[2018-11-12 03:49:46.197] [INFO] [TelegramBot onUpdateReceived] bot: *Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+[2018-11-12 03:49:52.704] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: возможные запросы
+[2018-11-12 03:49:52.992] [INFO] [TelegramBot onUpdateReceived] bot: *Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+[2018-11-12 03:50:01.302] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: мажор
+[2018-11-12 03:50:01.597] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 03:50:27.195] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: сериал мажор
+[2018-11-12 03:50:28.181] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 03:50:37.838] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: сериал
+[2018-11-12 03:50:38.144] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 03:50:55.981] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: покажи
+[2018-11-12 03:51:03.663] [INFO] [TelegramBot onUpdateReceived] bot: [Освобождение: Битва за Берлин](https://www.kinopoisk.ru/film/osvobozhdenie-bitva-za-berlin-1971-392540/)
+Год - 1971
+Рейтинг - 8.182
+[2018-11-12 03:51:03.663] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: мажор
+[2018-11-12 03:51:03.954] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 03:51:20.900] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: покажи мажор
+[2018-11-12 03:51:24.612] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор (сериал)](https://www.kinopoisk.ru/film/mazhor-2014-820638/)
+Год - 2014
+[2018-11-12 03:51:32.238] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: следующий
+[2018-11-12 03:51:32.554] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор 2 (сериал)](https://www.kinopoisk.ru/film/957773/)
+Год - 2016
+[2018-11-12 03:51:35.252] [INFO] [TelegramBot onUpdateReceived] (lilhachik)Lilhachik: следующий
+[2018-11-12 03:51:35.577] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор 3 (сериал)](https://www.kinopoisk.ru/film/1040559/)
+Год - 2018
+[2018-11-12 03:56:17.475] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 03:56:17.833] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 03:57:00.928] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи
+[2018-11-12 03:57:08.333] [INFO] [TelegramBot onUpdateReceived] bot: [Индиана Джонс и последний крестовый поход](https://www.kinopoisk.ru/film/indiana-dzhons-i-posledniy-krestovyy-pokhod-1989-472/)
+Год - 1989
+Рейтинг - 8.066
+[2018-11-12 03:57:24.891] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мажор
+[2018-11-12 03:57:29.136] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор (сериал)](https://www.kinopoisk.ru/film/mazhor-2014-820638/)
+Год - 2014
+[2018-11-12 03:57:32.562] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:00:13.373] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 04:00:18.246] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 04:00:33.401] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мажор 2
+[2018-11-12 04:00:36.971] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор 2 (сериал)](https://www.kinopoisk.ru/film/957773/)
+Год - 2016
+[2018-11-12 04:00:39.260] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:00:39.775] [INFO] [TelegramBot onUpdateReceived] bot:  
+[2018-11-12 04:02:55.603] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 04:02:55.952] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 04:03:05.097] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мажор 3
+[2018-11-12 04:03:08.657] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор 3 (сериал)](https://www.kinopoisk.ru/film/1040559/)
+Год - 2018
+[2018-11-12 04:03:10.861] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:03:11.406] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Мажор 3 (сериал)
+[2018-11-12 04:03:16.717] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:03:17.047] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор (сериал)](https://www.kinopoisk.ru/film/mazhor-2014-820638/)
+Год - 2014
+[2018-11-12 04:04:16.850] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи русские сериал
+[2018-11-12 04:04:22.400] [INFO] [TelegramBot onUpdateReceived] bot: [Русские](https://www.kinopoisk.ru/film/russkie-1987-17136/)
+Год - 1987
+[2018-11-12 04:04:47.222] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи сериал
+[2018-11-12 04:04:53.025] [INFO] [TelegramBot onUpdateReceived] bot: [Твин Пикс  (сериал)](https://www.kinopoisk.ru/film/tvin-piks-1990-84358/)
+Год - сериал
+Рейтинг - 8.511
+[2018-11-12 04:04:56.356] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:05:00.066] [INFO] [TelegramBot onUpdateReceived] bot: [Безумцы  (сериал)](https://www.kinopoisk.ru/film/391889/)
+Год - сериал
+Рейтинг - 7.841
+[2018-11-12 04:05:32.840] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи полицейский с рублёвки
+[2018-11-12 04:05:38.784] [INFO] [TelegramBot onUpdateReceived] bot: [Полицейский с Рублёвки (сериал)](https://www.kinopoisk.ru/film/913033/)
+Год - 2016
+[2018-11-12 04:05:42.382] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:05:42.939] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Полицейский с Рублёвки (сериал)
+[2018-11-12 04:05:46.258] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:05:46.573] [INFO] [TelegramBot onUpdateReceived] bot: [Полицейский с Рублёвки в Бескудниково (сериал)](https://www.kinopoisk.ru/film/policeyskiy-s-rublyovki-v-beskudnikovo-2017-1044770/)
+Год - 2017
+[2018-11-12 04:05:55.671] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:05:56.218] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Полицейский с Рублёвки в Бескудниково (сериал)
+[2018-11-12 04:05:58.493] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:05:58.821] [INFO] [TelegramBot onUpdateReceived] bot: [Полицейский с Рублёвки 3 (сериал)](https://www.kinopoisk.ru/film/1048335/)
+Год - 2018
+[2018-11-12 04:06:02.527] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:06:03.101] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Полицейский с Рублёвки 3 (сериал)
+[2018-11-12 04:06:07.258] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:06:07.582] [INFO] [TelegramBot onUpdateReceived] bot: [Полицейский с Рублёвки. Новогодний беспредел](https://www.kinopoisk.ru/film/1161783/)
+Год - 2018
+[2018-11-12 04:32:00.611] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 04:32:01.421] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 04:32:22.214] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 04:32:30.003] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.198
+[2018-11-12 04:32:33.793] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:32:34.368] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 04:32:35.937] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:32:36.493] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 04:32:46.782] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:32:47.338] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+Рейтинг - 8.218
+[2018-11-12 04:32:50.092] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:32:50.655] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Ван Гог. С любовью, Винсент
+[2018-11-12 04:32:54.288] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:32:55.538] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 04:33:08.991] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 04:33:16.207] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.198
+[2018-11-12 04:33:17.311] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:33:17.871] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 04:33:18.937] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:33:19.488] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 04:33:20.578] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:33:21.127] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+Рейтинг - 8.218
+[2018-11-12 04:39:05.203] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 04:39:09.992] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.196
+[2018-11-12 04:39:16.553] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:17.139] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 04:39:18.302] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:18.853] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 04:39:20.429] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:21.237] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 04:39:22.799] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:23.339] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 04:39:34.729] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:35.271] [INFO] [TelegramBot onUpdateReceived] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-12 04:39:37.422] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:37.988] [INFO] [TelegramBot onUpdateReceived] bot: [Ла-Ла Ленд](https://www.kinopoisk.ru/film/841081/)
+Год - 2016
+Рейтинг - 7.905
+[2018-11-12 04:39:40.577] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 04:39:41.122] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Ла-Ла Ленд
+[2018-11-12 04:39:43.425] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:44.087] [INFO] [TelegramBot onUpdateReceived] bot: [По соображениям совести](https://www.kinopoisk.ru/film/649917/)
+Год - 2016
+Рейтинг - 7.917
+[2018-11-12 04:39:46.589] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:39:47.157] [INFO] [TelegramBot onUpdateReceived] bot: [Твое имя](https://www.kinopoisk.ru/film/tvoe-imya-2016-958722/)
+Год - 2016
+Рейтинг - 8.320
+[2018-11-12 04:39:55.411] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 04:40:03.360] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.196
+[2018-11-12 04:40:04.831] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:05.379] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 04:40:06.471] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:07.016] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 04:40:08.081] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:08.880] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 04:40:10.439] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:10.991] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 04:40:17.116] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:17.680] [INFO] [TelegramBot onUpdateReceived] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-12 04:40:19.205] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:19.981] [INFO] [TelegramBot onUpdateReceived] bot: [По соображениям совести](https://www.kinopoisk.ru/film/649917/)
+Год - 2016
+Рейтинг - 7.917
+[2018-11-12 04:40:21.229] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:21.762] [INFO] [TelegramBot onUpdateReceived] bot: [Твое имя](https://www.kinopoisk.ru/film/tvoe-imya-2016-958722/)
+Год - 2016
+Рейтинг - 8.320
+[2018-11-12 04:40:24.099] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: аннотация
+[2018-11-12 04:40:26.721] [INFO] [TelegramBot onUpdateReceived] bot: История о парне из Токио и девушке из провинции, которые обнаруживают, что между ними существует странная и необъяснимая связь. Во сне они меняются телами и проживают жизни друг друга. Но однажды эта способность исчезает так же внезапно, как появилась. Таки решает во что бы то ни стало отыскать Мицуху, но способны ли они узнать друг друга в реальной жизни?
+[2018-11-12 04:40:31.626] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:32.177] [INFO] [TelegramBot onUpdateReceived] bot: [Безумный Макс: Дорога ярости](https://www.kinopoisk.ru/film/bezumnyy-maks-doroga-yarosti-2015-453406/)
+Год - 2015
+Рейтинг - 7.814
+[2018-11-12 04:40:34.096] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: аннотация
+[2018-11-12 04:40:36.757] [INFO] [TelegramBot onUpdateReceived] bot: Преследуемый призраками беспокойного прошлого, Макс уверен, что лучший способ выжить  скитаться в одиночестве. Несмотря на это, он присоединяется к бунтарям, бегущим через всю пустыню на боевой фуре, под предводительством военачальника Фуриосы.Они пытаются сбежать из Цитадели, страдающей от тирании Несмертного Джо, у которого они забрали кое-что очень ценное. Разъярённый военачальник бросает все свои силы на погоню за мятежниками, ступая на дорогу войны  дорогу ярости.
+[2018-11-12 04:40:40.119] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: похожие
+[2018-11-12 04:40:41.744] [INFO] [TelegramBot onUpdateReceived] bot: [Водный мир](https://www.kinopoisk.ru/film/8165/)
+Рейтинг - 7.596
+[2018-11-12 04:40:44.343] [INFO] [TelegramBot onUpdateReceived] bot: [Книга Илая](https://www.kinopoisk.ru/film/kniga-ilaya-2009-424266/)
+Рейтинг - 7.142
+[2018-11-12 04:40:44.634] [INFO] [TelegramBot onUpdateReceived] bot: [Судный день](https://www.kinopoisk.ru/film/sudnyy-den-2008-220594/)
+Рейтинг - 6.226
+[2018-11-12 04:40:51.383] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:40:51.927] [INFO] [TelegramBot onUpdateReceived] bot: [Вторая жизнь Уве](https://www.kinopoisk.ru/film/vtoraya-zhizn-uve-2015-848894/)
+Год - 2015
+Рейтинг - 7.859
+[2018-11-12 04:42:43.865] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 04:42:49.522] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.196
+[2018-11-12 04:42:56.244] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:42:56.788] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 04:42:57.826] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:42:58.394] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 04:42:59.338] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:00.128] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 04:43:01.296] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:04.344] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 04:43:05.744] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:06.298] [INFO] [TelegramBot onUpdateReceived] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-12 04:43:07.384] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:08.188] [INFO] [TelegramBot onUpdateReceived] bot: [По соображениям совести](https://www.kinopoisk.ru/film/649917/)
+Год - 2016
+Рейтинг - 7.917
+[2018-11-12 04:43:09.538] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:10.174] [INFO] [TelegramBot onUpdateReceived] bot: [Твое имя](https://www.kinopoisk.ru/film/tvoe-imya-2016-958722/)
+Год - 2016
+Рейтинг - 8.320
+[2018-11-12 04:43:22.607] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи ван гог
+[2018-11-12 04:43:27.997] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог](https://www.kinopoisk.ru/film/van-gog-1991-57800/)
+Год - 1991
+[2018-11-12 04:43:32.997] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:33.996] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог](https://www.kinopoisk.ru/film/van-gog-1948-188896/)
+Год - 1948
+[2018-11-12 04:43:36.592] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:36.942] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог (ТВ)](https://www.kinopoisk.ru/film/van-gog-1966-673558/)
+Год - 1966
+[2018-11-12 04:43:39.449] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:43:39.754] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+[2018-11-12 04:52:38.730] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи ссср мультфильм
+[2018-11-12 04:52:44.304] [INFO] [TelegramBot onUpdateReceived] bot: [Конек-Горбунок](https://www.kinopoisk.ru/film/konek-gorbunok-1947-44916/)
+Год - 1947
+Рейтинг - 7.845
+[2018-11-12 04:52:48.014] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:52:48.560] [INFO] [TelegramBot onUpdateReceived] bot: [Смех и горе у Бела моря](https://www.kinopoisk.ru/film/smekh-i-gore-u-bela-morya-1988-279828/)
+Год - 1988
+Рейтинг - 8.105
+[2018-11-12 04:52:52.430] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:52:52.994] [INFO] [TelegramBot onUpdateReceived] bot: [Сказка о царе Салтане](https://www.kinopoisk.ru/film/skazka-o-tsare-saltane-1984-43814/)
+Год - 1984
+Рейтинг - 7.727
+[2018-11-12 04:52:56.720] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:52:57.319] [INFO] [TelegramBot onUpdateReceived] bot: [Двенадцать месяцев](https://www.kinopoisk.ru/film/dvenadtsat-mesyatsev-1956-46788/)
+Год - 1956
+Рейтинг - 8.028
+[2018-11-12 04:53:00.873] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:53:01.434] [INFO] [TelegramBot onUpdateReceived] bot: [Дикие лебеди](https://www.kinopoisk.ru/film/dikie-lebedi-1962-44200/)
+Год - 1962
+Рейтинг - 7.775
+[2018-11-12 04:53:05.359] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:53:05.927] [INFO] [TelegramBot onUpdateReceived] bot: [Остров сокровищ  (ТВ)](https://www.kinopoisk.ru/film/573759/)
+Год - ТВ
+Рейтинг - 8.174
+[2018-11-12 04:53:28.933] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи япония фильм
+[2018-11-12 04:53:37.620] [INFO] [TelegramBot onUpdateReceived] bot: [История Хатико](https://www.kinopoisk.ru/film/38145/)
+Год - 1987
+Рейтинг - 8.131
+[2018-11-12 04:53:50.580] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:53:51.141] [INFO] [TelegramBot onUpdateReceived] bot: [Шёпот сердца](https://www.kinopoisk.ru/film/shyopot-serdtsa-1995-32714/)
+Год - 1995
+Рейтинг - 8.303
+[2018-11-12 04:53:54.311] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:53:54.892] [INFO] [TelegramBot onUpdateReceived] bot: [Ведьмина служба доставки](https://www.kinopoisk.ru/film/vedmina-sluzhba-dostavki-1989-2428/)
+Год - 1989
+Рейтинг - 8.046
+[2018-11-12 04:53:57.911] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:53:58.456] [INFO] [TelegramBot onUpdateReceived] bot: [Небесный замок Лапута](https://www.kinopoisk.ru/film/nebesnyy-zamok-laputa-1986-1846/)
+Год - 1986
+Рейтинг - 8.250
+[2018-11-12 04:54:00.046] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:54:00.596] [INFO] [TelegramBot onUpdateReceived] bot: [Токийская повесть](https://www.kinopoisk.ru/film/tokiyskaya-povest-1953-79836/)
+Год - 1953
+Рейтинг - 8.054
+[2018-11-12 04:54:04.076] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:54:04.670] [INFO] [TelegramBot onUpdateReceived] bot: [Ходячий замок](https://www.kinopoisk.ru/film/khodyachiy-zamok-2004-49684/)
+Год - 2004
+Рейтинг - 8.282
+[2018-11-12 04:54:06.050] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:54:06.586] [INFO] [TelegramBot onUpdateReceived] bot: [Девочка, покорившая время](https://www.kinopoisk.ru/film/273209/)
+Год - 2006
+Рейтинг - 7.975
+[2018-11-12 04:54:07.899] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:54:08.435] [INFO] [TelegramBot onUpdateReceived] bot: [Телохранитель](https://www.kinopoisk.ru/film/445/)
+Год - 1961
+Рейтинг - 8.016
+[2018-11-12 04:54:11.555] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:54:12.099] [INFO] [TelegramBot onUpdateReceived] bot: [Принцесса Мононоке](https://www.kinopoisk.ru/film/441/)
+Год - 1997
+Рейтинг - 8.145
+[2018-11-12 04:54:13.289] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:54:13.828] [INFO] [TelegramBot onUpdateReceived] bot: [Босоногий Гэн](https://www.kinopoisk.ru/film/bosonogiy-gen-1983-252330/)
+Год - 1983
+Рейтинг - 8.010
+[2018-11-12 04:54:17.539] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:54:18.089] [INFO] [TelegramBot onUpdateReceived] bot: [Семь самураев](https://www.kinopoisk.ru/film/sem-samuraev-1954-332/)
+Год - 1954
+Рейтинг - 8.151
+[2018-11-12 04:54:44.555] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам сша мультфильм
+[2018-11-12 04:54:50.875] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 04:55:00.199] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:00.999] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 04:55:03.754] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:04.324] [INFO] [TelegramBot onUpdateReceived] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-12 04:55:06.026] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:06.611] [INFO] [TelegramBot onUpdateReceived] bot: [Головоломка](https://www.kinopoisk.ru/film/golovolomka-2015-645118/)
+Год - 2015
+Рейтинг - 8.004
+[2018-11-12 04:55:08.837] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:09.388] [INFO] [TelegramBot onUpdateReceived] bot: [Город героев](https://www.kinopoisk.ru/film/gorod-geroev-2014-693126/)
+Год - 2014
+Рейтинг - 7.929
+[2018-11-12 04:55:11.617] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:12.145] [INFO] [TelegramBot onUpdateReceived] bot: [Как приручить дракона 2](https://www.kinopoisk.ru/film/512883/)
+Год - 2014
+Рейтинг - 7.925
+[2018-11-12 04:55:15.318] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:15.871] [INFO] [TelegramBot onUpdateReceived] bot: [Семейка Крудс](https://www.kinopoisk.ru/film/semeyka-kruds-2013-198116/)
+Год - 2013
+Рейтинг - 7.603
+[2018-11-12 04:55:19.568] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:20.133] [INFO] [TelegramBot onUpdateReceived] bot: [Университет монстров](https://www.kinopoisk.ru/film/universitet-monstrov-2013-468904/)
+Год - 2013
+Рейтинг - 7.563
+[2018-11-12 04:55:22.123] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:22.723] [INFO] [TelegramBot onUpdateReceived] bot: [Холодное сердце](https://www.kinopoisk.ru/film/kholodnoe-serdtse-2013-493208/)
+Год - 2013
+Рейтинг - 7.816
+[2018-11-12 04:55:24.453] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 04:55:24.983] [INFO] [TelegramBot onUpdateReceived] bot: [Ральф](https://www.kinopoisk.ru/film/ralf-2012-586260/)
+Год - 2012
+Рейтинг - 7.752
+[2018-11-12 15:22:40.185] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 15:22:40.749] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 15:24:34.159] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 15:24:49.628] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.195
+[2018-11-12 15:24:52.823] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:24:53.507] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 15:24:54.911] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:24:55.746] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 15:25:01.972] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 15:25:02.846] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Остров собак
+[2018-11-12 15:25:07.475] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:25:08.317] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+Рейтинг - 8.218
+[2018-11-12 15:25:09.931] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 15:25:14.127] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Ван Гог. С любовью, Винсент
+[2018-11-12 15:25:16.179] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:25:17.211] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 15:25:19.105] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:25:19.971] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 15:25:41.295] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 15:25:54.839] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.195
+[2018-11-12 15:25:56.589] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:25:57.359] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 15:26:01.884] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:26:04.168] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 15:26:05.459] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:26:06.248] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 15:26:30.313] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи россия сериал
+[2018-11-12 15:26:39.958] [INFO] [TelegramBot onUpdateReceived] bot: [BadComedian  (сериал)](https://www.kinopoisk.ru/film/972889/)
+Год - сериал
+Рейтинг - 9.215
+[2018-11-12 15:26:45.867] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:26:46.606] [INFO] [TelegramBot onUpdateReceived] bot: [Кухня  (сериал)](https://www.kinopoisk.ru/film/687595/)
+Год - сериал
+Рейтинг - 8.184
+[2018-11-12 15:26:51.306] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 15:26:51.630] [INFO] [TelegramBot onUpdateReceived] bot: Это был последний
+[2018-11-12 16:09:11.465] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: /start
+[2018-11-12 16:09:18.160] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:09:18.165] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: /start
+[2018-11-12 16:09:18.615] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:09:41.234] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи крым
+[2018-11-12 16:09:47.463] [INFO] [TelegramBot onUpdateReceived] bot: [Крым](https://www.kinopoisk.ru/film/krym-2017-984364/)
+Год - 2017
+[2018-11-12 16:09:51.433] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: скрыть
+[2018-11-12 16:09:51.773] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Крым
+[2018-11-12 16:09:58.102] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: похожие
+[2018-11-12 16:09:58.772] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 16:10:05.952] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: возможные запросы
+[2018-11-12 16:10:06.432] [INFO] [TelegramBot onUpdateReceived] bot: *Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+[2018-11-12 16:10:17.845] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: помощь
+[2018-11-12 16:10:18.182] [INFO] [TelegramBot onUpdateReceived] bot: Просто напиши - "Покажи" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки
+
+Пример запроса:
+Покажи мне мультфильм, и выводи их по годам, пожалуйста
+
+После вывода фильма, можно попросить показать "похожие"
+Чтобы продолжить вывод, напиши "следующий" или введи новый запрос
+
+Я еще не умею искать фильмы по названиям или по актерам, но скоро научусь)
+Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши "возможные запросы"
+
+[2018-11-12 16:20:05.592] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 16:20:05.731] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:20:21.778] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 16:22:20.362] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 16:22:24.621] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.195
+[2018-11-12 16:22:26.937] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:22:27.138] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 16:22:28.170] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:22:28.518] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 16:22:29.659] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:22:29.855] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 16:25:01.601] [INFO] [TelegramBot onUpdateReceived] (VladislavBardin)Бардинов: /start
+[2018-11-12 16:25:01.940] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:26:11.234] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:26:11.473] [INFO] [TelegramBot onUpdateReceived] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-12 16:26:16.555] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:26:16.976] [INFO] [TelegramBot onUpdateReceived] bot: [Ла-Ла Ленд](https://www.kinopoisk.ru/film/841081/)
+Год - 2016
+Рейтинг - 7.905
+[2018-11-12 16:26:18.754] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 16:26:18.955] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Ла-Ла Ленд
+[2018-11-12 16:26:22.018] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:26:22.206] [INFO] [TelegramBot onUpdateReceived] bot: [По соображениям совести](https://www.kinopoisk.ru/film/649917/)
+Год - 2016
+Рейтинг - 7.918
+[2018-11-12 16:36:00.610] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: /start
+[2018-11-12 16:36:00.730] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:36:00.732] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: возможные запросы
+[2018-11-12 16:36:00.825] [INFO] [TelegramBot onUpdateReceived] bot: *Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+[2018-11-12 16:36:00.826] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: /start
+[2018-11-12 16:36:00.914] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:36:09.436] [INFO] [TelegramBot onUpdateReceived] (VladislavBardin)Бардинов: карточный домик
+[2018-11-12 16:36:09.532] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 16:36:11.521] [INFO] [TelegramBot onUpdateReceived] (VladislavBardin)Бардинов: возможные запросы
+[2018-11-12 16:36:11.622] [INFO] [TelegramBot onUpdateReceived] bot: *Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+[2018-11-12 16:36:19.069] [INFO] [TelegramBot onUpdateReceived] (VladislavBardin)Бардинов: сериал
+[2018-11-12 16:36:19.243] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 16:36:22.031] [INFO] [TelegramBot onUpdateReceived] (VladislavBardin)Бардинов: помощь
+[2018-11-12 16:36:22.142] [INFO] [TelegramBot onUpdateReceived] bot: Просто напиши - "Покажи" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки
+
+Пример запроса:
+Покажи мне мультфильм, и выводи их по годам, пожалуйста
+
+После вывода фильма, можно попросить показать "похожие"
+Чтобы продолжить вывод, напиши "следующий" или введи новый запрос
+
+Я еще не умею искать фильмы по названиям или по актерам, но скоро научусь)
+Чтобы узнать знакомые мне жанры, сортировки вывода и т.п, напиши "возможные запросы"
+
+[2018-11-12 16:36:44.525] [INFO] [TelegramBot onUpdateReceived] (VladislavBardin)Бардинов: покажи мне карточный домик
+[2018-11-12 16:36:48.680] [INFO] [TelegramBot onUpdateReceived] bot: [Карточный домик (сериал)](https://www.kinopoisk.ru/film/581937/)
+Год - 2013 – 2018
+[2018-11-12 16:39:31.430] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 16:39:31.571] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:41:11.148] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-12 16:41:11.289] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:41:47.175] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 16:41:51.505] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.197
+[2018-11-12 16:41:55.557] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:41:55.775] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 16:41:56.777] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:41:57.189] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 16:41:58.257] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:41:58.470] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 16:41:59.422] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:41:59.609] [INFO] [TelegramBot onUpdateReceived] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-12 16:42:00.477] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:42:00.747] [INFO] [TelegramBot onUpdateReceived] bot: [По соображениям совести](https://www.kinopoisk.ru/film/649917/)
+Год - 2016
+Рейтинг - 7.917
+[2018-11-12 16:42:01.975] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 16:42:02.207] [INFO] [TelegramBot onUpdateReceived] bot: [Твое имя](https://www.kinopoisk.ru/film/tvoe-imya-2016-958722/)
+Год - 2016
+Рейтинг - 8.320
+[2018-11-12 16:57:08.893] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: /start
+[2018-11-12 16:57:09.648] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 16:57:16.582] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи крым
+[2018-11-12 16:57:20.916] [INFO] [TelegramBot onUpdateReceived] bot: [Крым](https://www.kinopoisk.ru/film/krym-2017-984364/)
+Год - 2017
+[2018-11-12 16:57:23.273] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: скрыть
+[2018-11-12 16:57:23.510] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Крым
+[2018-11-12 16:57:26.827] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 16:57:26.934] [INFO] [TelegramBot onUpdateReceived] bot: [Крым (сериал)](https://www.kinopoisk.ru/film/krym-2017-982486/)
+Год - 2017 – ...
+[2018-11-12 16:57:38.866] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи смешарики
+[2018-11-12 16:57:41.242] [INFO] [TelegramBot onUpdateReceived] bot: [Смешарики (сериал)](https://www.kinopoisk.ru/film/smeshariki-2003-256124/)
+Год - 2003 – 2012
+[2018-11-12 16:57:44.024] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: аннотация
+[2018-11-12 16:57:45.571] [INFO] [TelegramBot onUpdateReceived] bot: Сериал повествует о жизни круглых персонажей в стране «Смешариков». У каждого героя свой взгляд на вещи, свои увлечения и яркий характер. Вместе со Смешариками не бывает скучно  их мир наполнен яркими приключениями! С нескрываемым любопытством они интересуются всем, что происходит вокруг. Ежедневно герои попадают в неожиданные ситуации или создают их сами.
+[2018-11-12 16:57:50.046] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: похожие
+[2018-11-12 16:57:51.177] [INFO] [TelegramBot onUpdateReceived] bot: Я не нашел похожих, сорян
+[2018-11-12 16:58:00.927] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 16:58:01.033] [INFO] [TelegramBot onUpdateReceived] bot: [Смешарики. Азбука здоровья (сериал)](https://www.kinopoisk.ru/film/smeshariki-azbuka-zdorovya-2008-897892/)
+Год - 2008 – 2009
+[2018-11-12 16:58:05.323] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: похожие
+[2018-11-12 16:58:06.142] [INFO] [TelegramBot onUpdateReceived] bot: Я не нашел похожих, сорян
+[2018-11-12 16:58:08.321] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 16:58:08.434] [INFO] [TelegramBot onUpdateReceived] bot: [Смешарики. Азбука прав ребенка (сериал)](https://www.kinopoisk.ru/film/1162495/)
+Год - 2009
+[2018-11-12 16:58:12.659] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: похожие
+[2018-11-12 16:58:13.478] [INFO] [TelegramBot onUpdateReceived] bot: Я не нашел похожих, сорян
+[2018-11-12 16:58:16.187] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мажор
+[2018-11-12 16:58:18.146] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор (сериал)](https://www.kinopoisk.ru/film/mazhor-2014-820638/)
+Год - 2014
+[2018-11-12 16:58:21.972] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 16:58:22.384] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Мажор (сериал)
+[2018-11-12 16:59:28.273] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи фильм
+[2018-11-12 16:59:31.832] [INFO] [TelegramBot onUpdateReceived] bot: [Шерлок Холмс и доктор Ватсон: Король шантажа  (ТВ)](https://www.kinopoisk.ru/film/sherlok-kholms-i-doktor-vatson-korol-shantazha-1980-368936/)
+Год - ТВ
+Рейтинг - 8.365
+[2018-11-12 17:06:00.890] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи мажор
+[2018-11-12 17:06:03.142] [INFO] [TelegramBot onUpdateReceived] bot: [Мажор (сериал)](https://www.kinopoisk.ru/film/mazhor-2014-820638/)
+Год - 2014
+[2018-11-12 17:06:06.536] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: скрыть
+[2018-11-12 17:06:06.803] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Мажор (сериал)
+[2018-11-12 17:07:29.144] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: /start
+[2018-11-12 17:07:29.477] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 17:07:34.618] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи свадебную вазу
+[2018-11-12 17:07:37.807] [INFO] [TelegramBot onUpdateReceived] bot: [27 свадеб](https://www.kinopoisk.ru/film/27-svadeb-2008-280532/)
+Год - 2008
+[2018-11-12 17:07:40.851] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:07:40.955] [INFO] [TelegramBot onUpdateReceived] bot: [Свадебный угар](https://www.kinopoisk.ru/film/svadebnyy-ugar-2016-756092/)
+Год - 2016
+[2018-11-12 17:07:53.390] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи свадебная ваза
+[2018-11-12 17:07:56.641] [INFO] [TelegramBot onUpdateReceived] bot: [Свадебная ваза](https://www.kinopoisk.ru/film/134529/)
+Год - 1974
+[2018-11-12 17:07:59.237] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: скрыть
+[2018-11-12 17:07:59.424] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Свадебная ваза
+[2018-11-12 17:08:09.373] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи россия сериал
+[2018-11-12 17:08:12.855] [INFO] [TelegramBot onUpdateReceived] bot: [BadComedian  (сериал)](https://www.kinopoisk.ru/film/972889/)
+Год - сериал
+Рейтинг - 9.215
+[2018-11-12 17:08:16.003] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:08:16.190] [INFO] [TelegramBot onUpdateReceived] bot: [Кухня  (сериал)](https://www.kinopoisk.ru/film/687595/)
+Год - сериал
+Рейтинг - 8.184
+[2018-11-12 17:08:27.060] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:08:27.526] [INFO] [TelegramBot onUpdateReceived] bot: Это был последний
+[2018-11-12 17:08:33.793] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: понял
+[2018-11-12 17:08:33.931] [INFO] [TelegramBot onUpdateReceived] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 17:09:32.335] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи сериал
+[2018-11-12 17:09:36.327] [INFO] [TelegramBot onUpdateReceived] bot: [Как избежать наказания за убийство  (сериал)](https://www.kinopoisk.ru/film/kak-izbezhat-nakazaniya-za-ubiystvo-2014-804876/)
+Год - сериал
+Рейтинг - 8.068
+[2018-11-12 17:09:43.156] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: скрыть
+[2018-11-12 17:09:43.336] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Как избежать наказания за убийство  (сериал)
+[2018-11-12 17:12:00.399] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи свадебная ваза
+[2018-11-12 17:12:03.749] [INFO] [TelegramBot onUpdateReceived] bot: [Свадебная ваза](https://www.kinopoisk.ru/film/134529/)
+Год - 1974
+[2018-11-12 17:13:35.123] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи по годам фильм
+[2018-11-12 17:13:40.361] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.199
+[2018-11-12 17:13:42.593] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:13:42.777] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 17:13:45.987] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:13:46.177] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 17:13:53.419] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:13:53.912] [INFO] [TelegramBot onUpdateReceived] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+Рейтинг - 8.218
+[2018-11-12 17:13:56.239] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи по годам фильм
+[2018-11-12 17:14:01.066] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.199
+[2018-11-12 17:14:01.068] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: скрыть
+[2018-11-12 17:14:01.258] [INFO] [TelegramBot onUpdateReceived] bot: Больше я не буду показывать вам - Ван Гог. С любовью, Винсент
+[2018-11-12 17:14:02.202] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 17:14:02.379] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 17:14:03.430] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 17:14:03.768] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 17:14:04.888] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 17:14:05.065] [INFO] [TelegramBot onUpdateReceived] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.189
+[2018-11-12 17:14:06.133] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 17:14:06.320] [INFO] [TelegramBot onUpdateReceived] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-12 17:14:07.504] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: следующий
+[2018-11-12 17:14:07.801] [INFO] [TelegramBot onUpdateReceived] bot: [По соображениям совести](https://www.kinopoisk.ru/film/649917/)
+Год - 2016
+Рейтинг - 7.917
+[2018-11-12 17:14:10.094] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: покажи по годам фильм
+[2018-11-12 17:14:13.390] [INFO] [TelegramBot onUpdateReceived] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.199
+[2018-11-12 17:14:16.598] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:14:16.862] [INFO] [TelegramBot onUpdateReceived] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.895
+[2018-11-12 17:14:27.213] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:14:27.628] [INFO] [TelegramBot onUpdateReceived] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.150
+[2018-11-12 17:14:29.633] [INFO] [TelegramBot onUpdateReceived] (scarovik)Matthew: следующий
+[2018-11-12 17:14:29.956] [INFO] [TelegramBot onUpdateReceived] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.641
+[2018-11-12 20:16:18.319] [INFO] [Bot workOnConsole] console: /start
+[2018-11-12 20:16:18.323] [INFO] [Bot workOnConsole] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 20:34:58.640] [INFO] [Bot workOnConsole] console: /start
+[2018-11-12 20:34:58.645] [INFO] [Bot workOnConsole] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 20:35:02.782] [INFO] [Bot workOnConsole] console: помощь
+[2018-11-12 20:35:02.786] [INFO] [Bot workOnConsole] bot: Просто напиши - "Покажи" + что хочешь посмотреть. Так же можешь указать жанр и способ сортировки
+
+Пример запроса:
+Покажи новые мультфильмы
+Покажи страшные сериалы
+
+Команды:
+Помощь - выводит справку
+Возможные запросы - выводит возможные запросы
+Покажи ... - выводит фильмы в соответствии с запросом
+Следующий - выводит следующий фильм в соответствии с запросом
+Аннотация - выводит аннотацию к фильму
+Похожие - выводит 3 фильма, похожих на последний
+Скрыть - добавляет фильм в черный список
+
+[2018-11-12 20:37:11.531] [INFO] [Bot workOnConsole] console: помощь
+[2018-11-12 20:37:11.537] [INFO] [Bot workOnConsole] bot: Просто напиши - "Покажи" + что хочешь посмотреть
+
+Пример запроса:
+Покажи Матрица
+Покажи новые мультфильмы
+Покажи американские сериалы по рейтингу
+
+Команды:
+Помощь - выводит справку
+Возможные запросы - выводит возможные запросы
+Покажи ... - выводит фильмы в соответствии с запросом
+Следующий - выводит следующий фильм в соответствии с запросом
+Аннотация - выводит аннотацию к фильму
+Похожие - выводит 3 фильма, похожих на последний
+Скрыть - добавляет фильм в черный список
+
+[2018-11-12 20:38:53.467] [INFO] [Bot workOnConsole] console: возможные запросы
+[2018-11-12 20:38:53.471] [INFO] [Bot workOnConsole] bot: Могу найти фильм по названию
+*Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+*Знаю такие страны, как*: Германия, Ссср, Япония, Великобритания, Италия, Китай, Сша, Франция, Россия 
+[2018-11-12 20:41:00.829] [INFO] [Bot workOnConsole] console: /start
+[2018-11-12 20:41:00.835] [INFO] [Bot workOnConsole] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-12 20:41:06.994] [INFO] [Bot workOnConsole] console: помощь
+[2018-11-12 20:41:06.998] [INFO] [Bot workOnConsole] bot: Просто напиши - "Покажи" + что хочешь посмотреть
+
+Пример запроса:
+Покажи Матрица
+Покажи новые мультфильмы
+Покажи американские сериалы по рейтингу
+
+Команды:
+Помощь - выводит справку
+Возможные запросы - выводит возможные фильтры и сортировки
+Покажи ... - выводит фильмы в соответствии с запросом
+Следующий - выводит следующий фильм в соответствии с запросом
+Аннотация - выводит аннотацию к фильму
+Похожие - выводит 3 фильма, похожих на последний
+Скрыть - добавляет фильм в черный список
+
+[2018-11-12 20:44:09.839] [INFO] [Bot workOnConsole] console: возможные запросы
+[2018-11-12 20:44:09.842] [INFO] [Bot workOnConsole] bot: *Могу найти фильм по названию*
+*Могу найти*: фильм, сериал, мультфильм, аниме, аниме-сериал, мультсериал 
+*Выводить могу*: по рейтингу, по времени, по годам 
+*Знаю такие жанры, как*: комедия, ужас, приключения, фантастика, боевик, фэнтези 
+*Знаю такие страны, как*: германия, ссср, япония, великобритания, италия, китай, сша, франция, россия 
+[2018-11-12 20:44:55.386] [INFO] [Bot workOnConsole] console: покажи фильм по рейтингу
+[2018-11-12 20:44:57.453] [INFO] [Bot workOnConsole] bot: [Побег из Шоушенка](https://www.kinopoisk.ru/film/pobeg-iz-shoushenka-1994-326/)
+Рейтинг - 9.112
+[2018-11-12 20:46:47.642] [INFO] [Bot workOnConsole] console: покажи фильм по рейтингу
+[2018-11-12 20:46:49.866] [INFO] [Bot workOnConsole] bot: [Побег из Шоушенка](https://www.kinopoisk.ru/film/pobeg-iz-shoushenka-1994-326/)
+Рейтинг - 9.112
+[2018-11-12 20:46:55.958] [INFO] [Bot workOnConsole] console: аннотация
+[2018-11-12 20:46:56.968] [INFO] [Bot workOnConsole] bot: Бухгалтер Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключенным, так и к охранникам, добиваясь их особого к себе расположения.
+[2018-11-12 20:47:02.797] [INFO] [Bot workOnConsole] console: похожие
+[2018-11-12 20:47:03.556] [INFO] [Bot workOnConsole] bot: [Зеленая миля](https://www.kinopoisk.ru/film/435/)
+Рейтинг - 9.062
+[2018-11-12 20:47:03.559] [INFO] [Bot workOnConsole] bot: [Пролетая над гнездом кукушки](https://www.kinopoisk.ru/film/proletaya-nad-gnezdom-kukushki-1975-336/)
+Рейтинг - 8.552
+[2018-11-12 20:47:03.561] [INFO] [Bot workOnConsole] bot: [Побег  (сериал)](https://www.kinopoisk.ru/film/pobeg-2005-258048/)
+Рейтинг - 8.413
+[2018-11-12 20:47:16.340] [INFO] [Bot workOnConsole] console: следующий,
+[2018-11-12 20:47:16.340] [INFO] [Bot workOnConsole] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 20:47:17.652] [INFO] [Bot workOnConsole] console: 
+[2018-11-12 20:47:17.654] [INFO] [Bot workOnConsole] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-12 20:47:19.340] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:47:19.426] [INFO] [Bot workOnConsole] bot: [Крестный отец](https://www.kinopoisk.ru/film/325/)
+Рейтинг - 8.735
+[2018-11-12 20:47:21.339] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:47:21.430] [INFO] [Bot workOnConsole] bot: [Темный рыцарь](https://www.kinopoisk.ru/film/111543/)
+Рейтинг - 8.505
+[2018-11-12 20:47:22.883] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:47:22.967] [INFO] [Bot workOnConsole] bot: [Крестный отец 2](https://www.kinopoisk.ru/film/327/)
+Рейтинг - 8.543
+[2018-11-12 20:47:24.683] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:47:24.769] [INFO] [Bot workOnConsole] bot: [Криминальное чтиво](https://www.kinopoisk.ru/film/kriminalnoe-chtivo-1994-342/)
+Рейтинг - 8.620
+[2018-11-12 20:47:27.083] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:47:27.168] [INFO] [Bot workOnConsole] bot: [Властелин колец: Возвращение Короля](https://www.kinopoisk.ru/film/vlastelin-kolec-vozvrashhenie-korolya-2003-3498/)
+Рейтинг - 8.615
+[2018-11-12 20:48:00.018] [INFO] [Bot workOnConsole] console: покажи матрица
+[2018-11-12 20:48:01.226] [INFO] [Bot workOnConsole] bot: [Матрица](https://www.kinopoisk.ru/film/301/)
+Рейтинг - 1999
+[2018-11-12 20:48:05.794] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:48:05.800] [INFO] [Bot workOnConsole] bot: [Матрица (сериал)](https://www.kinopoisk.ru/film/400787/)
+Рейтинг - 1993
+[2018-11-12 20:48:07.569] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:48:07.571] [INFO] [Bot workOnConsole] bot: [Матрица: Перезагрузка](https://www.kinopoisk.ru/film/299/)
+Рейтинг - 2003
+[2018-11-12 20:48:09.034] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:48:09.036] [INFO] [Bot workOnConsole] bot: [Матрица: Революция](https://www.kinopoisk.ru/film/matrica-revolyuciya-2003-316/)
+Рейтинг - 2003
+[2018-11-12 20:48:10.985] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-12 20:48:10.992] [INFO] [Bot workOnConsole] bot: [Матрица времени](https://www.kinopoisk.ru/film/matritsa-vremeni-2017-556944/)
+Рейтинг - 2017
+[2018-11-14 16:07:11.179] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-14 16:07:11.371] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-14 16:07:13.710] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: покажи сша сериал по рейтингу
+[2018-11-14 16:07:17.157] [INFO] [TelegramBot onUpdateReceived] bot: [Игра престолов  (сериал)](https://www.kinopoisk.ru/film/464963/)
+Рейтинг - 9.011
+[2018-11-14 16:07:33.190] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:07:33.381] [INFO] [TelegramBot onUpdateReceived] bot: [Во все тяжкие  (сериал)](https://www.kinopoisk.ru/film/vo-vse-tyazhkie-2008-404900/)
+Рейтинг - 8.856
+[2018-11-14 16:07:41.189] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:07:41.410] [INFO] [TelegramBot onUpdateReceived] bot: [Прослушка  (сериал)](https://www.kinopoisk.ru/film/402955/)
+Рейтинг - 8.442
+[2018-11-14 16:07:51.725] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:07:51.919] [INFO] [TelegramBot onUpdateReceived] bot: [Шерлок  (сериал)](https://www.kinopoisk.ru/film/sherlok-2010-502838/)
+Рейтинг - 8.886
+[2018-11-14 16:07:55.847] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:07:56.029] [INFO] [TelegramBot onUpdateReceived] bot: [Клан Сопрано  (сериал)](https://www.kinopoisk.ru/film/klan-soprano-1999-79848/)
+Рейтинг - 8.672
+[2018-11-14 16:07:59.924] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:08:04.234] [INFO] [TelegramBot onUpdateReceived] bot: [Настоящий детектив  (сериал)](https://www.kinopoisk.ru/film/681831/)
+Рейтинг - 8.709
+[2018-11-14 16:08:04.434] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:08:04.878] [INFO] [TelegramBot onUpdateReceived] bot: [Фарго  (сериал)](https://www.kinopoisk.ru/film/767379/)
+Рейтинг - 8.411
+[2018-11-14 16:08:08.388] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:08:08.564] [INFO] [TelegramBot onUpdateReceived] bot: [Друзья  (сериал)](https://www.kinopoisk.ru/film/druzya-1994-77044/)
+Рейтинг - 9.256
+[2018-11-14 16:08:11.424] [INFO] [TelegramBot onUpdateReceived] (glitinsky)Gregory: следующий
+[2018-11-14 16:08:11.627] [INFO] [TelegramBot onUpdateReceived] bot: [Очень странные дела  (сериал)](https://www.kinopoisk.ru/film/ochen-strannye-dela-2016-915196/)
+Рейтинг - 8.468
+[2018-11-14 16:25:09.048] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: /start
+[2018-11-14 16:25:09.150] [INFO] [TelegramBot onUpdateReceived] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-14 16:41:48.204] [INFO] [TelegramBot onUpdateReceived] (Saithirius)Saithirius: покажи
+[2018-11-14 16:41:53.164] [INFO] [TelegramBot onUpdateReceived] bot: [Эдвард руки-ножницы](https://www.kinopoisk.ru/film/8421/)
+Рейтинг - 7.999
+[2018-11-16 10:47:17.655] [INFO] [Bot workOnConsole] console: /start
+[2018-11-16 10:47:17.686] [INFO] [Bot workOnConsole] bot: Привет, я Киноман!
+Могу помочь с выбором фильма, сериала и т.д.
+Для справки введи "помощь"
+[2018-11-16 10:47:23.677] [INFO] [Bot workOnConsole] console: покажи
+[2018-11-16 10:47:25.629] [INFO] [Bot workOnConsole] bot: [Пролетая над гнездом кукушки](https://www.kinopoisk.ru/film/proletaya-nad-gnezdom-kukushki-1975-336/)
+Год - 1975
+Рейтинг - 8.552
+[2018-11-16 10:47:43.867] [INFO] [Bot workOnConsole] console: покажи по годам
+[2018-11-16 10:47:46.333] [INFO] [Bot workOnConsole] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.174
+[2018-11-16 10:47:54.928] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:47:55.022] [INFO] [Bot workOnConsole] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.893
+[2018-11-16 10:47:56.360] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:47:56.614] [INFO] [Bot workOnConsole] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.640
+[2018-11-16 10:47:58.075] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:47:58.169] [INFO] [Bot workOnConsole] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.188
+[2018-11-16 10:48:02.883] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:48:02.961] [INFO] [Bot workOnConsole] bot: [Зверополис](https://www.kinopoisk.ru/film/zveropolis-2016-775276/)
+Год - 2016
+Рейтинг - 8.303
+[2018-11-16 10:48:04.632] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:48:04.794] [INFO] [Bot workOnConsole] bot: [По соображениям совести](https://www.kinopoisk.ru/film/649917/)
+Год - 2016
+Рейтинг - 7.917
+[2018-11-16 10:48:08.475] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:48:08.553] [INFO] [Bot workOnConsole] bot: [Твое имя](https://www.kinopoisk.ru/film/tvoe-imya-2016-958722/)
+Год - 2016
+Рейтинг - 8.320
+[2018-11-16 10:48:10.074] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:48:10.168] [INFO] [Bot workOnConsole] bot: [Безумный Макс: Дорога ярости](https://www.kinopoisk.ru/film/bezumnyy-maks-doroga-yarosti-2015-453406/)
+Год - 2015
+Рейтинг - 7.814
+[2018-11-16 10:48:11.698] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 10:48:11.773] [INFO] [Bot workOnConsole] bot: [Вторая жизнь Уве](https://www.kinopoisk.ru/film/vtoraya-zhizn-uve-2015-848894/)
+Год - 2015
+Рейтинг - 7.859
+[2018-11-16 11:05:27.596] [INFO] [Bot workOnConsole] console: покажи по годам фильм
+[2018-11-16 11:05:29.902] [INFO] [Bot workOnConsole] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.174
+[2018-11-16 11:05:35.631] [INFO] [Bot workOnConsole] console: следующая
+[2018-11-16 11:05:35.636] [INFO] [Bot workOnConsole] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-16 11:05:47.845] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:05:47.855] [INFO] [Bot workOnConsole] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.893
+[2018-11-16 11:05:51.928] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:05:51.932] [INFO] [Bot workOnConsole] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.148
+[2018-11-16 11:05:55.740] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:05:55.744] [INFO] [Bot workOnConsole] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+Рейтинг - 8.217
+[2018-11-16 11:12:02.995] [INFO] [Bot workOnConsole] console: покажи по годам фильм
+[2018-11-16 11:12:05.213] [INFO] [Bot workOnConsole] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.174
+[2018-11-16 11:12:18.555] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:12:18.651] [INFO] [Bot workOnConsole] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.893
+[2018-11-16 11:12:20.509] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:12:20.593] [INFO] [Bot workOnConsole] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.148
+[2018-11-16 11:12:24.069] [INFO] [Bot workOnConsole] console: скрыть
+[2018-11-16 11:12:24.258] [INFO] [Bot workOnConsole] bot: Больше я не буду показывать вам - Остров собак
+[2018-11-16 11:13:20.257] [INFO] [Bot workOnConsole] console: покажи по годам фильм
+[2018-11-16 11:13:22.049] [INFO] [Bot workOnConsole] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.174
+[2018-11-16 11:13:27.974] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:13:28.073] [INFO] [Bot workOnConsole] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.893
+[2018-11-16 11:13:29.049] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:13:29.141] [INFO] [Bot workOnConsole] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.148
+[2018-11-16 11:13:31.295] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:13:31.385] [INFO] [Bot workOnConsole] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+Рейтинг - 8.217
+[2018-11-16 11:13:35.516] [INFO] [Bot workOnConsole] console: скрыть
+[2018-11-16 11:13:35.691] [INFO] [Bot workOnConsole] bot: Больше я не буду показывать вам - Ван Гог. С любовью, Винсент
+[2018-11-16 11:13:37.765] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:13:37.851] [INFO] [Bot workOnConsole] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.640
+[2018-11-16 11:13:48.854] [INFO] [Bot workOnConsole] console: покожи по годам фильм
+[2018-11-16 11:13:48.854] [INFO] [Bot workOnConsole] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-16 11:13:59.127] [INFO] [Bot workOnConsole] console: покажи по годам фильм
+[2018-11-16 11:14:01.206] [INFO] [Bot workOnConsole] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.174
+[2018-11-16 11:14:02.706] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:14:02.793] [INFO] [Bot workOnConsole] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.893
+[2018-11-16 11:14:04.273] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:14:04.360] [INFO] [Bot workOnConsole] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.148
+[2018-11-16 11:14:05.593] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 11:14:05.773] [INFO] [Bot workOnConsole] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.640
+[2018-11-16 12:40:50.147] [INFO] [Bot workOnConsole] console: покажи по годам фильм
+[2018-11-16 12:40:52.038] [INFO] [Bot workOnConsole] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.174
+[2018-11-16 12:41:00.499] [INFO] [Bot workOnConsole] console: следйющий
+[2018-11-16 12:41:00.501] [INFO] [Bot workOnConsole] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-16 12:41:06.006] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 12:41:06.093] [INFO] [Bot workOnConsole] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.893
+[2018-11-16 12:41:07.710] [INFO] [Bot workOnConsole] console: следйющий
+[2018-11-16 12:41:07.713] [INFO] [Bot workOnConsole] bot: Некорректная команда
+Может ты что-то не правильно написал?
+[2018-11-16 12:41:11.077] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 12:41:11.164] [INFO] [Bot workOnConsole] bot: [Остров собак](https://www.kinopoisk.ru/film/939785/)
+Год - 2018
+Рейтинг - 8.148
+[2018-11-16 12:41:16.321] [INFO] [Bot workOnConsole] console: скрыть
+[2018-11-16 12:41:16.487] [INFO] [Bot workOnConsole] bot: Больше я не буду показывать вам - Остров собак
+[2018-11-16 12:41:17.709] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 12:41:17.792] [INFO] [Bot workOnConsole] bot: [Ван Гог. С любовью, Винсент](https://www.kinopoisk.ru/film/van-gog-s-lyubovyu-vinsent-2017-909720/)
+Год - 2017
+Рейтинг - 8.217
+[2018-11-16 12:41:20.877] [INFO] [Bot workOnConsole] console: скрыть
+[2018-11-16 12:41:21.047] [INFO] [Bot workOnConsole] bot: Больше я не буду показывать вам - Ван Гог. С любовью, Винсент
+[2018-11-16 12:41:32.762] [INFO] [Bot workOnConsole] console: покажи по годам фильм
+[2018-11-16 12:41:35.262] [INFO] [Bot workOnConsole] bot: [Богемская рапсодия](https://www.kinopoisk.ru/film/568289/)
+Год - 2018
+Рейтинг - 8.174
+[2018-11-16 12:41:36.826] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 12:41:36.914] [INFO] [Bot workOnConsole] bot: [Мстители: Война бесконечности](https://www.kinopoisk.ru/film/843649/)
+Год - 2018
+Рейтинг - 7.893
+[2018-11-16 12:41:38.041] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 12:41:38.295] [INFO] [Bot workOnConsole] bot: [Тайна Коко](https://www.kinopoisk.ru/film/tayna-koko-2017-679486/)
+Год - 2017
+Рейтинг - 8.640
+[2018-11-16 12:41:39.401] [INFO] [Bot workOnConsole] console: следующий
+[2018-11-16 12:41:39.484] [INFO] [Bot workOnConsole] bot: [Три билборда на границе Эббинга, Миссури](https://www.kinopoisk.ru/film/tri-bilborda-na-granitse-ebbinga-missuri-2017-944098/)
+Год - 2017
+Рейтинг - 8.188
