@@ -63,8 +63,8 @@ class DatabaseRepository {
                 queryInspector(movie.getYear())));
     }
 
-    boolean checkMovie(User user, Movie movie) {
-        ResultSet result = executeQuery(String.format("SELECT m_id FROM black_list WHERE u_id = %d AND m_id = %d", user.getId(), movie.getId()));
+    boolean checkMovie(int iuserId, int movieId) {
+        ResultSet result = executeQuery(String.format("SELECT m_id FROM black_list WHERE u_id = %d AND m_id = %d", iuserId, movieId));
         try {
             return !(result != null && result.next());
         } catch (SQLException e) {
@@ -77,7 +77,6 @@ class DatabaseRepository {
         return String.format("UPDATE users SET %s = \'%s\' WHERE u_id = %d;", column, value, token);
     }
 
-    //Защита от инъекций однако! Ну минимальная защита
     private String queryInspector(String query) {
         if (query == null) {
             return null;

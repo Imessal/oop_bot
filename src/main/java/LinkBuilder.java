@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.logging.Logger;
 
 class LinkBuilder {
-    private static final Logger log = Bot.log;
-
     static String getLink(String movie, String sortingType, int page, String[] genres, String[] countries){
         StringBuilder link = new StringBuilder();
         link.append("https://www.kinopoisk.ru/top/lists/");
@@ -32,7 +30,7 @@ class LinkBuilder {
         link.append("/page/");
         link.append(page);
 
-        log.config("link - " + link);
+        Bot.log.config("link - " + link);
         return link.toString();
     }
 
@@ -50,19 +48,19 @@ class LinkBuilder {
     static String getNextPage(String link){
         int curPageNumber = Integer.parseInt(link.substring(link.lastIndexOf("/")+1));
         link = getPageIndexOf(link, ++curPageNumber);
-        log.config("linkToNextPage - " + link);
+        Bot.log.config("linkToNextPage - " + link);
         return link;
     }
 
     static String getPageIndexOf(String link, int pageNumber){
         link = link.substring(0, link.lastIndexOf("/") + 1) + pageNumber;
-        log.config("linkToPageIndexOf " + pageNumber+ " - " + link);
+        Bot.log.config("linkToPageIndexOf " + pageNumber+ " - " + link);
         return link;
     }
 
     static String getAlikePageLink(String link){
         link = link + "like/";
-        log.config("linkAlikePageLink - " + link);
+        Bot.log.config("linkAlikePageLink - " + link);
         return link;
     }
 

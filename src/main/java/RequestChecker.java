@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-class SpellChecker {
-    static String check(String request){
+class RequestChecker {
+    static String validate(String request) {
+        return spellCheck(request.trim().toLowerCase());
+    }
+
+    private static String spellCheck(String request){
         if (request.startsWith("привет")){
             return "/start";
         }
@@ -32,6 +36,7 @@ class SpellChecker {
         }
         return st.toString().trim();
     }
+
     private static HashMap<String, ArrayList<String>> getDict(){
         HashMap<String, ArrayList<String>> dict = new HashMap<>();
 

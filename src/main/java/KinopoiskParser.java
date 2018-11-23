@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.logging.Logger;
 
 class KinopoiskParser {
-    private static Logger log = Bot.log;
-
     static ArrayList<Movie> getMoviesList(String link) {
         ArrayList<Movie> movies = new ArrayList<>();
         try(BufferedReader br = WebsiteOpener.getWebsiteContent(link))
@@ -29,7 +27,7 @@ class KinopoiskParser {
                                 year = StringEscapeUtils.unescapeHtml4(
                                         inputLine.substring(inputLine.indexOf("(") + 1, inputLine.indexOf(")")));
                             } catch (java.lang.StringIndexOutOfBoundsException E) {
-                                log.config("у фильма нет года");
+                                Bot.log.config("У фильма нет года");
                             }
                         }
                         if (inputLine.startsWith("             data-film-rating")) {
@@ -73,7 +71,7 @@ class KinopoiskParser {
                         year = StringEscapeUtils.unescapeHtml4(
                                 inputLine.substring(inputLine.indexOf("\"year\">") + 7, inputLine.indexOf("</span>")));
                     }catch (java.lang.StringIndexOutOfBoundsException E){
-                        log.config("у фильма нет года");
+                        Bot.log.config("У фильма нет года");
                     }
                     Movie movie = new Movie(name, id, m_link);
                     movie.setYear(year);
@@ -129,7 +127,7 @@ class KinopoiskParser {
     }
 
     static String getAnnotation(String link) {
-        log.config("ищу аннотацию");
+        Bot.log.config("Ищу аннотацию");
         String inputLine;
         try (BufferedReader br = WebsiteOpener.getWebsiteContent(link)) {
             assert br != null : "Не удалось открыть страницу - " + link;
@@ -146,14 +144,14 @@ class KinopoiskParser {
                             .replaceAll("<br>", "")
                             .replaceAll("<br />", "")
                             .replaceAll("`", "\\`");
-                    log.config("нашел - " + annotation);
+                    Bot.log.config("Нашел - " + annotation);
                     return StringEscapeUtils.unescapeHtml4(annotation);
                 }
             }
         } catch (java.io.IOException e) {
             e.printStackTrace();
         }
-        log.config("не нашел");
+        Bot.log.config("Не нашел");
         return "У этого фильма нет аннотации";
     }
 

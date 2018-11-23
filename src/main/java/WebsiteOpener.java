@@ -7,8 +7,6 @@ import java.net.URLConnection;
 import java.util.logging.Logger;
 
 class WebsiteOpener {
-    private static Logger log = Bot.log;
-
     static BufferedReader getWebsiteContent(String link) {
         URL url = stringToURL(link);
         assert url != null : "Сcылка равна null";
@@ -37,7 +35,7 @@ class WebsiteOpener {
             return new BufferedReader(
                     new InputStreamReader(conn.getInputStream(), "windows-1251"));
         } catch (IOException e) {
-            log.config("Не получилось открыть страницу - " + url.toString());
+            Bot.log.config("Не получилось открыть страницу - " + url.toString());
         }
         return null;
     }
