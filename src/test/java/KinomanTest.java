@@ -13,11 +13,11 @@ public class KinomanTest {
         words.add("по лезвию");
         Assert.assertEquals(words, Kinoman.splitRequest(request));
 
-        request = "покажи сериалы по руйтингу";
+        request = "покажи сериалы по рейтингу";
         words.clear();
         words.add("покажи");
         words.add("сериалы");
-        words.add("по руйтингу");
+        words.add("по рейтингу");
         Assert.assertEquals(words, Kinoman.splitRequest(request));
 
         request = "покажи фильмы По";

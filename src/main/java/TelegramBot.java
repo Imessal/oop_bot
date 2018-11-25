@@ -15,6 +15,7 @@ import java.util.function.BiConsumer;
 
 public class TelegramBot extends TelegramLongPollingBot {
     private HashMap<Integer, User> users = new HashMap<>();
+    private DatabaseRepository repository = Bot.repository;
 
     static void start() {
         ApiContextInitializer.init();
@@ -77,7 +78,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             user.username = message.getFrom().getUserName();
             user.FSM = new FiniteStateMachine();
             users.put(userId, user);
-            Bot.repository.addUser(user);
+            repository.addUser(user);
             Bot.log.config("New user - " + user.username);
         }
         return users.get(userId);

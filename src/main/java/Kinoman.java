@@ -13,10 +13,19 @@ class Kinoman{
     private Movie currentMovie = null;
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
     private ArrayList<Integer> shownMovieList = new ArrayList<>();
+    private DatabaseRepository repository = Bot.repository;
 
     Kinoman(User user, String request){
         this.user = user;
         setFields(request);
+    }
+
+    User getCurrentUser(){
+        return user;
+    }
+
+    DatabaseRepository getRepository(){
+        return repository;
     }
 
     Movie getNext(){
@@ -56,7 +65,7 @@ class Kinoman{
                 link = LinkBuilder.getNextPage(link);
                 currentMovieNumber = 0;
             }
-            if (Bot.repository.checkMovie(user.getId(), movie.getId())) {
+            if (repository.checkMovie(user.getId(), movie.getId())) {
                 return movie;
             }
         }
@@ -78,7 +87,7 @@ class Kinoman{
             if (!shownMovieList.contains(movie.getId())) {
                 shownMovieList.add(movie.getId());
                 currentMovie = movie;
-                if (Bot.repository.checkMovie(user.getId(), movie.getId())) {
+                if (repository.checkMovie(user.getId(), movie.getId())) {
                     return movie;
                 }
             }
@@ -151,7 +160,8 @@ class Kinoman{
             movieTitle.append(word).append(" ");
         }
         if (movieTitle.toString().length() == 0){
-            return LinkBuilder.getLink(typeOfMovie, sortingType, 1, genres.toArray(new String[0]), countries.toArray(new String[0]));
+            return LinkBuilder.getLink(typeOfMovie, sortingType,
+                    1, genres.toArray(new String[0]), countries.toArray(new String[0]));
         }else {
             this.movieTitle = movieTitle.toString().trim();
             return LinkBuilder.getLink(movieTitle.toString());
