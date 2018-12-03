@@ -5,7 +5,6 @@ import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 @ExtendWith(MockitoExtension.class)
 class DatabaseMockingTest {
@@ -70,16 +69,13 @@ class DatabaseMockingTest {
     }
 
     private void banMocking(Movie movie, ArrayList<Movie> movies){
-        int id = movie.getId();
-        for(Movie m: movies){
-            if (m.getId() == id){
-                movies.remove(m.getId()+1);
-            }
+        if (!movies.contains(movie)){
+            movies.add(movie);
         }
     }
 
     private ArrayList<Movie> getMovies(){
-        return new ArrayList<>(Arrays.asList(greenMile, forrestGump, theShawshankRedemption));
+        return new ArrayList<>();
     }
 
 
@@ -117,5 +113,12 @@ class DatabaseMockingTest {
         configureMocks(getMovies());
         repository.addMovieToBlackList(user, greenMile);
         Assertions.assertFalse(repository.checkMovie(user.getId(), greenMile.getId()));
+        Assertions.assertTrue(repository.checkMovie(user.getId(), theShawshankRedemption.getId()));
+        Assertions.assertTrue(repository.checkMovie(user.getId(), forrestGump.getId()));
+    }
+
+    @Test
+    void shouldWorkWithKinoman(){
+        //????
     }
 }
