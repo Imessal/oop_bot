@@ -3,7 +3,7 @@ import java.util.logging.Logger;
 
 public class Bot{
     static final Logger log = LoggerBot.getBotLoggerInFils(Bot.class.getName());
-    static DatabaseRepository repository = new DatabaseRepository();
+    //static DatabaseRepository repository = new DatabaseRepository();
 
     public static void main(String[] args) {
         //TelegramBot.start();

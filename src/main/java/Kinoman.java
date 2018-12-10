@@ -3,30 +3,30 @@ import java.util.*;
 
 class Kinoman{
     private User user;
-    private String link = null;
-    private int pageCount = 0;
-    private int movieCount = 0;
+    private String link;
+    private int pageCount;
+    private int movieCount;
     private int currentPage = 1;
     private int currentMovieNumber = 0;
     private String movieTitle = null;
     private String sortingType = null;
     private Movie currentMovie = null;
-    private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
     private ArrayList<Integer> shownMovieList = new ArrayList<>();
-    private DatabaseRepository repository = Bot.repository;
+    private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
+    private DatabaseRepository repository = new DatabaseRepository();
 
     Kinoman(User user, String request){
         this.user = user;
-        setFields(request);
+        this.link = getLink(request);
+        this.movieCount = KinopoiskParser.getMoviesCount(link);
+        this.pageCount = KinopoiskParser.getPageCount(movieCount);
     }
 
-    User getCurrentUser(){
-        return user;
-    }
+    User getCurrentUser(){return user;}
 
-    DatabaseRepository getRepository(){
-        return repository;
-    }
+    DatabaseRepository getRepository(){return repository;}
+
+    Map<Integer, ArrayList<Movie>> getPageList(){return pageList;}
 
     Movie getNext(){
         if (movieTitle != null) {
@@ -121,13 +121,6 @@ class Kinoman{
             Bot.log.config("Закончил");
             return pageList.get(page);
         }
-    }
-
-    private void setFields(String request){
-        link = getLink(request);
-        movieCount = KinopoiskParser.getMoviesCount(link);
-        pageCount = KinopoiskParser.getPageCount(movieCount);
-/*------movieTitle и sortingType задаются в getLink(), нужно исправить------*/
     }
 
     private String getLink(String request){

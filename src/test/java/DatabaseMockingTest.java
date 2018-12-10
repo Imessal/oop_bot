@@ -5,6 +5,8 @@ import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Map;
 
 @ExtendWith(MockitoExtension.class)
 class DatabaseMockingTest {
@@ -14,6 +16,9 @@ class DatabaseMockingTest {
 
     @Mock
     private DatabaseRepository repository;
+
+    @Mock
+    Map<Integer, ArrayList<Movie>> pageList;
 
     @InjectMocks
     private Kinoman kinoman = new Kinoman(user, "покажи фильм по рейтингу");
@@ -26,6 +31,11 @@ class DatabaseMockingTest {
     private Movie theShawshankRedemption;
 
     private void configureMocks(ArrayList<Movie> movies){
+
+        ArrayList<Movie> movies_not_banned = new ArrayList<>(Arrays.asList(greenMile, theShawshankRedemption, forrestGump));
+
+        Mockito.lenient().when(pageList.get(1)).thenReturn(movies_not_banned);
+
         Mockito.lenient().
                 when(user.getId()).thenReturn(0);
 
@@ -55,13 +65,14 @@ class DatabaseMockingTest {
             banMocking(theShawshankRedemption, movies);
             return null;
         }).when(repository).addMovieToBlackList(user, theShawshankRedemption);
+
     }
 
     private Boolean checkMovieMocking(int id, ArrayList<Movie> movies) {
-        boolean flag = false;
+        boolean flag = true;
         for(Movie m: movies){
-            if(m.getId() != id) {
-                flag = true;
+            if(m.getId() == id) {
+                flag = false;
                 break;
             }
         }
@@ -78,26 +89,15 @@ class DatabaseMockingTest {
         return new ArrayList<>();
     }
 
-
-
-    @Test
-    void testListOfMovies(){
-        ArrayList<Movie> movies = getMovies();
-        Movie first_movie = movies.get(0);
-        Movie second_movie = movies.get(1);
-        Movie third_movie = movies.get(2);
-        Assertions.assertSame(greenMile, first_movie);
-        Assertions.assertSame(forrestGump, second_movie);
-        Assertions.assertSame(theShawshankRedemption, third_movie);
-    }
-
     @Test
     void shouldInjectMocks(){
         Assertions.assertNotNull(user);
         Assertions.assertNotNull(repository);
         Assertions.assertNotNull(kinoman);
+        Assertions.assertNotNull(pageList);
         Assertions.assertSame(user, kinoman.getCurrentUser());
         Assertions.assertSame(repository, kinoman.getRepository());
+        Assertions.assertSame(pageList, kinoman.getPageList());
     }
 
     @Test
@@ -119,6 +119,31 @@ class DatabaseMockingTest {
 
     @Test
     void shouldWorkWithKinoman(){
-        //????
+        configureMocks(getMovies());
+        Movie start = kinoman.getCurrentMovie();
+        Assertions.assertNull(start);
+        Movie next = kinoman.getNext();
+        Assertions.assertNotNull(next);
+        Assertions.assertSame(greenMile, next);
+        next = kinoman.getNext();
+        Assertions.assertNotNull(next);
+        Assertions.assertSame(theShawshankRedemption, next);
+        next = kinoman.getNext();
+        Assertions.assertNotNull(next);
+        Assertions.assertSame(forrestGump, next);
+    }
+
+    @Test
+    void shouldBanWithKinoman(){
+        configureMocks(getMovies());
+        repository.addMovieToBlackList(user, theShawshankRedemption);
+        Movie start = kinoman.getCurrentMovie();
+        Assertions.assertNull(start);
+        Movie next = kinoman.getNext();
+        Assertions.assertNotNull(next);
+        Assertions.assertSame(greenMile, next);
+        next = kinoman.getNext();
+        Assertions.assertNotNull(next);
+        Assertions.assertSame(forrestGump, next);
     }
 }

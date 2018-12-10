@@ -8,7 +8,7 @@ class DatabaseRepository {
         connection = connect();
     }
 
-    private Connection connect() {
+     private Connection connect() {                                                     //private??
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         try {
             return DriverManager.getConnection(dbUrl);

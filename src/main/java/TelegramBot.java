@@ -15,7 +15,7 @@ import java.util.function.BiConsumer;
 
 public class TelegramBot extends TelegramLongPollingBot {
     private HashMap<Integer, User> users = new HashMap<>();
-    private DatabaseRepository repository = Bot.repository;
+    private DatabaseRepository repository = new DatabaseRepository();
 
     static void start() {
         ApiContextInitializer.init();

@@ -89,7 +89,8 @@ class Selector {
     }
     private static Answer banningCurrentRequest(User user){
         Movie c_movie = user.kinoman.getCurrentMovie();
-        Bot.repository.addMovieToBlackList(user, c_movie);
+        DatabaseRepository repository = user.kinoman.getRepository();
+        repository.addMovieToBlackList(user, c_movie);
         return new Answer(new String[]{"Больше я не буду показывать вам - " + c_movie.getName()},
                 new String[]{"Похожие", "Следующий"});
     }
