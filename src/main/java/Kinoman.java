@@ -13,13 +13,14 @@ class Kinoman{
     private Movie currentMovie = null;
     private ArrayList<Integer> shownMovieList = new ArrayList<>();
     private Map<Integer, ArrayList<Movie>> pageList = new HashMap<>();
-    private DatabaseRepository repository = new DatabaseRepository();
+    private DatabaseRepository repository;
 
-    Kinoman(User user, String request){
+    Kinoman(User user, String request, DatabaseRepository repository){
         this.user = user;
         this.link = getLink(request);
         this.movieCount = KinopoiskParser.getMoviesCount(link);
         this.pageCount = KinopoiskParser.getPageCount(movieCount);
+        this.repository = repository;
     }
 
     User getCurrentUser(){return user;}

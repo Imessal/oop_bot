@@ -51,7 +51,7 @@ class Selector {
                 new String[]{"Помощь", "Возможные запросы"});
     }
     private static Answer requesting(User user, String request){
-        user.kinoman = new Kinoman(user, request);
+        user.kinoman = new Kinoman(user, request, new DatabaseRepository());
         Movie movie = user.kinoman.getNext();
         if (movie == null){
             return new Answer(new String[]{"Ты пытался найди хоррор мультик или что-то вроде?" +
